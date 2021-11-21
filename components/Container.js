@@ -37,7 +37,7 @@ export default function Container(props) {
   const { children, ...customMeta } = props;
   const router = useRouter();
   const meta = {
-    title: "Imanol Ortega – Desarrollador Frontend",
+    title: "Imanol Ortega | Desarrollador Frontend",
     description: `Front-end developer, JavaScript & React enthusiast.`,
     image: "https://leerob.io/static/images/banner.png",
     type: "website",
@@ -57,7 +57,7 @@ export default function Container(props) {
           href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>"
         />
         <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content="Lee Robinson" />
+        <meta property="og:site_name" content="Imanol Ortega" />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
@@ -72,7 +72,7 @@ export default function Container(props) {
       </Head>
 
       <div className="flex flex-col justify-center px-8">
-        <nav className="flex items-center justify-between w-full relative max-w-2xl border-gray-300 dark:border-gray-700 mx-auto pt-8 pb-4 sm:pb-4 text-gray-900 bg-gray-50 dark:bg-gray-900 bg-opacity-60 dark:text-gray-100">
+        <nav className="flex items-center justify-between w-full relative max-w-screen-md border-gray-300 dark:border-gray-700 mx-auto pt-8 pb-4 sm:pb-4 text-gray-900 bg-gray-50 dark:bg-gray-900 bg-opacity-60 dark:text-gray-100">
           <div className="ml-[-0.60rem]">
             <MobileMenu />
             <NavItem href="/" text="Home" />
@@ -113,7 +113,7 @@ export default function Container(props) {
             )}
           </button>
         </nav>
-        <div className="flex justify-center max-w-2xl mx-auto w-full">
+        <div className="flex justify-center max-w-screen-md mx-auto w-full">
           <hr className="w-full border-1 border-gray-200 dark:border-gray-800 mb-8" />
         </div>
       </div>

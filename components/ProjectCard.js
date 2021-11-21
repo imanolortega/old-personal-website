@@ -1,12 +1,13 @@
 import cn from "classnames";
 
-export default function ProjectCard({ link, title, slug, gradient }) {
+export default function ProjectCard({ link, title, gradient }) {
   return (
     <a
       href={`${link}`}
+      target="_blank"
       className={cn(
         "transform hover:scale-[1.01] transition-all",
-        "rounded-xl w-full md:w-1/3 bg-gradient-to-r p-1",
+        "rounded-xl bg-gradient-to-r p-1",
         gradient
       )}>
       <div className="flex flex-col justify-between h-full bg-white dark:bg-gray-900 rounded-lg p-4">

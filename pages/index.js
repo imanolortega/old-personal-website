@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <Container>
       <div
-        className="flex flex-col justify-center items-start max-w-2xl border-gray-200
+        className="flex flex-col justify-center items-start max-w-screen-md border-gray-200
         dark:border-gray-700 mx-auto pb-16">
         <div className="flex flex-col-reverse sm:flex-row items-start">
           <div className="flex flex-col pr-8">
@@ -83,7 +83,7 @@ export default function Home() {
           Proyectos trainee y challenges que hice al principio. Los últimos
           proyectos voy a agregarlos más adelante.
         </p>
-        <div className="w-full flex gap-6 flex-col md:flex-row">
+        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 md:flex-row">
           <ProjectCard
             title="Facebook Clone"
             slug="style-guides-component-libraries-design-systems"

@@ -1,12 +1,14 @@
 import Container from "../components/Container";
 import ExternalLink from "../components/ExternalLink";
 import ProjectCard from "../components/ProjectCard";
+import { projects } from "../constants/projects";
 
 export default function Projects() {
+  console.log(projects)
   return (
-    <Container title="About – Imanol Ortega">
-      <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 mt-4">
-        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
+    <Container title="Projects | Imanol Ortega">
+      <div className="flex flex-col justify-center items-start max-w-screen-md mx-auto mb-16 mt-4">
+        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-6 text-black dark:text-white">
           Projects
         </h1>
         <div className="mb-8 prose leading-8 text-gray-600 dark:text-gray-400">
@@ -25,39 +27,14 @@ export default function Projects() {
             .
           </p>
         </div>
-        <div className="w-full flex gap-6 flex-col md:flex-row">
-          <ProjectCard
-            title="Facebook Clone"
-            slug="style-guides-component-libraries-design-systems"
-            gradient="from-[#D8B4FE] to-[#818CF8]"
-          />
-          <ProjectCard
-            title="Tetris con React"
-            slug="rust"
-            gradient="from-[#6EE7B7] to-[#9333EA]"
-          />
-          <ProjectCard
-            title="Datatable Googlesheets"
-            slug="react-state-management"
-            gradient="from-[#FDE68A] to-[#FCA5A5]"
-          />
-        </div>
-        <div className="w-full flex gap-6 flex-col md:flex-row mt-6">
-          <ProjectCard
-            title="Facebook Clone"
-            slug="style-guides-component-libraries-design-systems"
-            gradient="from-[#D8B4FE] to-[#818CF8]"
-          />
-          <ProjectCard
-            title="Tetris con React"
-            slug="rust"
-            gradient="from-[#6EE7B7] to-[#9333EA]"
-          />
-          <ProjectCard
-            title="Datatable Googlesheets"
-            slug="react-state-management"
-            gradient="from-[#FDE68A] to-[#FCA5A5]"
-          />
+        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 md:flex-row">
+          {projects.map((p) => (
+            <ProjectCard
+              title={p.title}
+              link={p.visit}
+              gradient="from-[#D8B4FE] to-[#818CF8]"
+            />
+          ))}
         </div>
       </div>
     </Container>

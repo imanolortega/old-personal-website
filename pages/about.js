@@ -3,9 +3,9 @@ import ExternalLink from "../components/ExternalLink";
 
 export default function About() {
   return (
-    <Container title="About – Imanol Ortega">
-      <div className="flex flex-col justify-center items-start max-w-2xl mx-auto mb-16 mt-4">
-        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
+    <Container title="About | Imanol Ortega">
+      <div className="flex flex-col justify-center items-start max-w-screen-md mx-auto mb-16 mt-4">
+        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-6 text-black dark:text-white">
           About Me
         </h1>
         <div className="mb-8 prose leading-8 text-gray-600 dark:text-gray-400">
@@ -19,7 +19,7 @@ export default function About() {
                 easytechgreen
               </span>
             </ExternalLink>
-            . Trabajo con Javascript y React JS. Antes fui diseñador
+            . Trabajo con Javascript, React y Next JS. Antes fui diseñador
             gráfico y Comunicador Social.
           </p>
         </div>
