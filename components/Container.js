@@ -54,7 +54,7 @@ export default function Container(props) {
         <link rel="canonical" href={`https://leerob.io${router.asPath}`} />
         <link
           rel="icon"
-          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍻</text></svg>"
         />
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="Imanol Ortega" />

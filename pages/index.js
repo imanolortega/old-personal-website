@@ -4,14 +4,17 @@ import Container from "../components/Container";
 import BlogPostCard from "../components/BlogPostCard";
 import ProjectCard from "../components/ProjectCard";
 import ExternalLink from "../components/ExternalLink";
+import { useState } from "react";
+import { projects } from "../constants/projects";
+import { useEffect } from "react";
+import { getRandomElement, shuffle } from "../lib/utils";
 
 export function ArrowLink({ text, href }) {
   return (
     <Link href={href}>
       <a
-        className="flex content-center h-8 mt-6 text-gray-600 dark:text-gray-400 rounded-lg
-          hover:text-gray-800 dark:hover:text-gray-200 transition-all">
-        {text}
+        className="flex content-center h-8 text-gray-600 dark:text-gray-400 rounded-lg
+          hover:text-gray-800 dark:hover:text-gray-200 hover:translate-x-1 transition-all">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           className="wiggle h-6 w-6"
@@ -19,18 +22,34 @@ export function ArrowLink({ text, href }) {
           viewBox="0 0 24 24"
           stroke="currentColor">
           <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
             d="M13 7l5 5m0 0l-5 5m5-5H6"
           />
         </svg>
+        {text}
       </a>
     </Link>
   );
 }
 
 export default function Home() {
+  const [allProjects, setAllProjects] = useState([]);
+
+  useEffect(() => {
+    setAllProjects(shuffle(projects).slice(5));
+  }, []);
+
+  let gradients = [
+    "from-[#D8B4FE] to-[#818CF8]",
+    "from-[#6EE7B7] to-[#9333EA]",
+    "from-[#FDE68A] to-[#FCA5A5]",
+    "from-[#818CF8] to-[#D8B4FE]",
+    "from-[#9333EA] to-[#6EE7B7]",
+    "from-[#FCA5A5] to-[#FDE68A]",
+  ];
+
   return (
     <Container>
       <div
@@ -74,7 +93,7 @@ export default function Home() {
           slug="style-guides-component-libraries-design-systems"
           gradient="from-[#D8B4FE] to-[#818CF8]"
         />
-        <ArrowLink text="Ver más artículos" href="/projects" />
+        <ArrowLink text="Más artículos" href="/blog" />
         <span className="h-16" />
         <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white">
           Proyectos
@@ -83,24 +102,18 @@ export default function Home() {
           Proyectos trainee y challenges que hice al principio. Los últimos
           proyectos voy a agregarlos más adelante.
         </p>
-        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 md:flex-row">
-          <ProjectCard
-            title="Facebook Clone"
-            slug="style-guides-component-libraries-design-systems"
-            gradient="from-[#D8B4FE] to-[#818CF8]"
-          />
-          <ProjectCard
-            title="Tetris con React"
-            slug="rust"
-            gradient="from-[#6EE7B7] to-[#9333EA]"
-          />
-          <ProjectCard
-            title="Datatable Googlesheets"
-            slug="react-state-management"
-            gradient="from-[#FDE68A] to-[#FCA5A5]"
-          />
+        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 md:flex-row mb-6">
+          {allProjects.map((p) => (
+            <ProjectCard
+              title={p.title}
+              tags={p.tags}
+              link={p.visit}
+              key={p.id}
+              gradient={getRandomElement(gradients)}
+            />
+          ))}
         </div>
-        <ArrowLink text="Ver más proyectos" href="/blog" />
+        <ArrowLink text="Más proyectos" href="/projects" />
       </div>
     </Container>
   );

@@ -4,12 +4,23 @@ import Container from "../components/Container";
 import ExternalLink from "../components/ExternalLink";
 import ProjectCard from "../components/ProjectCard";
 import { projects } from "../constants/projects";
+import { getRandomElement } from "../lib/utils";
 
 export default function Projects() {
   const [searchValue, setSearchValue] = useState("");
   const filteredProjects = projects.filter((post) =>
     post.title.toLowerCase().includes(searchValue.toLowerCase())
   );
+
+  let gradients = [
+    "from-[#D8B4FE] to-[#818CF8]",
+    "from-[#6EE7B7] to-[#9333EA]",
+    "from-[#FDE68A] to-[#FCA5A5]",
+    "from-[#818CF8] to-[#D8B4FE]",
+    "from-[#9333EA] to-[#6EE7B7]",
+    "from-[#FCA5A5] to-[#FDE68A]",
+  ];
+
   return (
     <Container title="Projects | Imanol Ortega">
       <div className="flex flex-col justify-center items-start max-w-screen-md mx-auto mb-16 mt-4">
@@ -61,7 +72,7 @@ export default function Projects() {
               tags={p.tags}
               link={p.visit}
               key={p.id}
-              gradient="from-[#D8B4FE] to-[#818CF8]"
+              gradient={getRandomElement(gradients)}
             />
           ))}
         </div>

@@ -1,7 +1,5 @@
 import Container from "../components/Container";
 import BlogPost from "../components/BlogPost";
-import BlogPostCard from "../components/BlogPostCard";
-import ExternalLink from "../components/ExternalLink";
 
 export default function Blog() {
   return (
