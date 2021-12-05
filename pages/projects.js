@@ -4,22 +4,15 @@ import Container from "../components/Container";
 import ExternalLink from "../components/ExternalLink";
 import ProjectCard from "../components/ProjectCard";
 import { projects } from "../constants/projects";
-import { getRandomElement } from "../lib/utils";
+import { getRandomElement } from "../lib/util";
+import { gradients } from '../constants/gradients';
 
 export default function Projects() {
   const [searchValue, setSearchValue] = useState("");
-  const filteredProjects = projects.filter((post) =>
-    post.title.toLowerCase().includes(searchValue.toLowerCase())
-  );
 
-  let gradients = [
-    "from-[#D8B4FE] to-[#818CF8]",
-    "from-[#6EE7B7] to-[#9333EA]",
-    "from-[#FDE68A] to-[#FCA5A5]",
-    "from-[#818CF8] to-[#D8B4FE]",
-    "from-[#9333EA] to-[#6EE7B7]",
-    "from-[#FCA5A5] to-[#FDE68A]",
-  ];
+  const filteredProjects = projects.filter((post) =>
+    post.tags.toString().toLowerCase().includes(searchValue.toLowerCase())
+  );
 
   return (
     <Container title="Projects | Imanol Ortega">
@@ -45,10 +38,10 @@ export default function Projects() {
         </div>
         <div className="relative w-full mb-8">
           <input
-            aria-label="Buscar proyectos"
+            aria-label="Buscar proyectos por tech"
             type="text"
             onChange={(e) => setSearchValue(e.target.value)}
-            placeholder="Buscar proyectos"
+            placeholder="Buscar proyectos por tech"
             className="block w-full px-4 py-2 text-gray-900 bg-white border border-gray-200 rounded-md dark:border-gray-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-gray-100"
           />
           <svg

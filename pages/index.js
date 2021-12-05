@@ -1,54 +1,29 @@
-import Link from "next/link";
+import { useState, useEffect } from "react";
 
-import Container from "../components/Container";
-import BlogPostCard from "../components/BlogPostCard";
-import ProjectCard from "../components/ProjectCard";
-import ExternalLink from "../components/ExternalLink";
-import { useState } from "react";
 import { projects } from "../constants/projects";
-import { useEffect } from "react";
-import { getRandomElement, shuffle } from "../lib/utils";
+import { getPaginatedPosts } from '../lib/posts';
+import { getRandomElement, shuffle } from "../lib/util";
 
-export function ArrowLink({ text, href }) {
-  return (
-    <Link href={href}>
-      <a
-        className="flex content-center h-8 text-gray-600 dark:text-gray-400 rounded-lg
-          hover:text-gray-800 dark:hover:text-gray-200 hover:translate-x-1 transition-all">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="wiggle h-6 w-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor">
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M13 7l5 5m0 0l-5 5m5-5H6"
-          />
-        </svg>
-        {text}
-      </a>
-    </Link>
-  );
-}
+import BlogPostCard from "../components/BlogPostCard";
+import Container from "../components/Container";
+import ExternalLink from "../components/ExternalLink";
+import LinkWithIcon from '../components/LinkWithIcon';
+import ProjectCard from "../components/ProjectCard"
+import { gradients } from '../constants/gradients';
+import { formatDate } from '../lib/datetime';
 
-export default function Home() {
+export default function Home({posts}) {
   const [allProjects, setAllProjects] = useState([]);
+  console.log(formatDate(posts[0].date))
 
   useEffect(() => {
     setAllProjects(shuffle(projects).slice(5));
-  }, []);
 
-  let gradients = [
-    "from-[#D8B4FE] to-[#818CF8]",
-    "from-[#6EE7B7] to-[#9333EA]",
-    "from-[#FDE68A] to-[#FCA5A5]",
-    "from-[#818CF8] to-[#D8B4FE]",
-    "from-[#9333EA] to-[#6EE7B7]",
-    "from-[#FCA5A5] to-[#FDE68A]",
-  ];
+    const interval = setInterval(() => {
+      setAllProjects(shuffle(projects).slice(5));
+    }, 30000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <Container>
@@ -59,7 +34,7 @@ export default function Home() {
           <div className="flex flex-col pr-8">
             <h1
               className="font-bold text-3xl md:text-5xl md:leading-normal tracking-tight mb-3
-            bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500">
+            bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500 animate-fade">
               Imanol Ortega
             </h1>
             <h2 className="text-gray-700 dark:text-gray-200 mb-16">
@@ -83,17 +58,14 @@ export default function Home() {
           Trato de escribir algunas de las cosas que voy descubriendo y le
           pueden servir a alguien más.
         </p>
-        <BlogPostCard
-          title="Cómo mezclar un array en JS sin métodos"
-          slug="style-guides-component-libraries-design-systems"
-          gradient="from-[#D8B4FE] to-[#818CF8]"
-        />
-        <BlogPostCard
-          title="Agregar Darkmode con Tailwind"
-          slug="style-guides-component-libraries-design-systems"
-          gradient="from-[#D8B4FE] to-[#818CF8]"
-        />
-        <ArrowLink text="Más artículos" href="/blog" />
+        {posts?.map((p) => (
+          <BlogPostCard
+            title={p.title}
+            link={p.slug}
+            date={formatDate(p.date)}
+          />
+        ))}
+        <LinkWithIcon text="Más artículos" href="/blog" />
         <span className="h-16" />
         <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-black dark:text-white">
           Proyectos
@@ -113,8 +85,22 @@ export default function Home() {
             />
           ))}
         </div>
-        <ArrowLink text="Más proyectos" href="/projects" />
+        <LinkWithIcon text="Más proyectos" href="/projects" />
       </div>
     </Container>
   );
+}
+
+export async function getStaticProps() {
+  const { posts, pagination } = await getPaginatedPosts();
+  console.log(posts)
+  return {
+    props: {
+      posts,
+      pagination: {
+        ...pagination,
+        basePath: '/posts',
+      },
+    },
+  };
 }

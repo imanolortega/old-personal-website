@@ -17,7 +17,6 @@ export const projects = [
     tags: [
       "React JS",
       "Redux",
-      "Styled Components",
       "Firebase",
     ],
     source: "https://github.com/imanolrtega/disney-clone",
@@ -29,7 +28,7 @@ export const projects = [
     description:
       "Clon de Amazon con opción para ver los productos del carrito y el costo total, aumentar la cantidad de unidades y borrarlos. Sólo desktop. Con React Js y React Router. Estilo con Styled-Components. Auth, DB y Hosting con Firebase.",
     image: "/images/3.png",
-    tags: ["React JS", "React Router", "Styled Components", "Firebase"],
+    tags: ["React JS", "React Router", "Firebase"],
     source: "https://github.com/imanolrtega/amazon-clone",
     visit: "https://clone-563e4.web.app/",
     id: 5,
@@ -55,11 +54,11 @@ export const projects = [
     id: 3,
   },
   {
-    title: "Datatable con Google Sheets",
+    title: "DB con Google Sheets",
     description:
       "Primer proyecto con React JS para la FAyA-UNSE, tablas con buscador. Responsivo. Datatables con Google Sheets como DB. Estilo con Bootstrap y Darkmode con Styled Components y Hooks.",
     image: "/images/6.png",
-    tags: [ "React JS", "Bootstrap", "Styled Components"],
+    tags: [ "React JS", "Google Sheets", "Styled Components"],
     source: "https://github.com/imanolrtega/datatable-googlesheets",
     visit: "http://clasesvirtuales.faya.com.ar/",
     id: 6,
@@ -69,17 +68,17 @@ export const projects = [
     description:
       "Clon de Facebook, con inicio de sesión, opción para publicar texto y fotos y eliminar la publicación. Con Next JS. Estilo con Tailwind CSS. Auth, DB y Storage con Firebase. Hosting con Vercel.",
     image: "/images/0.jpg",
-    tags: [ "React JS", "Next JS", "Tailwind CSS", "Firebase"],
+    tags: [ "Next JS", "Tailwind CSS", "Firebase"],
     source: "https://github.com/imanolrtega/facebook-clone",
     visit: "https://clone-sepia.vercel.app/",
     id: 0,
   },
   {
-    title: "Buscador de Noticias de Blogs",
+    title: "News Searcher",
     description:
       "Buscador de noticias con inicio de sesión y barra de búsqueda por palabras. Con React JS y Redux. Login con Google y buscador con API de GNews. Estilo con CSS (BEM).",
     image: "/images/7.jpg",
-    tags: ["React JS", "Redux JS", "CSS"],
+    tags: ["React JS", "Redux JS", "Vanilla CSS"],
     source: "https://github.com/imanolrtega/react-redux-blog",
     visit: "https://blogcito.netlify.app/",
     id: 7,

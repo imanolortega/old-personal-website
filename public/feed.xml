@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[Prueba Next JS]]></title>
+        <description><![CDATA[Otro sitio realizado con WordPress]]></description>
+        <link>http://github.com/dylang/node-rss</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Sun, 05 Dec 2021 22:15:43 GMT</lastBuildDate>
+        <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Sun, 05 Dec 2021 22:15:43 GMT</pubDate>
+        <copyright><![CDATA[2021 Prueba Next JS]]></copyright>
+        <language><![CDATA[en]]></language>
+        <item>
+            <title><![CDATA[Cómo mezclar un array en Javascript sin métodos]]></title>
+            <description><![CDATA[Canje de deuda por acción climática es el plato fuerte de las propuestas que Argentina llevará a la COP26. Sin duda nuestra región es acreedora ambiental del norte global desde hace siglos por transferencia de recursos naturales. ¿Entonces cuál es la contra? Que hace eco con una discusión histórica, la del canje de deuda por&hellip; Seguir leyendo Cómo mezclar un array en Javascript sin métodos
+]]></description>
+            <link>/posts/capitulo-2</link>
+            <guid isPermaLink="false">/posts/capitulo-2</guid>
+            <category><![CDATA[Sin categoría]]></category>
+            <dc:creator><![CDATA[Imanol Ortega]]></dc:creator>
+            <pubDate>Sun, 31 Oct 2021 17:44:40 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Agregar Darkmode con Tailwind]]></title>
+            <description><![CDATA[En 2016 los Panamá Papers dejaron al desnudo los esfuerzos de un sector de La Nación por proteger a Macri y a empresarios cercanos a su corazón y sus finanzas. Cinco años después, la decisión del mismo diario de no publicar en la tapa de la edición impresa una sola línea de los Pandora Papers&hellip; Seguir leyendo Agregar Darkmode con Tailwind
+]]></description>
+            <link>/posts/hola-mundo</link>
+            <guid isPermaLink="false">/posts/hola-mundo</guid>
+            <category><![CDATA[Capítulo]]></category>
+            <dc:creator><![CDATA[Imanol Ortega]]></dc:creator>
+            <pubDate>Sun, 10 Oct 2021 23:58:47 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
