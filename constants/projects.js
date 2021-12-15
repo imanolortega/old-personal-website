@@ -60,7 +60,7 @@ export const projects = [
     image: "/images/6.png",
     tags: [ "React JS", "Google Sheets", "Styled Components"],
     source: "https://github.com/imanolrtega/datatable-googlesheets",
-    visit: "http://clasesvirtuales.faya.com.ar/",
+    visit: "https://datatable-googlesheets.vercel.app/",
     id: 6,
   },
   {

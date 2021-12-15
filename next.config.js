@@ -27,7 +27,14 @@ module.exports = withPlugins([[indexSearch], [feed], [sitemap], [socialImages]],
 
     OG_IMAGE_DIRECTORY: '/images/og',
   },
+
 });
+
+module.exports = {
+  images: {
+    domains: ['secure.gravatar.com'],
+  },
+}
 
 /**
  * parseEnv

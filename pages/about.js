@@ -6,7 +6,7 @@ export default function About() {
   return (
     <Container title="About | Imanol Ortega">
       <div className="flex flex-col justify-center items-start max-w-screen-md mx-auto mb-16 mt-4">
-        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-6 text-black dark:text-white">
+        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-6 text-gray-900 dark:text-white">
           About Me
         </h1>
         <div className="mb-8 prose leading-8 text-gray-600 dark:text-gray-400">
@@ -16,7 +16,7 @@ export default function About() {
               {" "}
               <span
                 className="font-semibold bg-clip-text text-transparent bg-gradient-to-r
-                from-green-500 to-green-600">
+                from-emerald-500 to-emerald-600 underline decoration-1 underline-offset-4 decoration-emerald-600">
                 easytechgreen
               </span>
             </ExternalLink>
@@ -26,29 +26,37 @@ export default function About() {
         </div>
         <div className="block md:flex w-full justify-between mb-8 prose leading-8 text-gray-600 dark:text-gray-400">
           <div className="w-full md:w-1/3 mb-6 md:mb-0" >
-            <h3 className="text-xl text-black dark:text-white mb-3">Front</h3>
+            <h3 className="text-xl text-gray-900 dark:text-white mb-3">Front</h3>
             <ul>
               {techFront.map((t) => (
-                <li>- {t.tech}</li>
+                <li key={t.key}>- {t.tech}</li>
               ))}
             </ul>
           </div>
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
-            <h3 className="text-xl text-black dark:text-white mb-3">DB & Auth</h3>
+            <h3 className="text-xl text-gray-900 dark:text-white mb-3">DB & Auth</h3>
             <ul>
               {techBack.map((t) => (
-                <li>- {t.tech}</li>
+                <li key={t.key}>- {t.tech}</li>
               ))}
             </ul>
           </div>
-          <div className="w-full md:w-1/3 mb-6 md:mb-0" >
-            <h3 className="text-xl text-black dark:text-white mb-3">Random 🥸</h3>
+          <div className="w-full md:w-1/3 mb-8 md:mb-0" >
+            <h3 className="text-xl text-gray-900 dark:text-white mb-3">Random 🥸</h3>
             <ul>
               {oldTech.map((t) => (
-                <li>- {t.tech}</li>
+                <li key={t.key}>- {t.tech}</li>
               ))}
             </ul>
           </div>
+        </div>
+        <h2 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-gray-900 dark:text-white">
+          Contacto
+        </h2>
+        <div className="mb-8 prose leading-8 text-gray-600 dark:text-gray-400">
+          <p>
+            Etc etc
+          </p>
         </div>
       </div>
     </Container>

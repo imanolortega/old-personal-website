@@ -4,9 +4,9 @@
         <description><![CDATA[Otro sitio realizado con WordPress]]></description>
         <link>http://github.com/dylang/node-rss</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 05 Dec 2021 22:15:43 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 15 Dec 2021 19:01:31 GMT</lastBuildDate>
         <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-        <pubDate>Sun, 05 Dec 2021 22:15:43 GMT</pubDate>
+        <pubDate>Wed, 15 Dec 2021 19:01:31 GMT</pubDate>
         <copyright><![CDATA[2021 Prueba Next JS]]></copyright>
         <language><![CDATA[en]]></language>
         <item>

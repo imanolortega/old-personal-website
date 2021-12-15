@@ -5,7 +5,6 @@ import ExternalLink from "../components/ExternalLink";
 import ProjectCard from "../components/ProjectCard";
 import { projects } from "../constants/projects";
 import { getRandomElement } from "../lib/util";
-import { gradients } from '../constants/gradients';
 
 export default function Projects() {
   const [searchValue, setSearchValue] = useState("");
@@ -14,10 +13,19 @@ export default function Projects() {
     post.tags.toString().toLowerCase().includes(searchValue.toLowerCase())
   );
 
+  const gradients = [
+    "from-violet-600 to-emerald-600",
+    "from-violet-600 to-rose-500",
+    "from-emerald-600 to-violet-600",
+    "from-violet-600 to-emerald-600",
+    "from-rose-500 to-violet-600",
+    "from-violet-600 to-rose-500",
+  ];
+
   return (
     <Container title="Projects | Imanol Ortega">
       <div className="flex flex-col justify-center items-start max-w-screen-md mx-auto mb-16 mt-4">
-        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-6 text-black dark:text-white">
+        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-6 text-gray-900 dark:text-white">
           Projects
         </h1>
         <div className="mb-6 prose leading-8 text-gray-600 dark:text-gray-400">
@@ -29,7 +37,7 @@ export default function Projects() {
               {" "}
               <span
                 className="font-semibold bg-clip-text text-transparent bg-gradient-to-r
-                from-green-500 to-green-600">
+                from-purple-500 to-purple-600 underline decoration-1 underline-offset-4 decoration-purple-600">
                 Github
               </span>
             </ExternalLink>
@@ -42,7 +50,7 @@ export default function Projects() {
             type="text"
             onChange={(e) => setSearchValue(e.target.value)}
             placeholder="Buscar proyectos por tech"
-            className="block w-full px-4 py-2 text-gray-900 bg-white border border-gray-200 rounded-md dark:border-gray-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-gray-100"
+            className="block w-full px-4 py-2 text-gray-900 bg-white border border-slate-300 rounded-md dark:border-slate-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-800 dark:text-slate-100 outline-slate-600"
           />
           <svg
             className="absolute w-5 h-5 text-gray-400 right-3 top-3 dark:text-gray-300"
