@@ -4,7 +4,7 @@ import { categoryPathBySlug } from '../../lib/categories';
 import styles from './Article.module.scss'
 
 export default function Post({ post, relatedPosts }) {
-  console.log(post.content)
+  console.log(post)
   return (
     <BlogLayout post={post}>
       <div

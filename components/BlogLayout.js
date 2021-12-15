@@ -26,7 +26,8 @@ export default function BlogLayout({ children, post }) {
               className="rounded-full"
             />
             <p className="ml-2 text-sm text-gray-700 dark:text-gray-300">
-              {"Imanol Ortega | "}
+              {post.author.name}
+              {" | "}
               {formatDate(post.date)}
             </p>
           </div>
@@ -36,6 +37,9 @@ export default function BlogLayout({ children, post }) {
         </div>
         <div className="w-full mt-4 prose dark:prose-dark max-w-none">
           {children}
+        </div>
+        <div className="text-xs">
+          Última actualización el {formatDate(post.modified)}
         </div>
       </article>
     </Container>
