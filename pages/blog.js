@@ -25,21 +25,14 @@ export default function Blog({ posts }) {
         </h1>
         <div className="mb-8 prose leading-8 text-gray-600 dark:text-gray-400">
           <p>
-            Escribo algunas de las cosas que voy descubriendo y le
-            pueden servir a alguien más. Principalmente snippets y otras formas
-            de hacerle la vida más fácil a un dev JR (o no tanto).
+            Escribo algunas de las cosas que voy descubriendo y le pueden servir
+            a alguien más. Principalmente snippets y otras formas de hacerle la
+            vida más fácil a un dev JR (o no tanto).
           </p>
         </div>
         <div className="relative w-full mb-8">
-          <input
-            aria-label="Buscar proyectos por palabras"
-            type="text"
-            onChange={(e) => setSearchValue(e.target.value)}
-            placeholder="Buscar artículo por título o contenido"
-            className="block w-full px-4 py-2 text-gray-900 bg-white border border-slate-300 rounded-md dark:border-slate-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-800 dark:text-slate-100 outline-slate-600"
-          />
           <svg
-            className="absolute w-5 h-5 text-gray-400 right-3 top-3 dark:text-gray-300"
+            className="absolute w-5 h-5 text-gray-400 left-3 top-3 dark:text-gray-300"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -51,6 +44,13 @@ export default function Blog({ posts }) {
               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
             />
           </svg>
+          <input
+            aria-label="Buscar proyectos por palabras"
+            type="text"
+            onChange={(e) => setSearchValue(e.target.value)}
+            placeholder="Buscar artículo por título o contenido"
+            className="block w-full px-12 py-2 text-gray-900 bg-white border border-slate-300 rounded-md dark:border-slate-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-800 dark:text-slate-100 outline-slate-600"
+          />
         </div>
         <div className="w-full">
           {filteredArticles?.map((p) => (

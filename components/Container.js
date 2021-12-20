@@ -17,7 +17,7 @@ function NavItem({ href, text }) {
         className={`${
           isActive
             ? "font-semibold text-slate-600 dark:text-slate-200"
-            : "font-normal text-slate-600 hover:text-slate-700 dark:text-slate-500"
+            : "font-normal text-slate-600 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200"
         } hidden md:inline-block p-1 sm:px-3 sm:py-2 transition-all`}>
         <span className="capsize">{text}</span>
       </a>
@@ -106,9 +106,9 @@ export default function Container(props) {
           <div className="ml-[-0.60rem]">
             <MobileMenu />
             <NavItem href="/" text="Home" />
-            <NavItem href="/about/" text="About" />
-            <NavItem href="/blog/" text="Blog" />
-            <NavItem href="/projects/" text="Projects" />
+            <NavItem href="/about" text="About" />
+            <NavItem href="/blog" text="Blog" />
+            <NavItem href="/projects" text="Projects" />
           </div>
           <DarkModeButton
             onHandleClick={() =>
