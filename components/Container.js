@@ -69,7 +69,7 @@ export default function Container(props) {
   const meta = {
     title: "Imanol Ortega | Desarrollador Frontend",
     description: `Front-end developer, JavaScript & React enthusiast.`,
-    image: "https://leerob.io/static/images/banner.png",
+    image: "https://dailyweb.com.ar/data/img_cont/img_imagenes/img_gr/41431.jpg",
     type: "website",
     ...customMeta,
   };
