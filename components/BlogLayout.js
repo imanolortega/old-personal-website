@@ -38,8 +38,8 @@ export default function BlogLayout({ children, post }) {
         <div className="w-full mt-4 prose dark:prose-dark max-w-none">
           {children}
         </div>
-        <div className="text-xs">
-          Última actualización el {formatDate(post.modified)}
+        <div className="text-xs text-center w-full mt-4">
+          Última actualización del artículo el {formatDate(post.modified)}
         </div>
       </article>
     </Container>
