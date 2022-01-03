@@ -66,7 +66,7 @@ export default function Projects() {
             className="block w-full px-12 py-2 text-gray-900 bg-white border border-slate-300 rounded-md dark:border-slate-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-800 dark:text-slate-100 outline-slate-600"
           />
         </div>
-        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 md:flex-row">
+        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:flex-row">
           {filteredProjects.map((p) => (
             <ProjectCard
               title={p.title}

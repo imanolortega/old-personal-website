@@ -83,7 +83,7 @@ export default function Home({ posts }) {
           Proyectos trainee y challenges que hice al principio. Los últimos
           proyectos voy a agregarlos más adelante.
         </p>
-        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 md:flex-row mb-6">
+        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:flex-row mb-6">
           {allProjects.map((p) => (
             <ProjectCard
               title={p.title}
