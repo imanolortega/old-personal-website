@@ -19,6 +19,9 @@ export default function Footer() {
           <Link href="/blog">
             <a className="text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-200 transition">Blog</a>
           </Link>
+          <Link href="/projects">
+            <a className="text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-200 transition">Projects</a>
+          </Link>
         </div>
         <div className="flex flex-col space-y-4">
           <ExternalLink href="https://www.youtube.com/channel/UCZMli3czZnd1uoc1ShTouQw">
