@@ -112,8 +112,8 @@ export default function Container(props) {
             <NavItem href="/projects" text="Projects" />
           </div>
           <div className="flex space-x-2">
-            <IconButton path="https://www.linkedin.com/in/imanol-rtega/" icon="github" />
-            <IconButton path="https://github.com/imanolrtega" icon="linkedin" />
+            <IconButton theme={resolvedTheme} path="https://www.linkedin.com/in/imanol-rtega/" icon="github" />
+            <IconButton theme={resolvedTheme} path="https://github.com/imanolrtega" icon="linkedin" />
             <DarkModeButton
               onHandleClick={() =>
                 setTheme(resolvedTheme === "dark" ? "light" : "dark")
