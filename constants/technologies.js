@@ -2,12 +2,14 @@ export const techFront = [
   { key: 0, tech: "Javascript" },
   { key: 1, tech: "React JS" },
   { key: 2, tech: "Next JS" },
-  { key: 3, tech: "CSS3" },
-  { key: 4, tech: "HTML5" },
-  { key: 5, tech: "Material UI" },
-  { key: 6, tech: "Styled Components" },
+  { key: 3, tech: "GraphQL" },
+  { key: 4, tech: "CSS" },
+  { key: 5, tech: "SCSS" },
+  { key: 6, tech: "HTML" },
   { key: 7, tech: "Tailwind CSS" },
   { key: 8, tech: "Bootstrap" },
+  { key: 6, tech: "Styled Components" },
+  { key: 6, tech: "Material UI" },
 ];
 
 export const techBack = [
