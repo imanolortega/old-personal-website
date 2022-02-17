@@ -6,6 +6,7 @@ import Link from "next/link";
 
 import Footer from "./Footer";
 import MobileMenu from "./MobileMenu";
+import IconButton from "./IconButton";
 
 function NavItem({ href, text }) {
   const router = useRouter();
@@ -110,13 +111,17 @@ export default function Container(props) {
             <NavItem href="/blog" text="Blog" />
             <NavItem href="/projects" text="Projects" />
           </div>
-          <DarkModeButton
-            onHandleClick={() =>
-              setTheme(resolvedTheme === "dark" ? "light" : "dark")
-            }
-            isMounted={mounted}
-            isResolvedTheme={resolvedTheme}
-          />
+          <div className="flex space-x-2">
+            <IconButton path="https://www.linkedin.com/in/imanol-rtega/" icon="github" />
+            <IconButton path="https://github.com/imanolrtega" icon="linkedin" />
+            <DarkModeButton
+              onHandleClick={() =>
+                setTheme(resolvedTheme === "dark" ? "light" : "dark")
+              }
+              isMounted={mounted}
+              isResolvedTheme={resolvedTheme}
+            />
+          </div>
         </nav>
         <div className="flex justify-center max-w-screen-md mx-auto w-full">
           <hr className="w-full border-1 border-slate-300 dark:border-gray-800 mb-8" />

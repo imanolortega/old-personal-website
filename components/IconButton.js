@@ -1,19 +1,19 @@
 import React from 'react';
 
-const ContactCard = ({ description, icon, path, title }) => {
+const IconButton = ({ icon, path }) => {
   function Icon({ type }) {
     return (
       <>
         {type === 'email' && (
           <svg
-            className="block h-5 w-8 mb-4 text-gray-900 dark:text-gray-100"
+            className="block h-5 w-8 text-gray-900 dark:text-gray-100"
             width="32"
             height="32"
             fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path
               d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-              stroke="#4A5568"
+              stroke="#fff"
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -22,13 +22,13 @@ const ContactCard = ({ description, icon, path, title }) => {
         )}
         {type === 'linkedin' && (
           <svg
-            className="block h-5 w-5 mb-4 text-gray-900 dark:text-gray-100"
+            className="block h-5 w-5 text-gray-900 dark:text-gray-100"
             width="32"
             height="32"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512">
             <path
-              fill="#4A5568"
+              fill="#fff"
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -38,13 +38,13 @@ const ContactCard = ({ description, icon, path, title }) => {
         )}
         {type === 'github' && (
           <svg
-            className="block h-5 w-5 mb-4 text-gray-900 dark:text-gray-100"
+            className="block h-5 w-5 text-gray-900 dark:text-gray-100"
             width="32"
             height="32"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 496 512">
             <path
-              fill="#4A5568"
+              fill="#fff"
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -57,18 +57,12 @@ const ContactCard = ({ description, icon, path, title }) => {
   }
 
   return (
-    <div className="w-full group border border-gray-400 dark:border-gray-600 rounded-lg p-6">
+    <button className="w-8 h-8 opacity-75 bg-slate-300 rounded-lg dark:bg-slate-700 flex items-center justify-center hover:ring-2 ring-slate-400 transition-all cursor-pointer">
       <a target="_blank" rel="nofollow noopener noreferrer" href={path}>
         <Icon type={icon} />
-        <h4 className="text-lg md:text-lg font-medium mb-2 sm:mb-5 w-full text-gray-800 dark:text-gray-100 tracking-tight">
-          {title}
-        </h4>
-        <div className="text-gray-600 dark:text-gray-400 text-base">
-          {description}
-        </div>
       </a>
-    </div>
+    </button>
   );
 };
 
-export default ContactCard;
+export default IconButton;
