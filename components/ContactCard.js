@@ -57,17 +57,19 @@ const ContactCard = ({ description, icon, path, title }) => {
   }
 
   return (
-    <div className="w-full group border border-gray-400 dark:border-gray-600 rounded-lg p-6">
-      <a target="_blank" rel="nofollow noopener noreferrer" href={path}>
-        <Icon type={icon} />
-        <h4 className="text-lg md:text-lg font-medium mb-2 sm:mb-5 w-full text-gray-800 dark:text-gray-100">
-          {title}
-        </h4>
-        <div className="text-gray-600 dark:text-gray-400 text-base">
-          {description}
-        </div>
-      </a>
-    </div>
+    <a
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+      href={path}
+      className="w-full group border border-gray-400 dark:border-gray-600 rounded-lg p-6">
+      <Icon type={icon} />
+      <h4 className="text-lg md:text-lg font-medium mb-2 sm:mb-5 w-full text-gray-800 dark:text-gray-100">
+        {title}
+      </h4>
+      <div className="text-gray-600 dark:text-gray-400 text-base">
+        {description}
+      </div>
+    </a>
   );
 };
 

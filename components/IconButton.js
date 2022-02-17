@@ -58,11 +58,13 @@ const IconButton = ({ icon, path, theme }) => {
   }
 
   return (
-    <button className="w-8 h-8 opacity-75 bg-slate-300 rounded-lg dark:bg-slate-700 flex items-center justify-center hover:ring-2 ring-slate-400 transition-all cursor-pointer">
-      <a target="_blank" rel="nofollow noopener noreferrer" href={path}>
-        <Icon type={icon} />
-      </a>
-    </button>
+    <a
+      target="_blank"
+      rel="nofollow noopener noreferrer"
+      href={path}
+      className="w-8 h-8 opacity-75 bg-slate-300 rounded-lg dark:bg-slate-700 flex items-center justify-center hover:ring-2 ring-slate-400 transition-all cursor-pointer">
+      <Icon type={icon} />
+    </a>
   );
 };
 
