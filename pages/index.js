@@ -77,7 +77,7 @@ export default function Home({ posts }) {
         <LinkWithIcon text="Más artículos" href="/blog" />
         <span className="h-16" />
         <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-gray-900 dark:text-white">
-          Proyectos
+          Projects
         </h3>
         <p className="text-gray-600 dark:text-gray-400 mb-6">
           Proyectos trainee y challenges que hice al principio. Los últimos
