@@ -7,11 +7,11 @@ module.exports = {
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     fontFamily: {
-      sans: ['Inter', 'ui-sans-serif', 'system-ui'],
-      serif: ['Inter', 'ui-serif'],
-      mono: ['Inter', 'ui-monospace'],
-      display: ['Inter'],
-      body: ['Inter'],
+      sans: ['Rubik', 'ui-sans-serif', 'system-ui'],
+      serif: ['Rubik', 'ui-serif'],
+      mono: ['Rubik', 'ui-monospace'],
+      display: ['Rubik'],
+      body: ['Rubik'],
     },
   },
   variants: {
