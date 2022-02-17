@@ -20,7 +20,7 @@ export default function Blog({ posts }) {
   return (
     <Container title="Blog | Imanol Ortega">
       <div className="flex flex-col justify-center items-start max-w-screen-md mx-auto mb-16 mt-4">
-        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-6 text-gray-900 dark:text-white">
+        <h1 className="font-bold text-3xl md:text-5xl mb-6 text-gray-900 dark:text-white">
           Blog
         </h1>
         <div className="mb-8 prose leading-8 text-gray-600 dark:text-gray-400">

@@ -13,6 +13,9 @@ module.exports = {
       display: ['Rubik'],
       body: ['Rubik'],
     },
+    letterSpacing: {
+      normal: '0.015em',
+    }
   },
   variants: {
     extend: {},

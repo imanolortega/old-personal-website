@@ -12,7 +12,6 @@ import ProjectCard from "../components/ProjectCard"
 import { formatDate } from '../lib/datetime';
 
 export default function Home({ posts }) {
-  console.log(posts)
   const [allProjects, setAllProjects] = useState([]);
 
   useEffect(() => {
@@ -41,7 +40,7 @@ export default function Home({ posts }) {
         <div className="flex flex-col-reverse sm:flex-row items-start">
           <div className="flex flex-col pr-8">
             <h1
-              className="font-bold text-3xl md:text-5xl md:leading-normal tracking-tight mb-3
+              className="font-bold text-3xl md:text-5xl md:leading-normal mb-3
             bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500 animate-fade">
               Imanol Ortega
             </h1>
@@ -59,7 +58,7 @@ export default function Home({ posts }) {
           </div>
           <div className="w-[80px] sm:w-[176px] relative mb-2 sm:mb-0 mr-auto"></div>
         </div>
-        <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-gray-900 dark:text-white">
+        <h3 className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
           Blog
         </h3>
         <p className="text-gray-600 dark:text-gray-400 mb-6">
@@ -76,7 +75,7 @@ export default function Home({ posts }) {
         ))}
         <LinkWithIcon text="Más artículos" href="/blog" />
         <span className="h-16" />
-        <h3 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-gray-900 dark:text-white">
+        <h3 className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
           Projects
         </h3>
         <p className="text-gray-600 dark:text-gray-400 mb-6">

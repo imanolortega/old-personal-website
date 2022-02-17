@@ -7,7 +7,7 @@ export default function About() {
   return (
     <Container title="About | Imanol Ortega">
       <div className="flex flex-col justify-center items-start max-w-screen-md mx-auto mb-16 mt-4">
-        <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-6 text-gray-900 dark:text-white">
+        <h1 className="font-bold text-3xl md:text-5xl mb-6 text-gray-900 dark:text-white">
           About Me
         </h1>
         <div className="mb-8 prose leading-8 text-gray-600 dark:text-gray-400">
@@ -57,7 +57,7 @@ export default function About() {
             </ul>
           </div>
         </div>
-        <h2 className="font-bold text-2xl md:text-4xl tracking-tight mb-6 text-gray-900 dark:text-white">
+        <h2 className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
           Contacto
         </h2>
         <div className="mb-8 prose leading-8 text-gray-600 dark:text-gray-400 w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:flex-row">
