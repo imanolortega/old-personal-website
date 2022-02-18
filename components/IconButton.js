@@ -1,7 +1,7 @@
 import React from 'react';
 
 const IconButton = ({ icon, path, theme }) => {
-  function Icon({ type }) {
+  function Icon({ type, theme }) {
     return (
       <>
         {type === 'email' && (
@@ -64,7 +64,7 @@ const IconButton = ({ icon, path, theme }) => {
       type="button"
       href={path}
       className="w-8 h-8 opacity-75 rounded-lg flex items-center justify-center hover:ring-2 ring-slate-300 dark:ring-slate-600 transition-all cursor-pointer">
-      <Icon type={icon} />
+      <Icon type={icon} theme={theme} />
     </a>
   );
 };

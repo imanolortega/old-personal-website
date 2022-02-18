@@ -18,10 +18,10 @@ function MenuItem({ href, delay, text }) {
 
 export default function MobileMenu() {
   const menuLinks = [
-    { href: "/", text: "Home", transitionDelay: "150" },
-    { href: "/about", text: "About", transitionDelay: "200" },
-    { href: "/blog", text: "Blog", transitionDelay: "250" },
-    { href: "/projects", text: "Projects", transitionDelay: "300" },
+    { id: "0", href: "/", text: "Home", transitionDelay: "150" },
+    { id: "1", href: "/about", text: "About", transitionDelay: "200" },
+    { id: "2", href: "/blog", text: "Blog", transitionDelay: "250" },
+    { id: "3", href: "/projects", text: "Projects", transitionDelay: "300" },
   ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -52,7 +52,7 @@ export default function MobileMenu() {
   return (
     <>
       <button
-        className={cn(styles.burger, "visible md:hidden")}
+        className={cn(styles.burger, 'visible md:hidden')}
         aria-label="Toggle menu"
         type="button"
         onClick={toggleMenu}>
@@ -63,11 +63,16 @@ export default function MobileMenu() {
         <ul
           className={cn(
             styles.menu,
-            "flex flex-col absolute bg-slate-100 dark:bg-slate-900",
+            'flex flex-col absolute bg-slate-100 dark:bg-slate-900',
             isMenuRendered && styles.menuRendered
           )}>
           {menuLinks.map((l) => (
-            <MenuItem href={l.href} text={l.text} delay={l.transitionDelay} />
+            <MenuItem
+              href={l.href}
+              text={l.text}
+              delay={l.transitionDelay}
+              key={l.id}
+            />
           ))}
         </ul>
       )}

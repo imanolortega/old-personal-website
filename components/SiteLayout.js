@@ -76,7 +76,7 @@ export default function SiteLayout(props) {
   };
 
   return (
-    <div className="bg-slate-100 dark:bg-slate-900 h-screen">
+    <div className="bg-slate-100 dark:bg-slate-900 h-screen w-screen">
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
@@ -110,7 +110,7 @@ export default function SiteLayout(props) {
         )}
       </Head>
 
-      <body class="w-screen">
+
         <div className="flex flex-col justify-center px-8">
           <nav className="flex items-center justify-between w-full relative max-w-screen-md border-gray-300 dark:border-gray-700 mx-auto pt-8 pb-4 sm:pb-4 text-gray-900 bg-slate-100 dark:bg-slate-900 bg-opacity-60 dark:text-gray-100">
             <div className="ml-[-0.60rem]">
@@ -150,7 +150,6 @@ export default function SiteLayout(props) {
           {children}
           <Footer />
         </main>
-      </body>
     </div>
   );
 }

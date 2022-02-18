@@ -226,7 +226,6 @@ async function getFeedData(apolloClient, process, verbose = false) {
 
 /**
  * getFeedData
- */
 
 async function getSitemapData(apolloClient, process, verbose = false) {
   const posts = await getAllPosts(apolloClient, process, verbose);
@@ -237,6 +236,8 @@ async function getSitemapData(apolloClient, process, verbose = false) {
     ...pages,
   };
 }
+ */
+
 
 /**
  * generateFeed
@@ -299,7 +300,7 @@ function generateIndexSearch({ posts }) {
 
 /**
  * getSitemapData
- */
+
 
 function generateSitemap({ posts = [], pages = [] }) {
   const { homepage = '' } = config;
@@ -339,10 +340,11 @@ function generateSitemap({ posts = [], pages = [] }) {
 
   return sitemapFormatted;
 }
+ */
 
 /**
  * generateRobotsTxt
- */
+
 
 async function generateRobotsTxt({ outputDirectory, outputName }) {
   const { homepage = '' } = config;
@@ -371,6 +373,8 @@ async function generateRobotsTxt({ outputDirectory, outputName }) {
     throw new Error(`[Robots.txt] Failed to create robots.txt: ${e.message}`);
   }
 }
+
+ */
 
 /**
  * resolvePathname
@@ -430,9 +434,9 @@ module.exports = {
   generateFeed,
   generateIndexSearch,
   getPages,
-  getSitemapData,
-  generateSitemap,
-  generateRobotsTxt,
+  //getSitemapData,
+  //generateSitemap,
+  //generateRobotsTxt,
   removeLastTrailingSlash,
   resolvePublicPathname,
   terminalColor,
