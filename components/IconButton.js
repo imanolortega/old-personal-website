@@ -1,7 +1,6 @@
 import React from 'react';
 
 const IconButton = ({ icon, path, theme }) => {
-  console.log(theme);
   function Icon({ type }) {
     return (
       <>
