@@ -79,7 +79,7 @@ export default function Projects() {
         </div>
         {!filteredProjects.length && (
           <p className="w-full mb-4 text-gray-600 dark:text-gray-400">
-            No hay proyectos con ese nombre
+            No hay proyectos con esa tech
           </p>
         )}
       </div>
