@@ -57,13 +57,13 @@ const IconButton = ({ icon, path, theme }) => {
   }
 
   return (
-    <a
+    <button
       target="_blank"
       rel="nofollow noopener noreferrer"
       href={path}
       className="w-8 h-8 opacity-75 rounded-lg flex items-center justify-center hover:ring-2 ring-slate-300 dark:ring-slate-600 transition-all cursor-pointer">
       <Icon type={icon} />
-    </a>
+    </button>
   );
 };
 
