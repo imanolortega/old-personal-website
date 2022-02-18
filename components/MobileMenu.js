@@ -4,11 +4,11 @@ import useDelayedRender from "use-delayed-render";
 import { useEffect, useState } from "react";
 import styles from "../styles/mobile-menu.module.css";
 
-function MenuItem({ href, text }) {
+function MenuItem({ href, delay, text }) {
   return (
     <li
       className="border-b border-gray-300 dark:border-gray-700 text-slate-600 dark:text-slate-100 text-lg font-semibold"
-      style={{ transitionDelay: "150ms" }}>
+      style={{ transitionDelay: `${delay}ms` }}>
       <Link href={href}>
         <a className="flex w-auto pb-4">{text}</a>
       </Link>
@@ -18,10 +18,10 @@ function MenuItem({ href, text }) {
 
 export default function MobileMenu() {
   const menuLinks = [
-    { href: "/", text: "Home" },
-    { href: "/about", text: "About" },
-    { href: "/blog", text: "Blog" },
-    { href: "/projects", text: "Projects" },
+    { href: "/", text: "Home", transitionDelay: "150" },
+    { href: "/about", text: "About", transitionDelay: "200" },
+    { href: "/blog", text: "Blog", transitionDelay: "250" },
+    { href: "/projects", text: "Projects", transitionDelay: "300" },
   ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -67,7 +67,7 @@ export default function MobileMenu() {
             isMenuRendered && styles.menuRendered
           )}>
           {menuLinks.map((l) => (
-            <MenuItem href={l.href} text={l.text} />
+            <MenuItem href={l.href} text={l.text} delay={l.transitionDelay} />
           ))}
         </ul>
       )}
