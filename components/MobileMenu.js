@@ -7,7 +7,7 @@ import styles from "../styles/mobile-menu.module.css";
 function MenuItem({ href, text }) {
   return (
     <li
-      className="border-b border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100 text-sm font-semibold"
+      className="border-b border-gray-300 dark:border-gray-700 text-slate-600 dark:text-slate-100 text-lg font-semibold"
       style={{ transitionDelay: "150ms" }}>
       <Link href={href}>
         <a className="flex w-auto pb-4">{text}</a>
@@ -35,8 +35,10 @@ export default function MobileMenu() {
   function toggleMenu() {
     if (isMenuOpen) {
       setIsMenuOpen(false);
+      document.body.style.overflow = '';
     } else {
       setIsMenuOpen(true);
+      document.body.style.overflow = 'hidden';
     }
   }
 
@@ -54,7 +56,7 @@ export default function MobileMenu() {
         <ul
           className={cn(
             styles.menu,
-            "flex flex-col absolute bg-gray-100 dark:bg-slate-900",
+            "flex flex-col absolute bg-slate-100 dark:bg-slate-900",
             isMenuRendered && styles.menuRendered
           )}>
           {menuLinks.map((l) => (
