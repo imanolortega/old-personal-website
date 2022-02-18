@@ -70,7 +70,7 @@ export default function SiteLayout(props) {
   const meta = {
     title: "Imanol Ortega | Desarrollador Frontend",
     description: `Front-end developer, JavaScript & React enthusiast.`,
-    image: "https://dailyweb.com.ar/data/img_cont/img_imagenes/img_gr/41431.jpg",
+    image: "/images/imanol.jpg",
     type: "website",
     ...customMeta,
   };
