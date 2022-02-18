@@ -1,7 +1,7 @@
 import cn from "classnames";
 import Link from "next/link";
 import useDelayedRender from "use-delayed-render";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "../styles/mobile-menu.module.css";
 
 function MenuItem({ href, text }) {
@@ -24,6 +24,7 @@ export default function MobileMenu() {
     { href: "/projects", text: "Projects" },
   ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const { mounted: isMenuMounted, rendered: isMenuRendered } = useDelayedRender(
     isMenuOpen,
     {
@@ -41,6 +42,12 @@ export default function MobileMenu() {
       document.body.style.overflow = 'hidden';
     }
   }
+
+  useEffect(() => {
+    return function cleanup() {
+      document.body.style.overflow = '';
+    };
+  }, []);
 
   return (
     <>
