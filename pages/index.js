@@ -14,7 +14,6 @@ import { formatDate } from '../lib/datetime';
 
 export default function Home({ posts }) {
   const [allProjects, setAllProjects] = useState([]);
-
   useEffect(() => {
     setAllProjects(shuffle(projects).slice(5));
 
