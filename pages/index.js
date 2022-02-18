@@ -54,7 +54,7 @@ export default function Home({ posts }) {
                   easytechgreen
                 </span>
               </ExternalLink>
-              . Obsesionado con la web.
+              . Trabajador de la web y cebador de mates profesional.
             </h2>
           </div>
           <div className="w-[80px] sm:w-[176px] flex justify-end mb-8 sm:mb-0 md:flex hidden">
