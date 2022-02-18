@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Image from 'next/image';
 
 import { projects } from "../constants/projects";
 import { getPaginatedPosts } from '../lib/posts';
@@ -37,7 +38,7 @@ export default function Home({ posts }) {
       <div
         className="flex flex-col justify-center items-start max-w-screen-md border-gray-200
         dark:border-gray-700 mx-auto pb-16">
-        <div className="flex flex-col-reverse sm:flex-row items-start">
+        <div className="flex w-full justify-between flex-col-reverse sm:flex-row items-start">
           <div className="flex flex-col pr-8">
             <h1
               className="font-bold text-3xl md:text-5xl md:leading-normal mb-3
@@ -53,10 +54,18 @@ export default function Home({ posts }) {
                   easytechgreen
                 </span>
               </ExternalLink>
-              .
+              . Obsesionado con la web.
             </h2>
           </div>
-          <div className="w-[80px] sm:w-[176px] relative mb-2 sm:mb-0 mr-auto"></div>
+          <div className="w-[80px] sm:w-[176px] flex justify-end mb-8 sm:mb-0 md:flex hidden">
+            <Image
+              alt="Imanol Ortega"
+              height={120}
+              width={120}
+              src="/images/imanol.jpg"
+              className="rounded-full filter grayscale"
+            />
+          </div>
         </div>
         <h3 className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
           Blog
