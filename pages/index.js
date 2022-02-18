@@ -5,7 +5,7 @@ import { getPaginatedPosts } from '../lib/posts';
 import { getRandomElement, shuffle } from "../lib/util";
 
 import BlogPostCard from "../components/BlogPostCard";
-import Container from "../components/Container";
+import SiteLayout from "../components/SiteLayout";
 import ExternalLink from "../components/ExternalLink";
 import LinkWithIcon from '../components/LinkWithIcon';
 import ProjectCard from "../components/ProjectCard"
@@ -33,7 +33,7 @@ export default function Home({ posts }) {
   ];
 
   return (
-    <Container>
+    <SiteLayout>
       <div
         className="flex flex-col justify-center items-start max-w-screen-md border-gray-200
         dark:border-gray-700 mx-auto pb-16">
@@ -95,7 +95,7 @@ export default function Home({ posts }) {
         </div>
         <LinkWithIcon text="Más proyectos" href="/projects" />
       </div>
-    </Container>
+    </SiteLayout>
   );
 }
 

@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { parseISO, format } from "date-fns";
 
-import Container from "./Container";
+import SiteLayout from "./SiteLayout";
 import { formatDate } from '../lib/datetime';
 
 export default function BlogLayout({ children, post }) {
   return (
-    <Container
+    <SiteLayout
       title={`${post.title} | Imanol Ortega`}
       description={post.summary}
       image={`https://imanol.work${post.image}`}
@@ -42,6 +42,6 @@ export default function BlogLayout({ children, post }) {
           Última actualización del artículo el {formatDate(post.modified)}
         </div>
       </article>
-    </Container>
+    </SiteLayout>
   );
 }

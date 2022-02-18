@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import Container from "../components/Container";
+import SiteLayout from "../components/SiteLayout";
 import BlogPost from "../components/BlogPost";
 
 import { formatDate } from '../lib/datetime';
@@ -18,7 +18,7 @@ export default function Blog({ posts }) {
   );
 
   return (
-    <Container title="Blog | Imanol Ortega">
+    <SiteLayout title="Blog | Imanol Ortega">
       <div className="flex flex-col justify-center items-start max-w-screen-md mx-auto mb-16 mt-4">
         <h1 className="font-bold text-3xl md:text-5xl mb-6 text-gray-900 dark:text-white">
           Blog
@@ -76,7 +76,7 @@ export default function Blog({ posts }) {
           </p>
         )}
       </div>
-    </Container>
+    </SiteLayout>
   );
 }
 

@@ -1,11 +1,11 @@
-import Container from "../components/Container";
+import SiteLayout from "../components/SiteLayout";
 import ExternalLink from "../components/ExternalLink";
 import {techFront, techBack, oldTech} from '../constants/technologies';
 import ContactCard from '../components/ContactCard';
 
 export default function About() {
   return (
-    <Container title="About | Imanol Ortega">
+    <SiteLayout title="About | Imanol Ortega">
       <div className="flex flex-col justify-center items-start max-w-screen-md mx-auto mb-16 mt-4">
         <h1 className="font-bold text-3xl md:text-5xl mb-6 text-gray-900 dark:text-white">
           About Me
@@ -81,6 +81,6 @@ export default function About() {
           />
         </div>
       </div>
-    </Container>
+    </SiteLayout>
   );
 }

@@ -58,7 +58,7 @@ function DarkModeButton({ isMounted, isResolvedTheme, onHandleClick }) {
   );
 }
 
-export default function Container(props) {
+export default function SiteLayout(props) {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
 
@@ -81,7 +81,10 @@ export default function Container(props) {
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
-        <meta property="og:url" content={`https://imanol.work${router.asPath}`} />
+        <meta
+          property="og:url"
+          content={`https://imanol.work${router.asPath}`}
+        />
         <link rel="canonical" href={`https://imanol.work${router.asPath}`} />
         <link
           rel="icon"
@@ -89,7 +92,9 @@ export default function Container(props) {
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet"></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+          rel="stylesheet"></link>
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="Imanol Ortega" />
         <meta property="og:description" content={meta.description} />
@@ -115,11 +120,19 @@ export default function Container(props) {
             <NavItem href="/projects" text="Projects" />
           </div>
           <div className="flex space-x-2">
-            <IconButton theme={resolvedTheme} path="https://github.com/imanolrtega" icon="github" />
-            <IconButton theme={resolvedTheme} path="https://www.linkedin.com/in/imanol-rtega/" icon="linkedin" />
+            <IconButton
+              theme={resolvedTheme}
+              path="https://github.com/imanolrtega"
+              icon="github"
+            />
+            <IconButton
+              theme={resolvedTheme}
+              path="https://www.linkedin.com/in/imanol-rtega/"
+              icon="linkedin"
+            />
             <DarkModeButton
               onHandleClick={() =>
-                setTheme(resolvedTheme === "dark" ? "light" : "dark")
+                setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
               }
               isMounted={mounted}
               isResolvedTheme={resolvedTheme}

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Container from "../components/Container";
+import SiteLayout from "../components/SiteLayout";
 import ExternalLink from "../components/ExternalLink";
 import ProjectCard from "../components/ProjectCard";
 import { projects } from "../constants/projects";
@@ -23,7 +23,7 @@ export default function Projects() {
   ];
 
   return (
-    <Container title="Projects | Imanol Ortega">
+    <SiteLayout title="Projects | Imanol Ortega">
       <div className="flex flex-col justify-center items-start max-w-screen-md mx-auto mb-16 mt-4">
         <h1 className="font-bold text-3xl md:text-5xl mb-6 text-gray-900 dark:text-white">
           Projects
@@ -83,6 +83,6 @@ export default function Projects() {
           </p>
         )}
       </div>
-    </Container>
+    </SiteLayout>
   );
 }
