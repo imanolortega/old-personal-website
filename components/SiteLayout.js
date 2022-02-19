@@ -68,7 +68,7 @@ export default function SiteLayout(props) {
   const { children, ...customMeta } = props;
   const router = useRouter();
   const meta = {
-    title: "Imanol Ortega | Desarrollador Frontend",
+    title: "Imanol Ortega | Front-end Developer",
     description: `Front-end developer, JavaScript & React enthusiast.`,
     image: "https://www.imanol.work/images/imanol-ortega-personal-site.jpg",
     type: "website",
