@@ -8,8 +8,8 @@ export const techFront = [
   { key: 6, tech: "HTML" },
   { key: 7, tech: "Tailwind CSS" },
   { key: 8, tech: "Bootstrap" },
-  { key: 6, tech: "Styled Components" },
-  { key: 6, tech: "Material UI" },
+  { key: 9, tech: "Styled Components" },
+  { key: 10, tech: "Material UI" },
 ];
 
 export const techBack = [

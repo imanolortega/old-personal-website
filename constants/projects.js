@@ -83,4 +83,14 @@ export const projects = [
     visit: "https://blogcito.netlify.app/",
     id: 7,
   },
+  {
+    title: "Old Personal Site",
+    description:
+      "Mi primer sitio personal. Un portfolio enfocado en mi primera búsqueda laboral con los proyectos que había hecho hasta ese momento.",
+    image: "",
+    tags: ["Next JS", "Styled Components", "React JS"],
+    source: "https://github.com/imanolrtega/portfolio",
+    visit: "https://imanolortega.vercel.app/",
+    id: 8,
+  },
 ];

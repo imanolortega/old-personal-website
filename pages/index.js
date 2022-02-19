@@ -15,10 +15,10 @@ import { formatDate } from '../lib/datetime';
 export default function Home({ posts }) {
   const [allProjects, setAllProjects] = useState([]);
   useEffect(() => {
-    setAllProjects(shuffle(projects).slice(5));
+    setAllProjects(shuffle(projects).slice(6));
 
     const interval = setInterval(() => {
-      setAllProjects(shuffle(projects).slice(5));
+      setAllProjects(shuffle(projects).slice(6));
     }, 30000);
     return () => clearInterval(interval);
   }, []);
