@@ -42,10 +42,10 @@ export default function Footer() {
         <ExternalLink
           href="https://github.com/imanolrtega/new-personal-website"
           children={'Codeado'}
-        />
-        , con <ExternalLink href="https://nextjs.org/" children={'Next JS'} />,{' '}
+        />{' '}
+        con <ExternalLink href="https://nextjs.org/" children={'Next JS'} />,{' '}
         <ExternalLink href="https://tailwindcss.com/" children={'Tailwind'} />,{' '}
-        <ExternalLink href="https://graphql.org/" children={'GraphQl'} /> y
+        <ExternalLink href="https://graphql.org/" children={'GraphQL'} /> y
         hosteado en{' '}
         <ExternalLink href="https://vercel.com/" children={'Vercel'} />.
       </p>
