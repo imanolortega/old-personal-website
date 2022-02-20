@@ -75,10 +75,11 @@ export default function Home({ posts }) {
         </p>
         {posts?.map((p) => (
           <BlogPostCard
-            title={p.title}
-            link={`blog/${p.slug}`}
             date={formatDate(p.date)}
             key={p.title}
+            link={`blog/${p.slug}`}
+            modified={p.modified}
+            title={p.title}
           />
         ))}
         <LinkWithIcon text="Más artículos" href="/blog" />

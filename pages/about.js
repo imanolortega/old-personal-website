@@ -21,8 +21,14 @@ export default function About() {
                 easytechgreen
               </span>
             </ExternalLink>
-            . Trabajo con Javascript, React y Next JS. Antes fui diseñador
+            . Trabajo con Javascript y React. Antes fui diseñador
             gráfico y Comunicador Social.
+            <br />
+            Actualmente trabajo con NextJS en el
+            Front y generalmente con algún CMS (headless o no) en el Back. Sigo
+            estudiando en el día a día, enfocado en mantener buenas prácticas y
+            convertirme en Fullstack. Mi foco hoy está en la experiencia de
+            usuario: webs rápidas, intuitivas y accesibles.
           </p>
         </div>
         <div className="block md:flex w-full justify-between mb-8 prose leading-8 text-gray-600 dark:text-gray-400">
