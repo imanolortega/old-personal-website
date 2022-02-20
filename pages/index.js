@@ -56,14 +56,18 @@ export default function Home({ posts }) {
               . Trabajador de la web y cebador de mates profesional.
             </p>
           </div>
-          <div className="w-[80px] sm:w-[176px] flex justify-end mb-8 sm:mb-0 md:flex hidden">
-            <Image
-              alt="Imanol Ortega"
-              height={120}
-              width={120}
-              src="/images/imanol.jpg"
-              className="rounded-full filter grayscale"
-            />
+          <div className="w-[80px] sm:w-[176px] justify-end mb-8 sm:mb-0 md:flex hidden">
+            <div className="flex rounded-full bg-gradient-to-tl from-green-400/60 to-blue-500/60 shadow-lg p-1">
+              <div className="flex rounded-full bg-slate-50/60 dark:bg-black/60 p-[2px]">
+                <Image
+                  alt="Imanol Ortega"
+                  height={110}
+                  width={110}
+                  src="/images/imanol.jpg"
+                  className="rounded-full filter grayscale"
+                />
+              </div>
+            </div>
           </div>
         </div>
         <h2 className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
