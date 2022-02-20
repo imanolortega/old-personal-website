@@ -9,22 +9,22 @@ export default function Footer() {
       <div className="w-full max-w-screen-md grid grid-cols-1 gap-4 pb-16 sm:grid-cols-3">
         <div className="flex flex-col space-y-4">
           <Link href="/">
-            <a className="text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-200 transition">
+            <a className="text-slate-600 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200 transition">
               Home
             </a>
           </Link>
           <Link href="/about">
-            <a className="text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-200 transition">
+            <a className="text-slate-600 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200 transition">
               About
             </a>
           </Link>
           <Link href="/blog">
-            <a className="text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-200 transition">
+            <a className="text-slate-600 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200 transition">
               Blog
             </a>
           </Link>
           <Link href="/projects">
-            <a className="text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-200 transition">
+            <a className="text-slate-600 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200 transition">
               Projects
             </a>
           </Link>
@@ -38,7 +38,7 @@ export default function Footer() {
           </ExternalLink>
         </div>
       </div>
-      <p className="text-slate-500 dark:text-slate-400 mb-2">
+      <p className="text-slate-600 dark:text-slate-400 mb-2">
         <ExternalLink
           href="https://github.com/imanolrtega/new-personal-website"
           children={'Codeado'}
