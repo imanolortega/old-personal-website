@@ -6,17 +6,17 @@ export default function ProjectCard({ link, tags, title, gradient }) {
       <div className="transform transition-all rounded-xl w-full p-1 mb-2">
         <a href={`${link}`}>
           <div className="w-full bg-slate-100 dark:bg-slate-900 rounded-lg p-4">
-            <h4 className="text-lg md:text-lg font-medium mb-2 sm:mb-5 w-full text-gray-900 dark:text-gray-100">
+            <h3 className="text-lg md:text-lg font-medium mb-2 sm:mb-5 w-full text-gray-900 dark:text-gray-100">
               {title}
-            </h4>
+            </h3>
             <div className="text-gray-800 dark:text-gray-200 capsize">
               {tags &&
                 tags.map((t) => (
-                  <div
+                  <p
                     key={t}
                     className="text-xs text-gray-800 dark:text-white mb-1">
                     {t}
-                  </div>
+                  </p>
                 ))}
             </div>
           </div>

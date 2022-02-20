@@ -44,7 +44,7 @@ export default function Home({ posts }) {
             bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500 animate-fade">
               Imanol Ortega
             </h1>
-            <h2 className="text-gray-600 dark:text-gray-400 mb-16">
+            <p className="text-gray-600 dark:text-gray-400 mb-16">
               Desarrollador Frontend JR en{" "}
               <ExternalLink href="https://easytechgreen.com/">
                 <span
@@ -54,7 +54,7 @@ export default function Home({ posts }) {
                 </span>
               </ExternalLink>
               . Trabajador de la web y cebador de mates profesional.
-            </h2>
+            </p>
           </div>
           <div className="w-[80px] sm:w-[176px] flex justify-end mb-8 sm:mb-0 md:flex hidden">
             <Image
@@ -66,9 +66,9 @@ export default function Home({ posts }) {
             />
           </div>
         </div>
-        <h3 className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
+        <h2 className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
           Blog
-        </h3>
+        </h2>
         <p className="text-gray-600 dark:text-gray-400 mb-6">
           Trato de escribir algunas de las cosas que voy descubriendo y le
           pueden servir a alguien más.
@@ -83,9 +83,9 @@ export default function Home({ posts }) {
         ))}
         <LinkWithIcon text="Más artículos" href="/blog" />
         <span className="h-16" />
-        <h3 className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
+        <h2 className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
           Projects
-        </h3>
+        </h2>
         <p className="text-gray-600 dark:text-gray-400 mb-6">
           Proyectos trainee y challenges que hice al principio. Los últimos
           proyectos voy a agregarlos más adelante.
