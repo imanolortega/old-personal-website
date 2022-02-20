@@ -54,7 +54,7 @@ export default function About() {
           </div>
           <div className="w-full md:w-1/3 mb-8 md:mb-0">
             <h3 className="text-xl text-gray-900 dark:text-white mb-3">
-              Random 🥸
+              Random
             </h3>
             <ul>
               {oldTech.map((t) => (
