@@ -1,6 +1,10 @@
 import React from 'react';
+import { useContext } from 'react';
+import Site from '../contexts/siteLayout';
 
 const ContactCard = ({ description, icon, path, title }) => {
+  const { theme } = useContext(Site);
+
   function Icon({ type }) {
     return (
       <>
@@ -13,7 +17,7 @@ const ContactCard = ({ description, icon, path, title }) => {
             xmlns="http://www.w3.org/2000/svg">
             <path
               d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-              stroke="#4A5568"
+              stroke={theme === 'dark' ? '#94a3b8' : '#475569'}
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -28,7 +32,7 @@ const ContactCard = ({ description, icon, path, title }) => {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512">
             <path
-              fill="#4A5568"
+              fill={theme === 'dark' ? '#94a3b8' : '#475569'}
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -44,7 +48,7 @@ const ContactCard = ({ description, icon, path, title }) => {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 496 512">
             <path
-              fill="#4A5568"
+              fill={theme === 'dark' ? '#94a3b8' : '#475569'}
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"

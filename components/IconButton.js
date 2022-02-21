@@ -1,6 +1,10 @@
 import React from 'react';
+import { useContext } from 'react';
+import Site from '../contexts/siteLayout';
 
-const IconButton = ({ icon, isAProject, path, theme }) => {
+const IconButton = ({ icon, isAProject, path }) => {
+  const { theme } = useContext(Site);
+
   function Icon({ type, theme }) {
     return (
       <>
@@ -13,7 +17,7 @@ const IconButton = ({ icon, isAProject, path, theme }) => {
             xmlns="http://www.w3.org/2000/svg">
             <path
               d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-              stroke={theme === 'dark' ? '#fff' : '#111'}
+              stroke={theme === 'dark' ? '#fafafa' : '#111'}
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -28,7 +32,7 @@ const IconButton = ({ icon, isAProject, path, theme }) => {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512">
             <path
-              fill={theme === 'dark' ? '#fff' : '#475569'}
+              fill={theme === 'dark' ? '#fafafa' : '#475569'}
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -44,7 +48,7 @@ const IconButton = ({ icon, isAProject, path, theme }) => {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 496 512">
             <path
-              fill={theme === 'dark' ? '#fff' : '#475569'}
+              fill={theme === 'dark' ? '#fafafa' : '#475569'}
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -61,7 +65,7 @@ const IconButton = ({ icon, isAProject, path, theme }) => {
             xmlns="http://www.w3.org/2000/svg">
             <path
               d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-              stroke="#4A5568"
+              stroke={theme === 'dark' ? '#fafafa' : '#475569'}
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -79,7 +83,7 @@ const IconButton = ({ icon, isAProject, path, theme }) => {
       aria-label={`${icon} ${isAProject ? 'project' : 'link contact'}`}
       type="button"
       href={path}
-      className={`w-8 h-8 opacity-75 rounded-lg flex items-center justify-center ${
+      className={`w-8 h-8 opacity-75 hover:opacity-100 rounded-lg flex items-center justify-center ${
         !isAProject ? 'hover:ring-2' : null
       } ring-slate-300 dark:ring-slate-600 transition-all cursor-pointer`}>
       <Icon type={icon} theme={theme} />
