@@ -21,7 +21,7 @@ export default function About() {
                 easytechgreen
               </span>
             </ExternalLink>
-            y entusiasta de Javascript y React. Antes fui diseñador
+            {' '}y entusiasta de Javascript y React. Antes fui diseñador
             gráfico y Comunicador Social.
             <br />
             Actualmente trabajo con Next JS en el
