@@ -3,14 +3,15 @@ import { parseISO, format } from "date-fns";
 
 import SiteLayout from "./SiteLayout";
 import { formatDate } from '../lib/datetime';
+import { sanitizeSummary } from '../lib/posts';
 
 export default function BlogLayout({ children, post }) {
   return (
     <SiteLayout
       title={`${post.title} | Imanol Ortega`}
-      description={post.summary}
-      image={`https://imanol.work${post.image}`}
-      //date={new Date(post.publishedAt).toISOString()}
+      description={sanitizeSummary(post.excerpt)}
+      image={`${post.featuredImage.sourceUrl}`}
+      date={formatDate(post.date)}
       type="article">
       <article className="flex flex-col items-start justify-center w-full max-w-screen-md mx-auto mb-16">
         <h1 className="mb-6 text-3xl font-bold text-black md:text-5xl dark:text-white">
