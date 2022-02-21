@@ -13,7 +13,7 @@ export default function ProjectCard({
       <div
         className={`absolute inset-0.5 group-hover:inset-0 dark:inset-1 dark:group-hover:inset-0.5 bg-gradient-to-r ${gradient} opacity-50 group-hover:opacity-60 transition duration-900 rounded-xl blur mb-2`}></div>
       <div className="transform transition-all rounded-xl w-full p-1 mb-2">
-        <a href={`${link}`}>
+        <a href={`${link}`} target="_blank" rel="noopener noreferrer">
           <div className="w-full bg-slate-100 dark:bg-slate-900 rounded-lg p-4">
             <h3 className="text-lg md:text-lg font-medium mb-2 sm:mb-5 w-full text-gray-900 dark:text-gray-100">
               {title}
