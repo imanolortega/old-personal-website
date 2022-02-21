@@ -98,11 +98,13 @@ export default function Home({ posts }) {
         <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:flex-row mb-6">
           {allProjects.map((p) => (
             <ProjectCard
-              title={p.title}
-              tags={p.tags}
-              link={p.visit}
-              key={p.id}
+              externalLink={p.visit}
               gradient={getRandomElement(gradients)}
+              githubLink={p.source}
+              key={p.id}
+              link={p.visit}
+              tags={p.tags}
+              title={p.title}
             />
           ))}
         </div>

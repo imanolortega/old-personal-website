@@ -1,4 +1,13 @@
-export default function ProjectCard({ link, tags, title, gradient }) {
+import IconButton from './IconButton';
+
+export default function ProjectCard({
+  externalLink,
+  githubLink,
+  gradient,
+  link,
+  tags,
+  title,
+}) {
   return (
     <div className="relative w-full group">
       <div
@@ -18,6 +27,10 @@ export default function ProjectCard({ link, tags, title, gradient }) {
                     {t}
                   </p>
                 ))}
+            </div>
+            <div className="flex justify-end space-x-1">
+              <IconButton icon="github" isAProject path={githubLink} />
+              <IconButton icon="external-link" isAProject path={externalLink} />
             </div>
           </div>
         </a>

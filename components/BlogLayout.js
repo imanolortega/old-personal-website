@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { parseISO, format } from "date-fns";
 
 import SiteLayout from "./SiteLayout";
 import { formatDate } from '../lib/datetime';

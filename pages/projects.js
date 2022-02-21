@@ -74,6 +74,8 @@ export default function Projects() {
               link={p.visit}
               key={p.id}
               gradient={getRandomElement(gradients)}
+              githubLink={p.source}
+              externalLink={p.visit}
             />
           ))}
         </div>
