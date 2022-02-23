@@ -15,16 +15,18 @@ function NavItem({ href, text }) {
   const isActive = router.asPath === href;
 
   return (
-    <Link href={href}>
-      <a
-        className={`${
-          isActive
-            ? "font-semibold text-slate-600 dark:text-slate-200"
-            : "font-normal text-slate-600 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200"
-        } hidden md:inline-block p-1 sm:px-3 sm:py-2 transition-all`}>
-        <span className="capsize">{text}</span>
-      </a>
-    </Link>
+    <li>
+      <Link href={href}>
+        <a
+          className={`${
+            isActive
+              ? 'font-semibold text-slate-600 dark:text-slate-200'
+              : 'font-normal text-slate-600 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200'
+          } hidden md:inline-block p-1 sm:px-3 sm:py-2 transition-all`}>
+          <span className="capsize">{text}</span>
+        </a>
+      </Link>
+    </li>
   );
 }
 
@@ -118,15 +120,15 @@ export default function SiteLayout(props) {
           )}
         </Head>
 
-        <div className="flex flex-col justify-center px-8">
+        <header className="flex flex-col justify-center px-8">
           <nav className="flex items-center justify-between w-full relative max-w-screen-md border-gray-300 dark:border-gray-700 mx-auto pt-8 pb-4 sm:pb-4 text-gray-900 bg-slate-100 dark:bg-slate-900 bg-opacity-60 dark:text-gray-100">
-            <div className="ml-[-0.60rem]">
+            <ul className="inline-flex ml-[-0.60rem]">
               <MobileMenu />
               <NavItem href="/" text="Home" />
               <NavItem href="/about" text="About" />
               <NavItem href="/blog" text="Blog" />
               <NavItem href="/projects" text="Projects" />
-            </div>
+            </ul>
             <div className="flex space-x-2">
               <IconButton
                 path="https://github.com/imanolrtega"
@@ -148,7 +150,7 @@ export default function SiteLayout(props) {
           <div className="flex justify-center max-w-screen-md mx-auto w-full">
             <hr className="w-full border-1 border-slate-300 dark:border-gray-800 mb-8" />
           </div>
-        </div>
+        </header>
         <main
           id="skip"
           className="flex flex-col justify-center px-8 bg-slate-100 dark:bg-slate-900">

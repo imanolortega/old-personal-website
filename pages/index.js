@@ -9,7 +9,7 @@ import BlogPostCard from "../components/BlogPostCard";
 import SiteLayout from "../components/SiteLayout";
 import ExternalLink from "../components/ExternalLink";
 import LinkWithIcon from '../components/LinkWithIcon';
-import ProjectCard from "../components/ProjectCard"
+import ProjectCard from "../components/ProjectCard";
 import { formatDate } from '../lib/datetime';
 
 export default function Home({ posts }) {
