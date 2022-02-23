@@ -62,6 +62,7 @@ const ContactCard = ({ description, icon, path, title }) => {
 
   return (
     <a
+      aria-label={title}
       target="_blank"
       rel="nofollow noopener noreferrer"
       href={path}

@@ -82,9 +82,11 @@ export default function Blog({ posts }) {
           Recommended Blogs
         </h2>
         <p className="text-gray-600 dark:text-gray-400 mb-6">
-          En el día a día navego mucho, buscando info para resolver issues o para crear algún
-          feature de los proyectos en los que trabajo. Abajo les comparto algunos blogs que considero muy valiosos y que quizás puedan
-          servirles. Son de Front-end principalmente.
+          En el día a día navego mucho, buscando info para resolver bugs, para
+          crear algún feature de los proyectos en los que trabajo o simplemente
+          para aprender/entender algo. Debajo les comparto algunos blogs que
+          considero muy valiosos y que quizás puedan servirles. Son de Front-end
+          principalmente.
         </p>
         <div className="mb-8 prose leading-8 text-gray-600 dark:text-gray-400 w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:flex-row">
           {recommendedBlogs.map((blog) => (
