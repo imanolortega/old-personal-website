@@ -21,10 +21,10 @@ export default function About() {
                 easytechgreen
               </span>
             </ExternalLink>
-            . Trabajo con Javascript y React. Antes fui diseñador
+            {' '}y entusiasta de Javascript y React. Antes fui diseñador
             gráfico y Comunicador Social.
             <br />
-            Actualmente trabajo con NextJS en el
+            Actualmente trabajo con Next JS en el
             Front y generalmente con algún CMS (headless o no) en el Back. Sigo
             estudiando en el día a día, enfocado en mantener buenas prácticas y
             convertirme en Fullstack. Mi foco hoy está en la experiencia de
@@ -64,7 +64,7 @@ export default function About() {
           </div>
         </div>
         <h2 className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
-          Contacto
+          Contact
         </h2>
         <div className="mb-8 prose leading-8 text-gray-600 dark:text-gray-400 w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:flex-row">
           <ContactCard
