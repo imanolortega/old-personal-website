@@ -84,7 +84,7 @@ export default function SiteLayout(props) {
       value={{
         theme: resolvedTheme,
       }}>
-      <div className="bg-slate-100 dark:bg-slate-900 h-screen w-screen">
+      <div className="bg-slate-100 dark:bg-slate-900 h-screen w-screen overflow-x-hidden">
         <Head>
           <title>{meta.title}</title>
           <meta name="robots" content="follow, index" />

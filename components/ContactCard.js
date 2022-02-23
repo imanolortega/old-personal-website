@@ -66,7 +66,7 @@ const ContactCard = ({ description, icon, path, title }) => {
       rel="nofollow noopener noreferrer"
       href={path}
       className="w-full group border border-gray-400 dark:border-gray-600 rounded-lg p-6">
-      <Icon type={icon} />
+      {icon && <Icon type={icon} />}
       <h3 className="text-lg md:text-lg font-medium mb-2 sm:mb-5 w-full text-gray-800 dark:text-gray-100">
         {title}
       </h3>

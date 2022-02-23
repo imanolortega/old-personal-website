@@ -1,10 +1,12 @@
 import { useState } from 'react';
 
-import SiteLayout from "../components/SiteLayout";
 import BlogPost from "../components/BlogPost";
+import ContactCard from '../components/ContactCard';
+import SiteLayout from "../components/SiteLayout";
 
 import { formatDate } from '../lib/datetime';
 import { getPaginatedPosts, sanitizeExcerpt } from "../lib/posts";
+import { recommendedBlogs } from '../constants/recommendedBlogs';
 
 export default function Blog({ posts }) {
   const [searchValue, setSearchValue] = useState("");
@@ -75,6 +77,24 @@ export default function Blog({ posts }) {
             No hay artículos con esas palabras
           </p>
         )}
+        <span className="h-16" />
+        <h2 className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
+          Recommended Blogs
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-6">
+          En el día a día navego mucho, buscando info para resolver issues o para crear algún
+          feature de los proyectos en los que trabajo. Abajo les comparto algunos blogs que considero muy valiosos y que quizás puedan
+          servirles. Son de Front-end principalmente.
+        </p>
+        <div className="mb-8 prose leading-8 text-gray-600 dark:text-gray-400 w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:flex-row">
+          {recommendedBlogs.map((blog) => (
+            <ContactCard
+              path={blog.url}
+              title={blog.title}
+              description={blog.description}
+            />
+          ))}
+        </div>
       </div>
     </SiteLayout>
   );
