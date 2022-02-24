@@ -50,7 +50,7 @@ export default function MobileMenu() {
   }, []);
 
   return (
-    <>
+    <div>
       <button
         className={cn(styles.burger, 'visible md:hidden')}
         aria-label="Toggle menu"
@@ -76,7 +76,7 @@ export default function MobileMenu() {
           ))}
         </ul>
       )}
-    </>
+    </div>
   );
 }
 
