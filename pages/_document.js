@@ -11,7 +11,7 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
             rel="stylesheet"></link>
         </Head>
-        <body>
+        <body className='overflow-x-hidden'>
           <Main />
           <NextScript />
         </body>
