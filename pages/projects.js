@@ -30,16 +30,16 @@ export default function Projects() {
         </h1>
         <div className="mb-6 prose leading-8 text-gray-600 dark:text-gray-400">
           <p>
-            Algunos proyectos que hice al principio con React. Clones,
+            Algunos proyectos que hice al principio con React (y muy pocos con Vue). Clones,
             challenges, consumo de APIs, Autenticación con Firebase, Database
             con Firebase o Google Sheets, etc. También pueden visitar mi
-            <ExternalLink href="https://easytechgreen.com">
+            <ExternalLink href="https://github.com/imanolrtega">
               {" "}
               <span
                 className="font-semibold bg-clip-text text-transparent bg-gradient-to-r
                 from-purple-500 to-purple-600 underline decoration-1 underline-offset-4 decoration-purple-600">
                 Github
-              </span>
+              </span>, donde hay más repos
             </ExternalLink>
             .
           </p>
