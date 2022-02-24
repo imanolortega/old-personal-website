@@ -45,7 +45,7 @@ export default function Home({ posts }) {
               Imanol Ortega
             </h1>
             <p className="text-gray-600 dark:text-gray-400 mb-16">
-              Desarrollador Frontend JR en{" "}
+              Desarrollador Front-end en{" "}
               <ExternalLink href="https://easytechgreen.com/">
                 <span
                   className="font-semibold bg-clip-text text-transparent bg-gradient-to-r
@@ -53,7 +53,7 @@ export default function Home({ posts }) {
                   easytechgreen
                 </span>
               </ExternalLink>
-              . Trabajador de la web y cebador de mates profesional.
+              . JavaScript, React y Next JS.
             </p>
           </div>
           <div className="w-[80px] sm:w-[176px] justify-end mb-8 sm:mb-0 md:flex hidden">

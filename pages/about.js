@@ -12,7 +12,7 @@ export default function About() {
         </h1>
         <div className="mb-8 prose leading-8 text-gray-600 dark:text-gray-400">
           <p>
-            Buenas, mi nombre es Imanol. Soy desarrollador Frontend en
+            Buenas, mi nombre es Imanol. Soy desarrollador Front-end en
             <ExternalLink href="https://easytechgreen.com">
               {' '}
               <span
@@ -21,7 +21,7 @@ export default function About() {
                 easytechgreen
               </span>
             </ExternalLink>
-            {' '}y entusiasta de Javascript y React. Antes fui diseñador
+            {' '}y entusiasta de JavaScript y React JS. Antes fui diseñador
             gráfico y Comunicador Social.
             <br />
             Actualmente trabajo con Next JS en el
