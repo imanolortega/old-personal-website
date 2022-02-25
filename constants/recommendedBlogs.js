@@ -28,9 +28,9 @@ export const recommendedBlogs = [
 
   {
     id: 4,
-    title: 'Alligator',
-    description: 'Front-End Web Development',
-    url: 'https://alligator.io/',
+    title: 'Bel Curcio',
+    description: 'Science, code and life',
+    url: 'https://belcurcio.com/',
   },
 
   {
@@ -52,5 +52,12 @@ export const recommendedBlogs = [
     title: 'React Blog',
     description: 'React JS',
     url: 'https://reactjs.org/blog/all.html/',
+  },
+
+  {
+    id: 8,
+    title: 'Alligator',
+    description: 'Front-End Web Development',
+    url: 'https://alligator.io/',
   },
 ];
