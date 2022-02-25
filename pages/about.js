@@ -6,7 +6,7 @@ import ContactCard from '../components/ContactCard';
 export default function About() {
   return (
     <SiteLayout title="About | Imanol Ortega">
-      <div className="flex flex-col justify-center items-start max-w-screen-md mx-auto mb-16 mt-4">
+      <div className="flex flex-col justify-center items-start max-w-screen-md mx-auto md:mb-16 mb-12 mt-4">
         <h1 className="font-bold text-3xl md:text-5xl mb-6 text-gray-900 dark:text-white">
           About Me
         </h1>

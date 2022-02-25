@@ -36,7 +36,7 @@ export default function Home({ posts }) {
     <SiteLayout>
       <div
         className="flex flex-col justify-center items-start max-w-screen-md border-gray-200
-        dark:border-gray-700 mx-auto pb-16">
+        dark:border-gray-700 mx-auto md:pb-16 pb-12">
         <div className="flex w-full justify-between flex-col-reverse sm:flex-row items-start">
           <div className="flex flex-col pr-8">
             <h1
@@ -44,7 +44,7 @@ export default function Home({ posts }) {
             bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500 animate-fade">
               Imanol Ortega
             </h1>
-            <p className="text-gray-600 dark:text-gray-400 mb-16">
+            <p className="text-gray-600 dark:text-gray-400 md:mb-16 mb-12">
               Desarrollador Front-end en{" "}
               <ExternalLink href="https://easytechgreen.com/">
                 <span
@@ -87,7 +87,7 @@ export default function Home({ posts }) {
           />
         ))}
         <LinkWithIcon text="Más artículos" href="/blog" />
-        <span className="h-16" />
+        <span className="md:h-16 h-12" />
         <h2 className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
           Projects
         </h2>
