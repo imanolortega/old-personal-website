@@ -1,117 +1,13 @@
 import { useState, useEffect } from "react";
 import Head from "next/head";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTheme } from "next-themes";
-
-import cn from "classnames";
-import styles from "../styles/mobile-menu.module.css";
 
 import Site from '../contexts/siteLayout';
 
 import Footer from "./Footer";
 import MobileMenu from "./MobileMenu";
-import IconButton from "./IconButton";
-
-function NavItem({ href, text }) {
-  const router = useRouter();
-  const isActive = router.asPath === href;
-
-  return (
-    <li>
-      <Link href={href}>
-        <a
-          className={`${
-            isActive
-              ? 'font-semibold text-slate-600 dark:text-slate-200'
-              : 'font-normal text-slate-600 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200'
-          } hidden md:inline-block p-1 sm:px-3 sm:py-2 transition-all`}>
-          <span className="capsize">{text}</span>
-        </a>
-      </Link>
-    </li>
-  );
-}
-
-function DarkModeButton({ isMounted, isResolvedTheme, onHandleClick }) {
-  return (
-    <button
-      aria-label="Toggle Dark Mode"
-      type="button"
-      className="w-8 h-8 opacity-75 bg-slate-300 rounded-lg dark:bg-slate-700 flex items-center justify-center hover:ring-2 ring-slate-400 transition-all"
-      onClick={onHandleClick}>
-      {isMounted && (
-        <svg className="h-6 w-6" width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
-          {isResolvedTheme === "dark" ? (
-            <path
-              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-              stroke="#fff"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          ) : (
-            <path
-              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-              stroke="#4A5568"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          )}
-        </svg>
-      )}
-    </button>
-  );
-}
-
-function MenuIcon() {
-  return (
-    <svg
-      className="h-5 w-5 absolute text-gray-900 dark:text-gray-100"
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
-      >
-      <path
-        d="M2.5 7.5H17.5"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M2.5 12.5H17.5"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function CrossIcon() {
-  return (
-    <svg
-      className="h-5 w-5 absolute text-gray-900 dark:text-gray-100"
-      viewBox="0 0 24 24"
-      width="24"
-      height="24"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      fill="none"
-      shapeRendering="geometricPrecision"
-      >
-      <path d="M18 6L6 18" />
-      <path d="M6 6l12 12" />
-    </svg>
-  );
-}
-
+import Navbar from "./Navbar";
 
 export default function SiteLayout(props) {
   const [mounted, setMounted] = useState(false);
@@ -191,39 +87,13 @@ export default function SiteLayout(props) {
 
         <header className="flex flex-col justify-center px-8">
           <MobileMenu isMenuOpen={isMenuOpen} />
-          <nav className="flex items-center justify-between w-full relative max-w-screen-md border-gray-300 dark:border-gray-700 mx-auto pt-8 pb-4 sm:pb-4 text-gray-900 bg-slate-100 dark:bg-slate-900 bg-opacity-60 dark:text-gray-100">
-            <ul className="inline-flex ml-[-0.60rem]">
-              <button
-                className={cn(styles.burger, 'visible md:hidden')}
-                aria-label="Toggle menu"
-                type="button"
-                onClick={toggleMenu}>
-                {!isMenuOpen && <MenuIcon />}
-                {isMenuOpen && <CrossIcon />}
-              </button>
-              <NavItem href="/" text="Home" />
-              <NavItem href="/about" text="About" />
-              <NavItem href="/blog" text="Blog" />
-              <NavItem href="/projects" text="Projects" />
-            </ul>
-            <div className="flex space-x-2">
-              <IconButton
-                path="https://github.com/imanolrtega"
-                icon="github"
-              />
-              <IconButton
-                path="https://www.linkedin.com/in/imanol-rtega/"
-                icon="linkedin"
-              />
-              <DarkModeButton
-                onHandleClick={() =>
-                  setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
-                }
-                isMounted={mounted}
-                isResolvedTheme={resolvedTheme}
-              />
-            </div>
-          </nav>
+          <Navbar
+            isMenuOpen={isMenuOpen}
+            mounted={mounted}
+            setTheme={setTheme}
+            resolvedTheme={resolvedTheme}
+            toggleMenu={toggleMenu}
+          />
           <div className="flex justify-center max-w-screen-md mx-auto w-full">
             <hr className="w-full border-1 border-slate-300 dark:border-gray-800 mb-8" />
           </div>
