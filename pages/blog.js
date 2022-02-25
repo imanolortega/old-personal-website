@@ -88,7 +88,7 @@ export default function Blog({ posts }) {
           considero muy valiosos y que quizás puedan servirles. Son de Front-end
           principalmente.
         </p>
-        <div className="md:mb-8 mb-2 prose leading-8 text-gray-600 dark:text-gray-400 w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:flex-row">
+        <div className="md:mb-8 mb-4 prose leading-8 text-gray-600 dark:text-gray-400 w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:flex-row">
           {recommendedBlogs.map((blog) => (
             <ContactCard
               path={blog.url}
