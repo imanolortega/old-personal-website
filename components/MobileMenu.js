@@ -33,7 +33,7 @@ export default function MobileMenu({ isMenuOpen }) {
   );
 
   return (
-    <div>
+    <nav>
       {isMenuMounted && (
         <ul
           className={cn(
@@ -51,6 +51,6 @@ export default function MobileMenu({ isMenuOpen }) {
           ))}
         </ul>
       )}
-    </div>
+    </nav>
   );
 }
