@@ -44,6 +44,23 @@ export default function SiteLayout(props) {
     };
   }, []);
 
+  const [showScroll, setShowScroll] = useState(false);
+  const [topOfMobileMenu, setTopOfMobileMenu] = useState(false);
+
+  const checkScrollTop = () => {
+    if (!showScroll && window.pageYOffset > 150) {
+      setShowScroll(true);
+      setTopOfMobileMenu(window.pageYOffset - 18);
+    } else if (showScroll && window.pageYOffset <= 150) {
+      setShowScroll(false);
+      setTopOfMobileMenu(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", checkScrollTop);
+  });
+
   return (
     <Site.Provider
       value={{
@@ -85,8 +102,22 @@ export default function SiteLayout(props) {
           )}
         </Head>
 
+        {showScroll && (
+          <div className="fixed pl-6 pr-6 md:pl-8 md:pr-4 top-6 z-30 w-full">
+            <div className="mx-auto w-full max-w-screen-md">
+              <Navbar
+                isFixed
+                isMenuOpen={isMenuOpen}
+                mounted={mounted}
+                setTheme={setTheme}
+                resolvedTheme={resolvedTheme}
+                toggleMenu={toggleMenu}
+              />
+            </div>
+          </div>
+        )}
         <header className="flex flex-col justify-center px-8">
-          <MobileMenu isMenuOpen={isMenuOpen} />
+          <MobileMenu style={{top: topOfMobileMenu }} isMenuOpen={isMenuOpen} />
           <Navbar
             isMenuOpen={isMenuOpen}
             mounted={mounted}

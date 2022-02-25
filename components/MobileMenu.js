@@ -15,7 +15,7 @@ function MenuItem({ href, delay, text }) {
   );
 }
 
-export default function MobileMenu({ isMenuOpen }) {
+export default function MobileMenu({ isMenuOpen, style }) {
   const menuLinks = [
     { id: "0", href: "/", text: "Home", transitionDelay: "150" },
     { id: "1", href: "/about", text: "About", transitionDelay: "200" },
@@ -35,6 +35,7 @@ export default function MobileMenu({ isMenuOpen }) {
     <nav>
       {isMenuMounted && (
         <ul
+          style={style}
           className={cn(
             styles.menu,
             'flex flex-col absolute bg-slate-100 dark:bg-slate-900',
