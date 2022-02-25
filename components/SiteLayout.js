@@ -1,28 +1,28 @@
-import { useState, useEffect } from "react";
-import Head from "next/head";
-import { useRouter } from "next/router";
-import { useTheme } from "next-themes";
+import { useState, useEffect } from 'react';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { useTheme } from 'next-themes';
 
 import Site from '../contexts/siteLayout';
 
-import Footer from "./Footer";
-import MobileMenu from "./MobileMenu";
-import Navbar from "./Navbar";
+import Footer from './Footer';
+import MobileMenu from './MobileMenu';
+import Navbar from './Navbar';
+import ScrollTopButton from './ScrollTopButton';
 
 export default function SiteLayout(props) {
   const [mounted, setMounted] = useState(false);
   const { resolvedTheme, setTheme } = useTheme();
 
-  // After mounting, we have access to the theme
   useEffect(() => setMounted(true), []);
 
   const { children, ...customMeta } = props;
   const router = useRouter();
   const meta = {
-    title: "Imanol Ortega | Front-end Developer",
+    title: 'Imanol Ortega | Front-end Developer',
     description: `Front-end developer, JavaScript & React enthusiast.`,
-    image: "https://www.imanol.work/images/imanol-ortega-personal-site.jpg",
-    type: "website",
+    image: 'https://www.imanol.work/images/imanol-ortega-personal-site.jpg',
+    type: 'website',
     ...customMeta,
   };
 
@@ -58,7 +58,7 @@ export default function SiteLayout(props) {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", checkScrollTop);
+    window.addEventListener('scroll', checkScrollTop);
   });
 
   return (
@@ -117,7 +117,10 @@ export default function SiteLayout(props) {
           </div>
         )}
         <header className="flex flex-col justify-center px-8">
-          <MobileMenu style={{top: topOfMobileMenu }} isMenuOpen={isMenuOpen} />
+          <MobileMenu
+            style={{ top: topOfMobileMenu }}
+            isMenuOpen={isMenuOpen}
+          />
           <Navbar
             isMenuOpen={isMenuOpen}
             mounted={mounted}
@@ -134,6 +137,7 @@ export default function SiteLayout(props) {
           className="flex flex-col justify-center px-8 bg-slate-100 dark:bg-slate-900">
           {children}
           <Footer />
+          {showScroll && <ScrollTopButton />}
         </main>
       </div>
     </Site.Provider>
