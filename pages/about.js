@@ -66,7 +66,7 @@ export default function About() {
         <h2 className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
           Contact
         </h2>
-        <div className="mb-8 prose leading-8 text-gray-600 dark:text-gray-400 w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:flex-row">
+        <div className="md:mb-8 mb-2 prose leading-8 text-gray-600 dark:text-gray-400 w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:flex-row">
           <ContactCard
             path="mailto:imanolrtega@gmail.com"
             title="Email"
