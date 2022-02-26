@@ -1,22 +1,26 @@
 import { useState } from 'react';
 
-import BlogPost from "../components/BlogPost";
+import BlogPost from '../components/BlogPost';
 import ContactCard from '../components/ContactCard';
-import SiteLayout from "../components/SiteLayout";
+import SiteLayout from '../components/SiteLayout';
 
 import { formatDate } from '../lib/datetime';
-import { getPaginatedPosts, sanitizeExcerpt } from "../lib/posts";
+import { getPaginatedPosts, sanitizeExcerpt } from '../lib/posts';
 import { recommendedBlogs } from '../constants/recommendedBlogs';
+import SearchBar from '../components/SearchBar';
 
 export default function Blog({ posts }) {
-  const [searchValue, setSearchValue] = useState("");
+  const [searchValue, setSearchValue] = useState('');
 
   const addText = (content, title) => {
     return content + title;
-  }
+  };
 
   const filteredArticles = posts.filter((post) =>
-    addText(post.content, post.title).toString().toLowerCase().includes(searchValue.toLowerCase())
+    addText(post.content, post.title)
+      .toString()
+      .toLowerCase()
+      .includes(searchValue.toLowerCase())
   );
 
   return (
@@ -32,28 +36,7 @@ export default function Blog({ posts }) {
             vida más fácil a un dev JR (o no tanto).
           </p>
         </div>
-        <div className="relative w-full mb-8">
-          <svg
-            className="absolute w-5 h-5 text-gray-400 left-3 top-3 dark:text-gray-300"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
-          <input
-            aria-label="Buscar proyectos por palabras"
-            type="text"
-            onChange={(e) => setSearchValue(e.target.value)}
-            placeholder="Buscar artículo por título o contenido"
-            className="block w-full px-12 py-2 text-gray-900 bg-white border border-slate-300 rounded-md dark:border-slate-900 focus:ring-blue-500 focus:border-blue-500 dark:bg-slate-800 dark:text-slate-100 outline-slate-600"
-          />
-        </div>
+        <SearchBar handleSearch={setSearchValue} text="Buscar artículo por título o contenido" />
         <div className="w-full">
           {filteredArticles?.map((p) => (
             <BlogPost
@@ -109,7 +92,7 @@ export async function getStaticProps() {
       posts,
       pagination: {
         ...pagination,
-        basePath: "/posts",
+        basePath: '/posts',
       },
     },
     revalidate: 60 * 60 * 24,
