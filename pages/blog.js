@@ -2,12 +2,12 @@ import { useState } from 'react';
 
 import BlogPost from '../components/BlogPost';
 import ContactCard from '../components/ContactCard';
+import SearchBar from '../components/SearchBar';
 import SiteLayout from '../components/SiteLayout';
 
 import { formatDate } from '../lib/datetime';
 import { getPaginatedPosts, sanitizeExcerpt } from '../lib/posts';
 import { recommendedBlogs } from '../constants/recommendedBlogs';
-import SearchBar from '../components/SearchBar';
 
 export default function Blog({ posts }) {
   const [searchValue, setSearchValue] = useState('');

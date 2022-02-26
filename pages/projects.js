@@ -1,11 +1,13 @@
 import { useState } from 'react';
 
-import SiteLayout from '../components/SiteLayout';
 import ExternalLink from '../components/ExternalLink';
+import SearchBar from '../components/SearchBar';
+import SiteLayout from '../components/SiteLayout';
 import ProjectCard from '../components/ProjectCard';
+
 import { projects } from '../constants/projects';
 import { getRandomElement } from '../lib/util';
-import SearchBar from '../components/SearchBar';
+
 
 export default function Projects() {
   const [searchValue, setSearchValue] = useState('');
