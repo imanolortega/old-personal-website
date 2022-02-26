@@ -9,7 +9,7 @@ export default function ScrollTopButton() {
   };
 
   return (
-    <button onClick={scrollTop} className="fixed bottom-4 right-4 backdrop-blur-md dark:backdrop-blur-md bg-slate-400/30 dark:bg-slate-800/40 rounded-full px-2 py-2">
+    <button onClick={scrollTop} className="fixed bottom-4 right-4 backdrop-blur-md dark:backdrop-blur-md bg-slate-400/30 dark:bg-slate-800/40 rounded-full md:p-2 p-3">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
