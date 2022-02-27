@@ -3,7 +3,7 @@ export default function SearchBar({ className, handleSearch, text }) {
     <form className={`relative w-full ${className}`}>
       <label className="sr-only">{text}</label>
       <svg
-        className="absolute w-5 h-5 text-gray-400 left-3 top-3 dark:text-gray-300"
+        className="absolute w-5 h-5 text-gray-400 left-3 top-[0.85rem] dark:text-gray-300"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
