@@ -53,7 +53,7 @@ export default function Projects() {
             .
           </p>
           <SearchBar
-            className="md:mb-6"
+            className="md:mb-8"
             handleSearch={setSearchValue}
             text="Buscar por tecnología"
           />

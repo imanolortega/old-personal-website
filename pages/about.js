@@ -10,7 +10,7 @@ import SectionPage from '../components/SectionPage';
 export default function About() {
   return (
     <SiteLayout title="About | Imanol Ortega">
-      <PageLayout>
+      <PageLayout className="md:mb-16 mb-12">
         <SectionPage className="prose leading-8 text-gray-600 dark:text-gray-400">
           <Heading tag="h1" className="font-bold text-3xl md:text-5xl mb-6 text-gray-900 dark:text-white">
             About Me
