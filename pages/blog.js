@@ -8,6 +8,7 @@ import SiteLayout from '../components/SiteLayout';
 import { formatDate } from '../lib/datetime';
 import { getPaginatedPosts, sanitizeExcerpt } from '../lib/posts';
 import { recommendedBlogs } from '../constants/recommendedBlogs';
+import PageLayout from '../components/PageLayout';
 
 export default function Blog({ posts }) {
   const [searchValue, setSearchValue] = useState('');
@@ -25,7 +26,7 @@ export default function Blog({ posts }) {
 
   return (
     <SiteLayout title="Blog | Imanol Ortega">
-      <div className="flex flex-col justify-center items-start max-w-screen-md mx-auto md:mb-16 mb-12 mt-4">
+      <PageLayout>
         <h1 className="font-bold text-3xl md:text-5xl mb-6 text-gray-900 dark:text-white">
           Blog
         </h1>
@@ -36,7 +37,10 @@ export default function Blog({ posts }) {
             vida más fácil a un dev JR (o no tanto).
           </p>
         </div>
-        <SearchBar handleSearch={setSearchValue} text="Buscar artículo por título o contenido" />
+        <SearchBar
+          handleSearch={setSearchValue}
+          text="Buscar artículo por título o contenido"
+        />
         <div className="w-full">
           {filteredArticles?.map((p) => (
             <BlogPost
@@ -80,7 +84,7 @@ export default function Blog({ posts }) {
             />
           ))}
         </div>
-      </div>
+      </PageLayout>
     </SiteLayout>
   );
 }

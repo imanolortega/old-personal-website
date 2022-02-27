@@ -7,7 +7,7 @@ import ProjectCard from '../components/ProjectCard';
 
 import { projects } from '../constants/projects';
 import { getRandomElement } from '../lib/util';
-
+import PageLayout from '../components/PageLayout';
 
 export default function Projects() {
   const [searchValue, setSearchValue] = useState('');
@@ -27,7 +27,7 @@ export default function Projects() {
 
   return (
     <SiteLayout title="Projects | Imanol Ortega">
-      <div className="flex flex-col justify-center items-start max-w-screen-md mx-auto md:mb-16 mb-12 mt-4">
+      <PageLayout>
         <h1 className="font-bold text-3xl md:text-5xl mb-6 text-gray-900 dark:text-white">
           Projects
         </h1>
@@ -68,7 +68,7 @@ export default function Projects() {
             No hay proyectos con esa tecnología
           </p>
         )}
-      </div>
+      </PageLayout>
     </SiteLayout>
   );
 }

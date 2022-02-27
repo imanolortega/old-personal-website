@@ -11,6 +11,7 @@ import ExternalLink from "../components/ExternalLink";
 import LinkWithIcon from '../components/LinkWithIcon';
 import ProjectCard from "../components/ProjectCard";
 import { formatDate } from '../lib/datetime';
+import PageLayout from "../components/PageLayout";
 
 export default function Home({ posts }) {
   const [allProjects, setAllProjects] = useState([]);
@@ -34,9 +35,7 @@ export default function Home({ posts }) {
 
   return (
     <SiteLayout>
-      <div
-        className="flex flex-col justify-center items-start max-w-screen-md border-gray-200
-        dark:border-gray-700 mx-auto md:pb-16 pb-12">
+      <PageLayout className="border-gray-200 dark:border-gray-700 md:mb-14 mb-10">
         <div className="flex w-full justify-between flex-col-reverse sm:flex-row items-start">
           <div className="flex flex-col pr-8">
             <h1
@@ -45,7 +44,7 @@ export default function Home({ posts }) {
               Imanol Ortega
             </h1>
             <p className="text-gray-600 dark:text-gray-400 md:mb-16 mb-12">
-              Desarrollador Front-end en{" "}
+              Desarrollador Front-end en{' '}
               <ExternalLink href="https://easytechgreen.com/">
                 <span
                   className="font-semibold bg-clip-text text-transparent bg-gradient-to-r
@@ -109,7 +108,7 @@ export default function Home({ posts }) {
           ))}
         </div>
         <LinkWithIcon text="Más proyectos" href="/projects" />
-      </div>
+      </PageLayout>
     </SiteLayout>
   );
 }

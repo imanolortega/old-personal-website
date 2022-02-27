@@ -1,12 +1,13 @@
-import SiteLayout from "../components/SiteLayout";
-import ExternalLink from "../components/ExternalLink";
-import {techFront, techBack, oldTech} from '../constants/technologies';
+import SiteLayout from '../components/SiteLayout';
+import ExternalLink from '../components/ExternalLink';
+import { techFront, techBack, oldTech } from '../constants/technologies';
 import ContactCard from '../components/ContactCard';
+import PageLayout from '../components/PageLayout';
 
 export default function About() {
   return (
     <SiteLayout title="About | Imanol Ortega">
-      <div className="flex flex-col justify-center items-start max-w-screen-md mx-auto md:mb-16 mb-12 mt-4">
+      <PageLayout>
         <h1 className="font-bold text-3xl md:text-5xl mb-6 text-gray-900 dark:text-white">
           About Me
         </h1>
@@ -20,15 +21,15 @@ export default function About() {
                 from-emerald-500 to-emerald-600 underline decoration-1 underline-offset-4 decoration-emerald-600">
                 easytechgreen
               </span>
-            </ExternalLink>
-            {' '}y entusiasta de JavaScript y React JS. Antes fui diseñador
-            gráfico y Comunicador Social.
+            </ExternalLink>{' '}
+            y entusiasta de JavaScript y React JS. Antes fui diseñador gráfico y
+            Comunicador Social.
             <br />
-            Actualmente trabajo con Next JS en el
-            Front y generalmente con algún CMS (headless o no) en el Back. Sigo
-            estudiando en el día a día, enfocado en mantener buenas prácticas y
-            convertirme en Fullstack. Mi foco hoy está en la experiencia de
-            usuario: webs rápidas, intuitivas y accesibles.
+            Actualmente trabajo con Next JS en el Front y generalmente con algún
+            CMS (headless o no) en el Back. Sigo estudiando en el día a día,
+            enfocado en mantener buenas prácticas y convertirme en Fullstack. Mi
+            foco hoy está en la experiencia de usuario: webs rápidas, intuitivas
+            y accesibles.
           </p>
         </div>
         <div className="block md:flex w-full justify-between mb-8 prose leading-8 text-gray-600 dark:text-gray-400">
@@ -86,7 +87,7 @@ export default function About() {
             icon="github"
           />
         </div>
-      </div>
+      </PageLayout>
     </SiteLayout>
   );
 }
