@@ -5,15 +5,16 @@ import PageLayout from '../components/PageLayout';
 import SiteLayout from '../components/SiteLayout';
 
 import { techFront, techBack, oldTech } from '../constants/technologies';
+import SectionPage from '../components/SectionPage';
 
 export default function About() {
   return (
     <SiteLayout title="About | Imanol Ortega">
       <PageLayout>
-        <Heading tag="h1" className="font-bold text-3xl md:text-5xl mb-6 text-gray-900 dark:text-white">
-          About Me
-        </Heading>
-        <div className="mb-8 prose leading-8 text-gray-600 dark:text-gray-400">
+        <SectionPage className="prose leading-8 text-gray-600 dark:text-gray-400">
+          <Heading tag="h1" className="font-bold text-3xl md:text-5xl mb-6 text-gray-900 dark:text-white">
+            About Me
+          </Heading>
           <p>
             Buenas, mi nombre es Imanol. Soy desarrollador Front-end en
             <ExternalLink href="https://easytechgreen.com">
@@ -33,8 +34,8 @@ export default function About() {
             foco hoy está en la experiencia de usuario: webs rápidas, intuitivas
             y accesibles.
           </p>
-        </div>
-        <div className="block md:flex w-full justify-between mb-8 prose leading-8 text-gray-600 dark:text-gray-400">
+        </SectionPage>
+        <SectionPage className="block md:flex w-full justify-between prose leading-8 text-gray-600 dark:text-gray-400">
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
             <Heading tag="h3" className="text-xl text-gray-900 dark:text-white mb-3">
               Front
@@ -55,7 +56,7 @@ export default function About() {
               ))}
             </ul>
           </div>
-          <div className="w-full md:w-1/3 mb-8 md:mb-0">
+          <div className="w-full md:w-1/3">
             <Heading tag="h3" className="text-xl text-gray-900 dark:text-white mb-3">
               Random
             </Heading>
@@ -65,7 +66,7 @@ export default function About() {
               ))}
             </ul>
           </div>
-        </div>
+        </SectionPage>
         <Heading tag="h2" className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
           Contact
         </Heading>

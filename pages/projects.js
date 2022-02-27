@@ -9,7 +9,7 @@ import SiteLayout from '../components/SiteLayout';
 
 import { projects } from '../constants/projects';
 import { getRandomElement } from '../lib/util';
-
+import SectionPage from '../components/SectionPage';
 
 export default function Projects() {
   const [searchValue, setSearchValue] = useState('');
@@ -29,12 +29,14 @@ export default function Projects() {
 
   return (
     <SiteLayout title="Projects | Imanol Ortega">
-      <PageLayout>
-        <Heading tag="h1" className="font-bold text-3xl md:text-5xl mb-6 text-gray-900 dark:text-white">
-          Projects
-        </Heading>
-        <div className="mb-6 prose leading-8 text-gray-600 dark:text-gray-400">
-          <p>
+      <PageLayout className="md:mb-14 mb-10">
+        <SectionPage className="md:mb-4 mb-2 prose leading-8 text-gray-600 dark:text-gray-400">
+          <Heading
+            tag="h1"
+            className="font-bold text-3xl md:text-5xl mb-6 text-gray-900 dark:text-white">
+            Projects
+          </Heading>
+          <p className='mb-6'>
             Algunos proyectos que hice al principio con React (y muy pocos con
             Vue). Clones, challenges, consumo de APIs, Autenticación con
             Firebase, Database con Firebase o Google Sheets, etc. También pueden
@@ -50,8 +52,12 @@ export default function Projects() {
             </ExternalLink>
             .
           </p>
-        </div>
-        <SearchBar handleSearch={setSearchValue} text="Buscar por tecnología" />
+          <SearchBar
+            className="md:mb-6"
+            handleSearch={setSearchValue}
+            text="Buscar por tecnología"
+          />
+        </SectionPage>
         <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:flex-row">
           {filteredProjects.map((p) => (
             <ProjectCard

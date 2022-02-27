@@ -1,6 +1,6 @@
-export default function SearchBar({ handleSearch, text }) {
+export default function SearchBar({ className, handleSearch, text }) {
   return (
-    <form className="relative w-full mb-8">
+    <form className={`relative w-full ${className}`}>
       <label className="sr-only">{text}</label>
       <svg
         className="absolute w-5 h-5 text-gray-400 left-3 top-3 dark:text-gray-300"
