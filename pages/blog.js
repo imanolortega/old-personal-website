@@ -5,12 +5,12 @@ import ContactCard from '../components/ContactCard';
 import Heading from '../components/Heading';
 import PageLayout from '../components/PageLayout';
 import SearchBar from '../components/SearchBar';
+import SectionPage from '../components/SectionPage';
 import SiteLayout from '../components/SiteLayout';
 
 import { formatDate } from '../lib/datetime';
 import { getPaginatedPosts, sanitizeExcerpt } from '../lib/posts';
 import { recommendedBlogs } from '../constants/recommendedBlogs';
-import SectionPage from '../components/SectionPage';
 
 export default function Blog({ posts }) {
   const [searchValue, setSearchValue] = useState('');
