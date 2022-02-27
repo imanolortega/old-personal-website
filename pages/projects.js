@@ -29,7 +29,7 @@ export default function Projects() {
 
   return (
     <SiteLayout title="Projects | Imanol Ortega">
-      <PageLayout className="md:mb-14 mb-10">
+      <PageLayout className="md:mb-10 mb-8">
         <SectionPage className="md:mb-4 mb-2 prose leading-8 text-gray-600 dark:text-gray-400">
           <Heading
             tag="h1"
@@ -57,8 +57,7 @@ export default function Projects() {
             handleSearch={setSearchValue}
             text="Buscar por tecnología"
           />
-        </SectionPage>
-        <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:flex-row">
+          <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:flex-row">
           {filteredProjects.map((p) => (
             <ProjectCard
               title={p.title}
@@ -76,6 +75,7 @@ export default function Projects() {
             No hay proyectos con esa tecnología
           </p>
         )}
+        </SectionPage>
       </PageLayout>
     </SiteLayout>
   );
