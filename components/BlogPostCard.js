@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import Heading from './Heading';
+
 import { formatDate } from '../lib/datetime';
 
 export default function ProjectCard({ date, link, modified, title }) {
@@ -24,9 +26,9 @@ export default function ProjectCard({ date, link, modified, title }) {
         <Link href={`${link}`}>
           <a>
             <div className="h-full w-full bg-slate-100 dark:bg-slate-900 rounded-lg p-4">
-              <h3 className="text-lg md:text-lg font-medium mb-2 sm:mb-5 w-full text-gray-900 dark:text-gray-100">
+              <Heading tag="h3" className="text-lg md:text-lg font-medium mb-2 sm:mb-5 w-full text-gray-900 dark:text-gray-100">
                 {title}
-              </h3>
+              </Heading>
               <p className="text-xs">
                 Publicado el {date} | Última actualización el{' '}
                 {formatDate(modified)}

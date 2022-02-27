@@ -1,5 +1,7 @@
-import React from 'react';
 import { useContext } from 'react';
+
+import Heading from './Heading';
+
 import Site from '../contexts/siteLayout';
 
 const ContactCard = ({ description, icon, path, title }) => {
@@ -68,9 +70,9 @@ const ContactCard = ({ description, icon, path, title }) => {
       href={path}
       className="w-full group border border-gray-400 dark:border-gray-600 rounded-lg p-6">
       {icon && <Icon type={icon} />}
-      <h3 className="text-lg md:text-lg font-medium mb-2 sm:mb-5 w-full text-gray-800 dark:text-gray-100">
+      <Heading tag="h3" className="text-lg md:text-lg font-medium mb-2 sm:mb-5 w-full text-gray-800 dark:text-gray-100">
         {title}
-      </h3>
+      </Heading>
       <p className="text-gray-600 dark:text-gray-400 text-base">
         {description}
       </p>

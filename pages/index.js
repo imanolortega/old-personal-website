@@ -1,17 +1,18 @@
 import { useState, useEffect } from "react";
 import Image from 'next/image';
 
+import BlogPostCard from "../components/BlogPostCard";
+import ExternalLink from "../components/ExternalLink";
+import Heading from '../components/Heading';
+import LinkWithIcon from '../components/LinkWithIcon';
+import PageLayout from "../components/PageLayout";
+import ProjectCard from "../components/ProjectCard";
+import SiteLayout from "../components/SiteLayout";
+
 import { projects } from "../constants/projects";
+import { formatDate } from '../lib/datetime';
 import { getPaginatedPosts } from '../lib/posts';
 import { getRandomElement, shuffle } from "../lib/util";
-
-import BlogPostCard from "../components/BlogPostCard";
-import SiteLayout from "../components/SiteLayout";
-import ExternalLink from "../components/ExternalLink";
-import LinkWithIcon from '../components/LinkWithIcon';
-import ProjectCard from "../components/ProjectCard";
-import { formatDate } from '../lib/datetime';
-import PageLayout from "../components/PageLayout";
 
 export default function Home({ posts }) {
   const [allProjects, setAllProjects] = useState([]);
@@ -38,11 +39,11 @@ export default function Home({ posts }) {
       <PageLayout className="border-gray-200 dark:border-gray-700 md:mb-14 mb-10">
         <div className="flex w-full justify-between flex-col-reverse sm:flex-row items-start">
           <div className="flex flex-col pr-8">
-            <h1
+            <Heading tag="h1"
               className="font-bold text-3xl md:text-5xl md:leading-normal mb-3
             bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500 animate-fade">
               Imanol Ortega
-            </h1>
+            </Heading>
             <p className="text-gray-600 dark:text-gray-400 md:mb-16 mb-12">
               Desarrollador Front-end en{' '}
               <ExternalLink href="https://easytechgreen.com/">
@@ -69,9 +70,9 @@ export default function Home({ posts }) {
             </div>
           </div>
         </div>
-        <h2 className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
+        <Heading tag="h2" className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
           Blog
-        </h2>
+        </Heading>
         <p className="text-gray-600 dark:text-gray-400 mb-6">
           Trato de escribir algunas de las cosas que voy descubriendo y le
           pueden servir a alguien más.
@@ -87,9 +88,9 @@ export default function Home({ posts }) {
         ))}
         <LinkWithIcon text="Más artículos" href="/blog" />
         <span className="md:h-16 h-12" />
-        <h2 className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
+        <Heading tag="h2" className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
           Projects
-        </h2>
+        </Heading>
         <p className="text-gray-600 dark:text-gray-400 mb-6">
           Proyectos trainee y challenges que hice al principio. Los últimos
           proyectos voy a agregarlos más adelante.

@@ -1,13 +1,15 @@
 import { useState } from 'react';
 
 import ExternalLink from '../components/ExternalLink';
+import Heading from '../components/Heading';
+import PageLayout from '../components/PageLayout';
+import ProjectCard from '../components/ProjectCard';
 import SearchBar from '../components/SearchBar';
 import SiteLayout from '../components/SiteLayout';
-import ProjectCard from '../components/ProjectCard';
 
 import { projects } from '../constants/projects';
 import { getRandomElement } from '../lib/util';
-import PageLayout from '../components/PageLayout';
+
 
 export default function Projects() {
   const [searchValue, setSearchValue] = useState('');
@@ -28,9 +30,9 @@ export default function Projects() {
   return (
     <SiteLayout title="Projects | Imanol Ortega">
       <PageLayout>
-        <h1 className="font-bold text-3xl md:text-5xl mb-6 text-gray-900 dark:text-white">
+        <Heading tag="h1" className="font-bold text-3xl md:text-5xl mb-6 text-gray-900 dark:text-white">
           Projects
-        </h1>
+        </Heading>
         <div className="mb-6 prose leading-8 text-gray-600 dark:text-gray-400">
           <p>
             Algunos proyectos que hice al principio con React (y muy pocos con

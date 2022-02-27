@@ -1,16 +1,18 @@
-import SiteLayout from '../components/SiteLayout';
-import ExternalLink from '../components/ExternalLink';
-import { techFront, techBack, oldTech } from '../constants/technologies';
 import ContactCard from '../components/ContactCard';
+import ExternalLink from '../components/ExternalLink';
+import Heading from '../components/Heading';
 import PageLayout from '../components/PageLayout';
+import SiteLayout from '../components/SiteLayout';
+
+import { techFront, techBack, oldTech } from '../constants/technologies';
 
 export default function About() {
   return (
     <SiteLayout title="About | Imanol Ortega">
       <PageLayout>
-        <h1 className="font-bold text-3xl md:text-5xl mb-6 text-gray-900 dark:text-white">
+        <Heading tag="h1" className="font-bold text-3xl md:text-5xl mb-6 text-gray-900 dark:text-white">
           About Me
-        </h1>
+        </Heading>
         <div className="mb-8 prose leading-8 text-gray-600 dark:text-gray-400">
           <p>
             Buenas, mi nombre es Imanol. Soy desarrollador Front-end en
@@ -34,9 +36,9 @@ export default function About() {
         </div>
         <div className="block md:flex w-full justify-between mb-8 prose leading-8 text-gray-600 dark:text-gray-400">
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
-            <h3 className="text-xl text-gray-900 dark:text-white mb-3">
+            <Heading tag="h3" className="text-xl text-gray-900 dark:text-white mb-3">
               Front
-            </h3>
+            </Heading>
             <ul>
               {techFront.map((t) => (
                 <li key={t.key}>- {t.tech}</li>
@@ -44,9 +46,9 @@ export default function About() {
             </ul>
           </div>
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
-            <h3 className="text-xl text-gray-900 dark:text-white mb-3">
+            <Heading tag="h3" className="text-xl text-gray-900 dark:text-white mb-3">
               DB & Auth
-            </h3>
+            </Heading>
             <ul>
               {techBack.map((t) => (
                 <li key={t.key}>- {t.tech}</li>
@@ -54,9 +56,9 @@ export default function About() {
             </ul>
           </div>
           <div className="w-full md:w-1/3 mb-8 md:mb-0">
-            <h3 className="text-xl text-gray-900 dark:text-white mb-3">
+            <Heading tag="h3" className="text-xl text-gray-900 dark:text-white mb-3">
               Random
-            </h3>
+            </Heading>
             <ul>
               {oldTech.map((t) => (
                 <li key={t.key}>- {t.tech}</li>
@@ -64,9 +66,9 @@ export default function About() {
             </ul>
           </div>
         </div>
-        <h2 className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
+        <Heading tag="h2" className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
           Contact
-        </h2>
+        </Heading>
         <div className="prose leading-8 text-gray-600 dark:text-gray-400 w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:flex-row">
           <ContactCard
             path="mailto:imanolrtega@gmail.com"

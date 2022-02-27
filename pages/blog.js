@@ -2,13 +2,14 @@ import { useState } from 'react';
 
 import BlogPost from '../components/BlogPost';
 import ContactCard from '../components/ContactCard';
+import Heading from '../components/Heading';
+import PageLayout from '../components/PageLayout';
 import SearchBar from '../components/SearchBar';
 import SiteLayout from '../components/SiteLayout';
 
 import { formatDate } from '../lib/datetime';
 import { getPaginatedPosts, sanitizeExcerpt } from '../lib/posts';
 import { recommendedBlogs } from '../constants/recommendedBlogs';
-import PageLayout from '../components/PageLayout';
 
 export default function Blog({ posts }) {
   const [searchValue, setSearchValue] = useState('');
@@ -27,9 +28,9 @@ export default function Blog({ posts }) {
   return (
     <SiteLayout title="Blog | Imanol Ortega">
       <PageLayout>
-        <h1 className="font-bold text-3xl md:text-5xl mb-6 text-gray-900 dark:text-white">
+        <Heading tag="h1" className="font-bold text-3xl md:text-5xl mb-6 text-gray-900 dark:text-white">
           Blog
-        </h1>
+        </Heading>
         <div className="mb-8 prose leading-8 text-gray-600 dark:text-gray-400">
           <p>
             Escribo algunas de las cosas que voy descubriendo y le pueden servir
@@ -65,9 +66,9 @@ export default function Blog({ posts }) {
           </p>
         )}
         <span className="md:h-16 h-12" />
-        <h2 className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
+        <Heading tag="h2" className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
           Recommended Blogs
-        </h2>
+        </Heading>
         <p className="text-gray-600 dark:text-gray-400 mb-6">
           En el día a día navego mucho, buscando info para resolver bugs, para
           crear algún feature de los proyectos en los que trabajo o simplemente

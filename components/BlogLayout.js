@@ -1,6 +1,8 @@
 import Image from "next/image";
 
+import Heading from "./Heading";
 import SiteLayout from "./SiteLayout";
+
 import { formatDate } from '../lib/datetime';
 import { sanitizeSummary } from '../lib/posts';
 
@@ -13,9 +15,9 @@ export default function BlogLayout({ children, post }) {
       date={formatDate(post.date)}
       type="article">
       <article className="flex flex-col items-start justify-center w-full max-w-screen-md mx-auto md:mb-16 mb-12">
-        <h1 className="mb-6 text-3xl font-bold text-black md:text-5xl dark:text-white">
+        <Heading tag="h1" className="mb-6 text-3xl font-bold text-black md:text-5xl dark:text-white">
           {post.title}
-        </h1>
+        </Heading>
         <div className="flex flex-col items-start justify-between w-full mt-2 mb-6 md:flex-row md:items-center">
           <div className="flex items-center">
             <Image
