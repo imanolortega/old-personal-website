@@ -36,7 +36,7 @@ export default function Blog({ posts }) {
           <p className='mb-6'>
             Escribo algunas de las cosas que voy descubriendo y le pueden servir
             a alguien más. Principalmente snippets y otras formas de hacerle la
-            vida más fácil a un dev JR (o no tanto).
+            vida más fácil a un dev.
           </p>
           <SearchBar
             className="mb-10"
@@ -71,11 +71,10 @@ export default function Blog({ posts }) {
           Recommended Blogs
         </Heading>
         <p className="text-gray-600 dark:text-gray-400 mb-6">
-          En el día a día navego mucho, buscando info para resolver bugs, para
+          En el día a día navego mucho, buscando info para resolver problemas, para
           crear algún feature de los proyectos en los que trabajo o simplemente
-          para aprender/entender algo. Debajo les comparto algunos blogs que
-          considero muy valiosos y que quizás puedan servirles. Son de Front-end
-          principalmente.
+          para aprender/entender algo. Debajo les comparto algunos blogs (principalmente de Front-end) que
+          considero muy valiosos y que quizás puedan servirles.
         </p>
         <div className="prose leading-8 text-gray-600 dark:text-gray-400 w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:flex-row">
           {recommendedBlogs.map((blog) => (
