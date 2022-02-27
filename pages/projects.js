@@ -29,7 +29,7 @@ export default function Projects() {
 
   return (
     <SiteLayout title="Projects | Imanol Ortega">
-      <PageLayout className="md:mb-2 mb-1">
+      <PageLayout className="md:mb-2">
         <SectionPage className="prose leading-8 text-gray-600 dark:text-gray-400">
           <Heading
             tag="h1"
@@ -53,7 +53,7 @@ export default function Projects() {
             .
           </p>
           <SearchBar
-            className="md:mb-8"
+            className="mb-8"
             handleSearch={setSearchValue}
             text="Buscar por tecnología"
           />
