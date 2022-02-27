@@ -29,8 +29,8 @@ export default function Projects() {
 
   return (
     <SiteLayout title="Projects | Imanol Ortega">
-      <PageLayout className="md:mb-10 mb-8">
-        <SectionPage className="md:mb-4 mb-2 prose leading-8 text-gray-600 dark:text-gray-400">
+      <PageLayout className="md:mb-2 mb-1">
+        <SectionPage className="prose leading-8 text-gray-600 dark:text-gray-400">
           <Heading
             tag="h1"
             className="font-bold text-3xl md:text-5xl mb-6 text-gray-900 dark:text-white">
