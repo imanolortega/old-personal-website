@@ -1,5 +1,6 @@
-import { getPaginatedPosts } from '../lib/posts';
 import moment from 'moment';
+
+import { getPaginatedPosts } from '@/lib/posts';
 
 const Sitemap = () => {};
 

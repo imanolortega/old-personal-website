@@ -1,18 +1,18 @@
 import { useState, useEffect } from "react";
 import Image from 'next/image';
 
-import BlogPostCard from "../components/BlogPostCard";
-import ExternalLink from "../components/ExternalLink";
-import Heading from '../components/Heading';
-import LinkWithIcon from '../components/LinkWithIcon';
-import PageLayout from "../components/PageLayout";
-import ProjectCard from "../components/ProjectCard";
-import SiteLayout from "../components/SiteLayout";
+import BlogPostCard from "@/components/BlogPostCard";
+import ExternalLink from "@/components/ExternalLink";
+import Heading from '@/components/Heading';
+import LinkWithIcon from '@/components/LinkWithIcon';
+import ProjectCard from "@/components/ProjectCard";
+import PageLayout from "@/layouts/PageLayout";
+import SiteLayout from "@/layouts/SiteLayout";
 
-import { projects } from "../constants/projects";
-import { formatDate } from '../lib/datetime';
-import { getPaginatedPosts } from '../lib/posts';
-import { getRandomElement, shuffle } from "../lib/util";
+import { projects } from "@/constants/projects";
+import { formatDate } from '@/lib/datetime';
+import { getPaginatedPosts } from '@/lib/posts';
+import { getRandomElement, shuffle } from "@/lib/util";
 
 export default function Home({ posts }) {
   const [allProjects, setAllProjects] = useState([]);

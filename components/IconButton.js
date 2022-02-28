@@ -1,6 +1,7 @@
 import React from 'react';
 import { useContext } from 'react';
-import Site from '../contexts/siteLayout';
+
+import Site from '@/contexts/siteLayout';
 
 const IconButton = ({ icon, isAProject, path }) => {
   const { theme } = useContext(Site);

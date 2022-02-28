@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import Heading from './Heading';
 
-import { formatDate } from '../lib/datetime';
+import { formatDate } from '@/lib/datetime';
 
 export default function ProjectCard({ date, link, modified, title }) {
   return (

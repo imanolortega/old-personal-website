@@ -1,15 +1,15 @@
 import { useState } from 'react';
 
-import ExternalLink from '../components/ExternalLink';
-import Heading from '../components/Heading';
-import PageLayout from '../components/PageLayout';
-import ProjectCard from '../components/ProjectCard';
-import SearchBar from '../components/SearchBar';
-import SiteLayout from '../components/SiteLayout';
+import ExternalLink from '@/components/ExternalLink';
+import Heading from '@/components/Heading';
+import ProjectCard from '@/components/ProjectCard';
+import SearchBar from '@/components/SearchBar';
+import SectionPage from '@/components/SectionPage';
+import PageLayout from '@/layouts/PageLayout';
+import SiteLayout from '@/layouts/SiteLayout';
 
-import { projects } from '../constants/projects';
-import { getRandomElement } from '../lib/util';
-import SectionPage from '../components/SectionPage';
+import { projects } from '@/constants/projects';
+import { getRandomElement } from '@/lib/util';
 
 export default function Projects() {
   const [searchValue, setSearchValue] = useState('');

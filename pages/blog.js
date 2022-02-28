@@ -1,16 +1,16 @@
 import { useState } from 'react';
 
-import BlogPost from '../components/BlogPost';
-import ContactCard from '../components/ContactCard';
-import Heading from '../components/Heading';
-import PageLayout from '../components/PageLayout';
-import SearchBar from '../components/SearchBar';
-import SectionPage from '../components/SectionPage';
-import SiteLayout from '../components/SiteLayout';
+import BlogPost from '@/components/BlogPost';
+import ContactCard from '@/components/ContactCard';
+import Heading from '@/components/Heading';
+import SearchBar from '@/components/SearchBar';
+import SectionPage from '@/components/SectionPage';
+import PageLayout from '@/layouts/PageLayout';
+import SiteLayout from '@/layouts/SiteLayout';
 
-import { formatDate } from '../lib/datetime';
-import { getPaginatedPosts, sanitizeExcerpt } from '../lib/posts';
-import { recommendedBlogs } from '../constants/recommendedBlogs';
+import { recommendedBlogs } from '@/constants/recommendedBlogs';
+import { formatDate } from '@/lib/datetime';
+import { getPaginatedPosts, sanitizeExcerpt } from '@/lib/posts';
 
 export default function Blog({ posts }) {
   const [searchValue, setSearchValue] = useState('');
