@@ -1,12 +1,12 @@
-import ContactCard from '../components/ContactCard';
-import ExternalLink from '../components/ExternalLink';
-import Heading from '../components/Heading';
-import List from '../components/List';
-import PageLayout from '../components/PageLayout';
-import SiteLayout from '../components/SiteLayout';
+import ContactCard from '@/components/ContactCard';
+import ExternalLink from '@/components/ExternalLink';
+import Heading from '@/components/Heading';
+import List from '@/components/List';
+import SectionPage from '@/components/SectionPage';
+import PageLayout from '@/layouts/PageLayout';
+import SiteLayout from '@/layouts/SiteLayout';
 
-import { techFront, techBack, oldTech } from '../constants/technologies';
-import SectionPage from '../components/SectionPage';
+import { techFront, techBack, oldTech } from '@/constants/technologies';
 
 export default function About() {
   return (
@@ -30,6 +30,7 @@ export default function About() {
             </ExternalLink>{' '}
             y entusiasta de JavaScript y React JS. Antes fui diseñador gráfico y
             Comunicador Social.
+            <br />
             <br />
             Actualmente trabajo con Next JS en el Front y generalmente con algún
             CMS (headless o no) en el Back. Sigo estudiando en el día a día,

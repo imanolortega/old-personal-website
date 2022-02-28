@@ -1,9 +1,11 @@
-import BlogLayout from '../../components/BlogLayout';
-import { getAllPosts, getPostBySlug, getRelatedPosts } from '../../lib/posts';
-import { categoryPathBySlug } from '../../lib/categories';
-import styles from './Article.module.scss'
+import styles from './Article.module.scss';
 
-export default function Post({ post, relatedPosts }) {
+import BlogLayout from '@/layouts/BlogLayout';
+
+import { categoryPathBySlug } from '@/lib/categories';
+import { getAllPosts, getPostBySlug, getRelatedPosts } from '@/lib/posts';
+
+export default function Post({ post }) {
   return (
     <BlogLayout post={post}>
       <div

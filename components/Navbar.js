@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import styles from '../styles/mobile-menu.module.css';
+import styles from '@/styles/mobile-menu.module.css';
 
 import DarkModeButton from './DarkModeButton';
 import IconButton from './IconButton';

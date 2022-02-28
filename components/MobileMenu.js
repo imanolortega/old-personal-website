@@ -1,7 +1,7 @@
 import cn from "classnames";
 import Link from "next/link";
-import useDelayedRender from "use-delayed-render";
 import styles from "../styles/mobile-menu.module.css";
+import useDelayedRender from "use-delayed-render";
 
 function MenuItem({ href, delay, text }) {
   return (

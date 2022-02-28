@@ -2,7 +2,7 @@ import { useContext } from 'react';
 
 import Heading from './Heading';
 
-import Site from '../contexts/siteLayout';
+import Site from '@/contexts/siteLayout';
 
 const ContactCard = ({ description, icon, path, title }) => {
   const { theme } = useContext(Site);

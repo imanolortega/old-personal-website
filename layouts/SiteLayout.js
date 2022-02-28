@@ -3,12 +3,12 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useTheme } from 'next-themes';
 
-import Site from '../contexts/siteLayout';
+import Site from '@/contexts/siteLayout';
 
-import Footer from './Footer';
-import MobileMenu from './MobileMenu';
-import Navbar from './Navbar';
-import ScrollTopButton from './ScrollTopButton';
+import Footer from '@/components/Footer';
+import MobileMenu from '@/components/MobileMenu';
+import Navbar from '@/components/Navbar';
+import ScrollTopButton from '@/components/ScrollTopButton';
 
 export default function SiteLayout(props) {
   const [mounted, setMounted] = useState(false);

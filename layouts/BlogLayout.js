@@ -1,10 +1,10 @@
 import Image from "next/image";
 
-import Heading from "./Heading";
-import SiteLayout from "./SiteLayout";
+import Heading from "@/components/Heading";
+import SiteLayout from "@/layouts/SiteLayout";
 
-import { formatDate } from '../lib/datetime';
-import { sanitizeSummary } from '../lib/posts';
+import { formatDate } from '@/lib/datetime';
+import { sanitizeSummary } from '@/lib/posts';
 
 export default function BlogLayout({ children, post }) {
   return (

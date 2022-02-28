@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 
-import Site from '../contexts/siteLayout';
+import Site from '@/contexts/siteLayout';
 
 export default function ScrollTopButton() {
   const { theme } = useContext(Site);
