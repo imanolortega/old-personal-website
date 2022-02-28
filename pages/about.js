@@ -1,6 +1,7 @@
 import ContactCard from '../components/ContactCard';
 import ExternalLink from '../components/ExternalLink';
 import Heading from '../components/Heading';
+import List from '../components/List';
 import PageLayout from '../components/PageLayout';
 import SiteLayout from '../components/SiteLayout';
 
@@ -12,7 +13,9 @@ export default function About() {
     <SiteLayout title="About | Imanol Ortega">
       <PageLayout className="md:mb-16 mb-12">
         <SectionPage className="prose leading-8 text-gray-600 dark:text-gray-400">
-          <Heading tag="h1" className="font-bold text-3xl md:text-5xl mb-6 text-gray-900 dark:text-white">
+          <Heading
+            tag="h1"
+            className="font-bold text-3xl md:text-5xl mb-6 text-gray-900 dark:text-white">
             About Me
           </Heading>
           <p>
@@ -37,37 +40,18 @@ export default function About() {
         </SectionPage>
         <SectionPage className="block md:flex w-full justify-between prose leading-8 text-gray-600 dark:text-gray-400">
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
-            <Heading tag="h3" className="text-xl text-gray-900 dark:text-white mb-3">
-              Front
-            </Heading>
-            <ul>
-              {techFront.map((t) => (
-                <li key={t.key}>- {t.tech}</li>
-              ))}
-            </ul>
+            <List title="Front-end" data={techFront} />
           </div>
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
-            <Heading tag="h3" className="text-xl text-gray-900 dark:text-white mb-3">
-              DB & Auth
-            </Heading>
-            <ul>
-              {techBack.map((t) => (
-                <li key={t.key}>- {t.tech}</li>
-              ))}
-            </ul>
+            <List title="Back-end, DB & Auth" data={techBack} />
           </div>
           <div className="w-full md:w-1/3">
-            <Heading tag="h3" className="text-xl text-gray-900 dark:text-white mb-3">
-              Random
-            </Heading>
-            <ul>
-              {oldTech.map((t) => (
-                <li key={t.key}>- {t.tech}</li>
-              ))}
-            </ul>
+            <List title="Random" data={oldTech} />
           </div>
         </SectionPage>
-        <Heading tag="h2" className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
+        <Heading
+          tag="h2"
+          className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
           Contact
         </Heading>
         <div className="prose leading-8 text-gray-600 dark:text-gray-400 w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:flex-row">
