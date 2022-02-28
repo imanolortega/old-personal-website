@@ -54,13 +54,13 @@ export const projects = [
     id: 3,
   },
   {
-    title: "DB con Google Sheets",
+    title: "IP Tracker",
     description:
-      "Primer proyecto con React JS para la FAyA-UNSE, tablas con buscador. Responsivo. Datatables con Google Sheets como DB. Estilo con Bootstrap y Darkmode con Styled Components y Hooks.",
+      "IP Address Tracker con Vue 3, Tailwind CSS y Leaflet.",
     image: "/images/6.png",
-    tags: [ "React JS", "Google Sheets", "Styled Components"],
-    source: "https://github.com/imanolrtega/datatable-googlesheets",
-    visit: "https://datatable-googlesheets.vercel.app/",
+    tags: [ "Vue JS", "Tailwind CSS", "Leaflet"],
+    source: "https://github.com/imanolrtega/ip-tracker",
+    visit: "https://ip-tracker-amber.vercel.app/",
     id: 6,
   },
   {
