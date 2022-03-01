@@ -16,6 +16,7 @@ import { getRandomElement, shuffle } from "@/lib/util";
 
 export default function Home({ posts }) {
   const [allProjects, setAllProjects] = useState([]);
+
   useEffect(() => {
     setAllProjects(shuffle(projects).slice(6));
 
