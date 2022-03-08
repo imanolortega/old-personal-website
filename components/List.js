@@ -1,3 +1,5 @@
+import { array, string } from "prop-types";
+
 import Heading from './Heading';
 
 export default function List({ data, title }) {
@@ -14,3 +16,13 @@ export default function List({ data, title }) {
     </>
   );
 }
+
+List.defaultProps = {
+  data: [],
+  title: ""
+};
+
+List.propTypes = {
+  data: array,
+  title: string
+};

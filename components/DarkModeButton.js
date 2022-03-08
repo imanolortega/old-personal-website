@@ -1,3 +1,5 @@
+import { bool, string, func } from "prop-types";
+
 export default function DarkModeButton({ isMounted, isResolvedTheme, onHandleClick }) {
   return (
     <button
@@ -29,3 +31,15 @@ export default function DarkModeButton({ isMounted, isResolvedTheme, onHandleCli
     </button>
   );
 }
+
+DarkModeButton.defaultProps = {
+  isMounted: false,
+  isResolvedTheme: "",
+  onHandleClick: () => {},
+};
+
+DarkModeButton.propTypes = {
+  isMounted: bool,
+  isResolvedTheme: string,
+  onHandleClick: func,
+};

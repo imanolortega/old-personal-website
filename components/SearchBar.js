@@ -1,3 +1,5 @@
+import { func, string } from "prop-types";
+
 export default function SearchBar({ className, handleSearch, text }) {
   return (
     <form className={`relative w-full ${className}`}>
@@ -25,3 +27,15 @@ export default function SearchBar({ className, handleSearch, text }) {
     </form>
   );
 }
+
+SearchBar.defaultProps = {
+  className: "",
+  handleSearch: () => {},
+  text: "",
+};
+
+SearchBar.propTypes = {
+  className: string,
+  handleSearch: func,
+  text: string,
+};
