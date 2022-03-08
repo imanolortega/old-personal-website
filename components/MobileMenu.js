@@ -1,5 +1,7 @@
-import cn from "classnames";
 import Link from "next/link";
+import { bool, object } from 'prop-types';
+
+import cn from "classnames";
 import styles from "../styles/mobile-menu.module.css";
 import useDelayedRender from "use-delayed-render";
 
@@ -54,3 +56,13 @@ export default function MobileMenu({ isMenuOpen, style }) {
     </nav>
   );
 }
+
+MobileMenu.defaultProps = {
+  isMenuOpen: false,
+  style: {}
+};
+
+MobileMenu.propTypes = {
+  isMenuOpen: bool,
+  style: object
+};

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import BlogPostCard from "@/components/BlogPostCard";
 import ExternalLink from "@/components/ExternalLink";
 import Heading from '@/components/Heading';
-import LinkWithIcon from '@/components/LinkWithIcon';
+import LinkWithArrow from '@/components/LinkWithArrow';
 import ProjectCard from "@/components/ProjectCard";
 import PageLayout from "@/layouts/PageLayout";
 import SiteLayout from "@/layouts/SiteLayout";
@@ -87,7 +87,7 @@ export default function Home({ posts }) {
             title={p.title}
           />
         ))}
-        <LinkWithIcon text="Más artículos" href="/blog" />
+        <LinkWithArrow text="Más artículos" href="/blog" />
         <span className="md:h-16 h-12" />
         <Heading tag="h2" className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
           Projects
@@ -109,7 +109,7 @@ export default function Home({ posts }) {
             />
           ))}
         </div>
-        <LinkWithIcon text="Más proyectos" href="/projects" />
+        <LinkWithArrow text="Más proyectos" href="/projects" />
       </PageLayout>
     </SiteLayout>
   );

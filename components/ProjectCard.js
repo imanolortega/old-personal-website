@@ -1,3 +1,5 @@
+import { array, string } from 'prop-types';
+
 import Heading from './Heading';
 import IconButton from './IconButton';
 
@@ -5,7 +7,6 @@ export default function ProjectCard({
   externalLink,
   githubLink,
   gradient,
-  link,
   tags,
   title,
 }) {
@@ -37,3 +38,19 @@ export default function ProjectCard({
     </div>
   );
 }
+
+ProjectCard.defaultProps = {
+  externalLink: "",
+  githubLink: "",
+  gradient: "",
+  tags: [],
+  title: "",
+};
+
+ProjectCard.propTypes = {
+  externalLink: string,
+  githubLink: string,
+  gradient: string,
+  tags: array,
+  title: string,
+};

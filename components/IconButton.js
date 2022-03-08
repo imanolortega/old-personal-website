@@ -1,15 +1,15 @@
-import React from 'react';
-import { useContext } from 'react';
+import { useContext } from "react";
+import { bool, string } from 'prop-types';
 
-import Site from '@/contexts/siteLayout';
+import Site from "@/contexts/siteLayout";
 
-const IconButton = ({ icon, isAProject, path }) => {
+export default function IconButton({ icon, isAProject, path }) {
   const { theme } = useContext(Site);
 
   function Icon({ type, theme }) {
     return (
       <>
-        {type === 'email' && (
+        {type === "email" && (
           <svg
             className="block h-5 w-8 text-gray-900 dark:text-gray-100"
             width="32"
@@ -18,14 +18,14 @@ const IconButton = ({ icon, isAProject, path }) => {
             xmlns="http://www.w3.org/2000/svg">
             <path
               d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-              stroke={theme === 'dark' ? '#fafafa' : '#111'}
+              stroke={theme === "dark" ? "#fafafa" : "#111"}
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
           </svg>
         )}
-        {type === 'linkedin' && (
+        {type === "linkedin" && (
           <svg
             className="block h-5 w-5 text-gray-900 dark:text-gray-100"
             width="32"
@@ -33,7 +33,7 @@ const IconButton = ({ icon, isAProject, path }) => {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512">
             <path
-              fill={theme === 'dark' ? '#fafafa' : '#475569'}
+              fill={theme === "dark" ? "#fafafa" : "#475569"}
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -41,7 +41,7 @@ const IconButton = ({ icon, isAProject, path }) => {
             />
           </svg>
         )}
-        {type === 'github' && (
+        {type === "github" && (
           <svg
             className="block h-5 w-5 text-gray-900 dark:text-gray-100"
             width="32"
@@ -49,7 +49,7 @@ const IconButton = ({ icon, isAProject, path }) => {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 496 512">
             <path
-              fill={theme === 'dark' ? '#fafafa' : '#475569'}
+              fill={theme === "dark" ? "#fafafa" : "#475569"}
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -57,7 +57,7 @@ const IconButton = ({ icon, isAProject, path }) => {
             />
           </svg>
         )}
-        {type === 'external-link' && (
+        {type === "external-link" && (
           <svg
             className="block h-6 w-6 text-gray-900 dark:text-gray-100"
             width="24"
@@ -66,7 +66,7 @@ const IconButton = ({ icon, isAProject, path }) => {
             xmlns="http://www.w3.org/2000/svg">
             <path
               d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-              stroke={theme === 'dark' ? '#fafafa' : '#475569'}
+              stroke={theme === "dark" ? "#fafafa" : "#475569"}
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -81,15 +81,25 @@ const IconButton = ({ icon, isAProject, path }) => {
     <a
       target="_blank"
       rel="nofollow noopener noreferrer"
-      aria-label={`${icon} ${isAProject ? 'project' : 'link contact'}`}
+      aria-label={`${icon} ${isAProject ? "project" : "link contact"}`}
       type="button"
       href={path}
       className={`w-8 h-8 opacity-75 hover:opacity-100 rounded-lg flex items-center justify-center ${
-        !isAProject ? 'hover:ring-2' : null
+        !isAProject ? "hover:ring-2" : null
       } ring-slate-300 dark:ring-slate-600 transition-all cursor-pointer`}>
       <Icon type={icon} theme={theme} />
     </a>
   );
+}
+
+IconButton.defaultProps = {
+  icon: "",
+  isAProject: false,
+  path: "",
 };
 
-export default IconButton;
+IconButton.propTypes = {
+  icon: string,
+  isAProject: bool,
+  path: string,
+};

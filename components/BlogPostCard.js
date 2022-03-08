@@ -1,10 +1,11 @@
 import Link from "next/link";
+import { string } from "prop-types";
 
-import Heading from './Heading';
+import Heading from "./Heading";
 
-import { formatDate } from '@/lib/datetime';
+import { formatDate } from "@/lib/datetime";
 
-export default function ProjectCard({ date, link, modified, title }) {
+export default function BlogPostCard({ date, link, modified, title }) {
   return (
     <div className="relative w-full group">
       <div
@@ -26,11 +27,13 @@ export default function ProjectCard({ date, link, modified, title }) {
         <Link href={`${link}`}>
           <a>
             <div className="h-full w-full bg-slate-100 dark:bg-slate-900 rounded-lg p-4">
-              <Heading tag="h3" className="text-lg md:text-lg font-medium mb-2 sm:mb-5 w-full text-gray-900 dark:text-gray-100">
+              <Heading
+                tag="h3"
+                className="text-lg md:text-lg font-medium mb-2 sm:mb-5 w-full text-gray-900 dark:text-gray-100">
                 {title}
               </Heading>
               <p className="text-xs">
-                Publicado el {date} | Última actualización el{' '}
+                Publicado el {date} | Última actualización el{" "}
                 {formatDate(modified)}
               </p>
             </div>
@@ -40,3 +43,17 @@ export default function ProjectCard({ date, link, modified, title }) {
     </div>
   );
 }
+
+BlogPostCard.defaultProps = {
+  date: "",
+  link: "",
+  modified: "",
+  title: "",
+};
+
+BlogPostCard.propTypes = {
+  date: string,
+  slug: string,
+  summary: string,
+  title: string,
+};

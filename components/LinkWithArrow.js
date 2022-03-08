@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { string } from "prop-types";
 
-const LinkWithIcon = ({ href, text }) => {
+export default function LinkWithArrow({ href, text }) {
   return (
     <Link href={href}>
       <a
@@ -25,6 +26,14 @@ const LinkWithIcon = ({ href, text }) => {
       </a>
     </Link>
   );
+}
+
+LinkWithArrow.defaultProps = {
+  href: "",
+  text: ""
 };
 
-export default LinkWithIcon;
+LinkWithArrow.propTypes = {
+  href: string,
+  text: string
+};

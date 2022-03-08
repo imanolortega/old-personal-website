@@ -1,16 +1,17 @@
-import { useContext } from 'react';
+import { useContext } from "react";
+import { string } from "prop-types";
 
-import Heading from './Heading';
+import Heading from "./Heading";
 
-import Site from '@/contexts/siteLayout';
+import Site from "@/contexts/siteLayout";
 
-const ContactCard = ({ description, icon, path, title }) => {
+export default function ContactCard({ description, icon, path, title }) {
   const { theme } = useContext(Site);
 
   function Icon({ type }) {
     return (
       <>
-        {type === 'email' && (
+        {type === "email" && (
           <svg
             className="block h-5 w-8 mb-4 text-gray-900 dark:text-gray-100"
             width="32"
@@ -19,14 +20,14 @@ const ContactCard = ({ description, icon, path, title }) => {
             xmlns="http://www.w3.org/2000/svg">
             <path
               d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-              stroke={theme === 'dark' ? '#94a3b8' : '#475569'}
+              stroke={theme === "dark" ? "#94a3b8" : "#475569"}
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
           </svg>
         )}
-        {type === 'linkedin' && (
+        {type === "linkedin" && (
           <svg
             className="block h-5 w-5 mb-4 text-gray-900 dark:text-gray-100"
             width="32"
@@ -34,7 +35,7 @@ const ContactCard = ({ description, icon, path, title }) => {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 448 512">
             <path
-              fill={theme === 'dark' ? '#94a3b8' : '#475569'}
+              fill={theme === "dark" ? "#94a3b8" : "#475569"}
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -42,7 +43,7 @@ const ContactCard = ({ description, icon, path, title }) => {
             />
           </svg>
         )}
-        {type === 'github' && (
+        {type === "github" && (
           <svg
             className="block h-5 w-5 mb-4 text-gray-900 dark:text-gray-100"
             width="32"
@@ -50,7 +51,7 @@ const ContactCard = ({ description, icon, path, title }) => {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 496 512">
             <path
-              fill={theme === 'dark' ? '#94a3b8' : '#475569'}
+              fill={theme === "dark" ? "#94a3b8" : "#475569"}
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -70,7 +71,9 @@ const ContactCard = ({ description, icon, path, title }) => {
       href={path}
       className="w-full group border border-gray-400 dark:border-gray-600 rounded-lg p-6">
       {icon && <Icon type={icon} />}
-      <Heading tag="h3" className="text-lg md:text-lg font-medium mb-2 sm:mb-5 w-full text-gray-800 dark:text-gray-100">
+      <Heading
+        tag="h3"
+        className="text-lg md:text-lg font-medium mb-2 sm:mb-5 w-full text-gray-800 dark:text-gray-100">
         {title}
       </Heading>
       <p className="text-gray-600 dark:text-gray-400 text-base">
@@ -78,6 +81,18 @@ const ContactCard = ({ description, icon, path, title }) => {
       </p>
     </a>
   );
+}
+
+ContactCard.defaultProps = {
+  description: "",
+  icon: "",
+  path: "",
+  title: "",
 };
 
-export default ContactCard;
+ContactCard.propTypes = {
+  date: string,
+  slug: string,
+  summary: string,
+  title: string,
+};
