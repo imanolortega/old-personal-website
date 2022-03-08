@@ -1,3 +1,4 @@
+import { object } from 'prop-types';
 import styles from './Article.module.scss';
 
 import BlogLayout from '@/layouts/BlogLayout';
@@ -34,6 +35,14 @@ export async function getStaticPaths() {
     fallback: false,
   };
 }
+
+Post.defaultProps = {
+  post: {},
+};
+
+Post.propTypes = {
+  post: object,
+};
 
 export async function getStaticProps({ params }) {
   const { post } = await getPostBySlug(params?.slug);

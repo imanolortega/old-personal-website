@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { any } from 'prop-types';
 
 import BlogPost from '@/components/BlogPost';
 import ContactCard from '@/components/ContactCard';
@@ -89,6 +90,14 @@ export default function Blog({ posts }) {
     </SiteLayout>
   );
 }
+
+Blog.defaultProps = {
+  posts: {},
+};
+
+Blog.propTypes = {
+  posts: any,
+};
 
 export async function getStaticProps() {
   const { posts, pagination } = await getPaginatedPosts();

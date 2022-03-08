@@ -1,3 +1,5 @@
+import { any, string } from "prop-types";
+
 export default function PageLayout({ children, className }) {
   return (
     <div
@@ -6,3 +8,13 @@ export default function PageLayout({ children, className }) {
     </div>
   );
 }
+
+PageLayout.defaultProps = {
+  children: [],
+  className: "",
+};
+
+PageLayout.propTypes = {
+  children: any,
+  className: string,
+};

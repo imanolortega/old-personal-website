@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { object } from 'prop-types';
 
 import Heading from "@/components/Heading";
 import SiteLayout from "@/layouts/SiteLayout";
@@ -47,3 +48,13 @@ export default function BlogLayout({ children, post }) {
     </SiteLayout>
   );
 }
+
+BlogLayout.defaultProps = {
+  children: {},
+  post: {},
+};
+
+BlogLayout.propTypes = {
+  children: object,
+  post: object,
+};
