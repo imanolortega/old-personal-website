@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Image from 'next/image';
+import { object } from 'prop-types';
 
 import BlogPostCard from "@/components/BlogPostCard";
 import ExternalLink from "@/components/ExternalLink";
@@ -114,6 +115,14 @@ export default function Home({ posts }) {
     </SiteLayout>
   );
 }
+
+Home.defaultProps = {
+  posts: {},
+};
+
+Home.propTypes = {
+  posts: object,
+};
 
 export async function getStaticProps() {
   const { posts, pagination } = await getPaginatedPosts();

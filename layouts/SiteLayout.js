@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
+import { browserName } from "react-device-detect";
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useTheme } from 'next-themes';
-import { browserName } from "react-device-detect";
+import { object } from 'prop-types';
 
 import Site from '@/contexts/siteLayout';
 
@@ -144,3 +145,11 @@ export default function SiteLayout(props) {
     </Site.Provider>
   );
 }
+
+SiteLayout.defaultProps = {
+  children: {},
+};
+
+SiteLayout.propTypes = {
+  children: object,
+};
