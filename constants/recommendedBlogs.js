@@ -60,4 +60,25 @@ export const recommendedBlogs = [
     description: 'Front-End Web Development',
     url: 'https://alligator.io/',
   },
+  
+  {
+    id: 9,
+    title: 'Anthony Fu',
+    description: 'Vue JS, Nuxt JS y Vite',
+    url: 'https://antfu.me/',
+  },
+  
+  {
+    id: 10,
+    title: 'Magic of CSS',
+    description: 'CSS',
+    url: 'https://adamschwartz.co/magic-of-css/',
+  },
+  
+  {
+    id: 11,
+    title: "Rico's cheatsheets",
+    description: 'Development',
+    url: 'https://devhints.io/',
+  },
 ];
