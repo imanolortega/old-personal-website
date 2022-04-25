@@ -1,18 +1,18 @@
-import { object } from 'prop-types';
-import styles from './Article.module.scss';
+import { object } from "prop-types";
+import styles from "./Article.module.scss";
 
-import BlogLayout from '@/layouts/BlogLayout';
+import BlogLayout from "@/layouts/BlogLayout";
 
-import { categoryPathBySlug } from '@/lib/categories';
-import { getAllPosts, getPostBySlug, getRelatedPosts } from '@/lib/posts';
+import { getAllPosts, getPostBySlug } from "@/lib/posts";
+import { markdownToHtml } from "@/lib/util";
 
-export default function Post({ post }) {
+export default function Post({ content, post }) {
   return (
     <BlogLayout post={post}>
       <div
         className={styles.Content}
         dangerouslySetInnerHTML={{
-          __html: post.content,
+          __html: content,
         }}
       />
     </BlogLayout>
@@ -20,13 +20,12 @@ export default function Post({ post }) {
 }
 
 export async function getStaticPaths() {
-  const { posts } = await getAllPosts();
-
+  const posts = await getAllPosts();
   const paths = posts
-    .filter(({ slug }) => typeof slug === 'string')
-    .map(({ slug }) => ({
+    .filter((post) => typeof post?.attributes?.slug === "string")
+    .map((post) => ({
       params: {
-        slug,
+        slug: post?.attributes?.slug,
       },
     }));
 
@@ -45,25 +44,14 @@ Post.propTypes = {
 };
 
 export async function getStaticProps({ params }) {
-  const { post } = await getPostBySlug(params?.slug);
-
-  //const socialImage = `${process.env.OG_IMAGE_DIRECTORY}/${params?.slug}.png`;
-
-  const { categories, databaseId: postId } = post;
-  const category = categories.length && categories[0];
-  let { name, slug } = category;
+  const post = await getPostBySlug(params.slug);
+  const content = await markdownToHtml(post?.attributes?.content || "");
 
   return {
     props: {
+      content,
       post,
-      //socialImage,
-      relatedPosts: {
-        posts: await getRelatedPosts(category, postId),
-        title: {
-          name: name || null,
-          link: categoryPathBySlug(slug),
-        },
-      },
     },
+    revalidate: 60 * 60 * 24,
   };
 }

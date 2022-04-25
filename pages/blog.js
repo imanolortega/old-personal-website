@@ -11,7 +11,7 @@ import SiteLayout from '@/layouts/SiteLayout';
 
 import { recommendedBlogs } from '@/constants/recommendedBlogs';
 import { formatDate } from '@/lib/datetime';
-import { getPaginatedPosts, sanitizeExcerpt } from '@/lib/posts';
+import { getAllPosts } from "@/lib/posts";
 
 export default function Blog({ posts }) {
   const [searchValue, setSearchValue] = useState('');
@@ -21,7 +21,7 @@ export default function Blog({ posts }) {
   };
 
   const filteredArticles = posts.filter((post) =>
-    addText(post.content, post.title)
+    addText(post.attributes.content, post.attributes.title)
       .toString()
       .toLowerCase()
       .includes(searchValue.toLowerCase())
@@ -47,15 +47,15 @@ export default function Blog({ posts }) {
           <div className="w-full mb-2">
             {filteredArticles?.map((p) => (
               <BlogPost
-                title={p.title}
+                title={p.attributes.title}
                 key={p.id}
-                date={formatDate(p.date)}
-                slug={p.slug}
+                date={formatDate(p.attributes.date)}
+                slug={p.attributes.slug}
                 summary={
                   <div
                     className="text-sm text-gray-600 dark:text-gray-400"
                     dangerouslySetInnerHTML={{
-                      __html: sanitizeExcerpt(p.excerpt),
+                      __html: p.attributes.description,
                     }}
                   />
                 }
@@ -100,14 +100,11 @@ Blog.propTypes = {
 };
 
 export async function getStaticProps() {
-  const { posts, pagination } = await getPaginatedPosts();
+  const posts = await getAllPosts();
+
   return {
     props: {
       posts,
-      pagination: {
-        ...pagination,
-        basePath: '/posts',
-      },
     },
     revalidate: 60 * 60 * 24,
   };
