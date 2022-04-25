@@ -34,7 +34,7 @@ export default function BlogPostCard({ date, link, modified, title }) {
               </Heading>
               <p className="text-xs">
                 Publicado el {date} | Última actualización el{" "}
-                {formatDate(modified)}
+                {modified}
               </p>
             </div>
           </a>

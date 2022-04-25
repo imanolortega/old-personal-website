@@ -1,18 +1,18 @@
 import { useState, useEffect } from "react";
-import Image from 'next/image';
-import { object } from 'prop-types';
+import Image from "next/image";
+import { array } from "prop-types";
 
 import BlogPostCard from "@/components/BlogPostCard";
 import ExternalLink from "@/components/ExternalLink";
-import Heading from '@/components/Heading';
-import LinkWithArrow from '@/components/LinkWithArrow';
+import Heading from "@/components/Heading";
+import LinkWithArrow from "@/components/LinkWithArrow";
 import ProjectCard from "@/components/ProjectCard";
 import PageLayout from "@/layouts/PageLayout";
 import SiteLayout from "@/layouts/SiteLayout";
 
 import { projects } from "@/constants/projects";
-import { formatDate } from '@/lib/datetime';
-import { getPaginatedPosts } from '@/lib/posts';
+import { formatDate } from "@/lib/datetime";
+import { getAllPosts } from "@/lib/posts";
 import { getRandomElement, shuffle } from "@/lib/util";
 
 export default function Home({ posts }) {
@@ -41,13 +41,14 @@ export default function Home({ posts }) {
       <PageLayout className="border-gray-200 dark:border-gray-700 md:mb-14 mb-10">
         <div className="flex w-full justify-between flex-col-reverse sm:flex-row items-start">
           <div className="flex flex-col pr-8">
-            <Heading tag="h1"
+            <Heading
+              tag="h1"
               className="font-bold text-3xl md:text-5xl md:leading-normal mb-3
             bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-blue-500 animate-fade">
               Imanol Ortega
             </Heading>
             <p className="text-gray-600 dark:text-gray-400 md:mb-16 mb-12">
-              Desarrollador Front-end en{' '}
+              Desarrollador Front-end en{" "}
               <ExternalLink href="https://easytechgreen.com/">
                 <span
                   className="font-semibold bg-clip-text text-transparent bg-gradient-to-r
@@ -72,7 +73,9 @@ export default function Home({ posts }) {
             </div>
           </div>
         </div>
-        <Heading tag="h2" className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
+        <Heading
+          tag="h2"
+          className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
           Blog
         </Heading>
         <p className="text-gray-600 dark:text-gray-400 mb-6">
@@ -81,16 +84,18 @@ export default function Home({ posts }) {
         </p>
         {posts?.map((p) => (
           <BlogPostCard
-            date={formatDate(p.date)}
-            key={p.title}
-            link={`blog/${p.slug}`}
-            modified={p.modified}
-            title={p.title}
+            date={formatDate(p?.attributes?.date)}
+            key={p?.id}
+            link={`blog/${p?.attributes?.slug}`}
+            modified={formatDate(p?.attributes?.updatedAt)}
+            title={p?.attributes?.title}
           />
         ))}
         <LinkWithArrow text="Más artículos" href="/blog" />
         <span className="md:h-16 h-12" />
-        <Heading tag="h2" className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
+        <Heading
+          tag="h2"
+          className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
           Projects
         </Heading>
         <p className="text-gray-600 dark:text-gray-400 mb-6">
@@ -121,18 +126,15 @@ Home.defaultProps = {
 };
 
 Home.propTypes = {
-  posts: object,
+  posts: array,
 };
 
 export async function getStaticProps() {
-  const { posts, pagination } = await getPaginatedPosts();
+  const posts = await getAllPosts();
+
   return {
     props: {
       posts,
-      pagination: {
-        ...pagination,
-        basePath: '/posts',
-      },
     },
     revalidate: 60 * 60 * 24,
   };
