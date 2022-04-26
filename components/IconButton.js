@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { bool, string } from 'prop-types';
+import { bool, string } from "prop-types";
 
 import Site from "@/contexts/siteLayout";
 
@@ -78,7 +78,7 @@ export default function IconButton({ icon, isAProject, path }) {
   }
 
   return (
-    <a
+    <button
       target="_blank"
       rel="nofollow noopener noreferrer"
       aria-label={`${icon} ${isAProject ? "project" : "link contact"}`}
@@ -86,9 +86,9 @@ export default function IconButton({ icon, isAProject, path }) {
       href={path}
       className={`w-8 h-8 opacity-75 hover:opacity-100 rounded-lg flex items-center justify-center ${
         !isAProject ? "hover:ring-2" : null
-      } ring-slate-300 dark:ring-slate-600 transition-all cursor-pointer`}>
+      }  ring-slate-300 dark:ring-slate-600 transition-all cursor-pointer`}>
       <Icon type={icon} theme={theme} />
-    </a>
+    </button>
   );
 }
 

@@ -5,7 +5,7 @@ export default function InternalLink({ href, children }) {
   return (
     <Link href={href} scroll={false}>
       <a className="text-slate-600 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200 transition">
-        {children}
+        <span className="capsize">{children}</span>
       </a>
     </Link>
   );
