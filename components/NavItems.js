@@ -9,7 +9,7 @@ export default function NavItem({ href, text }) {
 
   return (
     <li>
-      <Link href={href}>
+      <Link href={href} scroll={false}>
         <a
           className={`${
             isActive

@@ -10,7 +10,7 @@ function MenuItem({ href, delay, text }) {
     <li
       className="border-b border-gray-300 dark:border-gray-700 text-slate-600 dark:text-slate-100 text-lg font-semibold"
       style={{ transitionDelay: `${delay}ms` }}>
-      <Link href={href}>
+      <Link href={href} scroll={false}>
         <a className="flex w-auto pb-4">{text}</a>
       </Link>
     </li>

@@ -24,7 +24,7 @@ export default function BlogPostCard({ date, link, modified, title }) {
         blur
         mb-6"></div>
       <div className="transform transition-all rounded-xl w-full p-1 mb-6">
-        <Link href={`${link}`}>
+        <Link href={`${link}`} scroll={false}>
           <a>
             <div className="h-full w-full bg-slate-100 dark:bg-slate-900 rounded-lg p-4">
               <Heading
