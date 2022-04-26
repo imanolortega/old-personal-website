@@ -21,11 +21,11 @@ export default function ProjectCard({
           </Heading>
           <div className="text-gray-800 dark:text-gray-200 capsize">
             {tags &&
-              tags.map((t) => (
+              tags?.map((t) => (
                 <p
-                  key={t}
+                  key={t.id}
                   className="text-xs text-gray-800 dark:text-white mb-1">
-                  {t}
+                  {t.attributes.name}
                 </p>
               ))}
           </div>

@@ -1,6 +1,6 @@
-import moment from 'moment';
+import moment from "moment";
 
-import { getPaginatedPosts } from '@/lib/posts';
+import { getAllPosts } from "@/lib/posts";
 
 const Sitemap = () => {};
 
@@ -10,7 +10,7 @@ export const getServerSideProps = async ({ res }) => {
   const formatDate = "YYYY-MM-DD";
   date = moment(date).format(formatDate);
 
-  const { posts } = await getPaginatedPosts();
+  const posts = await getAllPosts();
 
   const staticPages = ["", "about", "blog", "projects"].map(
     (staticPagePath) => {
@@ -24,8 +24,10 @@ export const getServerSideProps = async ({ res }) => {
         .map((post) => {
           return `
             <url>
-              <loc>${baseUrl}/${post?.slug}</loc>
-              <lastmod>${moment(post?.modified).format(formatDate)}</lastmod>
+              <loc>${baseUrl}/${post?.attributes?.slug}</loc>
+              <lastmod>${moment(post?.attributes?.updatedAt).format(
+                formatDate
+              )}</lastmod>
               <changefreq>weekly</changefreq>
               <priority>1.0</priority>
             </url>

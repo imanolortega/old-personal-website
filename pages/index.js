@@ -10,12 +10,12 @@ import ProjectCard from "@/components/ProjectCard";
 import PageLayout from "@/layouts/PageLayout";
 import SiteLayout from "@/layouts/SiteLayout";
 
-import { projects } from "@/constants/projects";
 import { formatDate } from "@/lib/datetime";
 import { getAllPosts } from "@/lib/posts";
+import { getAllProjects } from "@/lib/projects";
 import { getRandomElement, shuffle } from "@/lib/util";
 
-export default function Home({ posts }) {
+export default function Home({ posts, projects }) {
   const [allProjects, setAllProjects] = useState([]);
 
   useEffect(() => {
@@ -103,15 +103,14 @@ export default function Home({ posts }) {
           proyectos voy a agregarlos más adelante.
         </p>
         <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:flex-row mb-4">
-          {allProjects.map((p) => (
+          {allProjects?.map((p) => (
             <ProjectCard
-              externalLink={p.visit}
+              externalLink={p.attributes.landing}
               gradient={getRandomElement(gradients)}
-              githubLink={p.source}
+              githubLink={p.attributes.github}
               key={p.id}
-              link={p.visit}
-              tags={p.tags}
-              title={p.title}
+              tags={p.attributes.tags.data}
+              title={p.attributes.title}
             />
           ))}
         </div>
@@ -131,10 +130,12 @@ Home.propTypes = {
 
 export async function getStaticProps() {
   const posts = await getAllPosts();
+  const projects = await getAllProjects();
 
   return {
     props: {
-      posts,
+      posts: posts ? posts : null,
+      projects: projects ? projects : null,
     },
     revalidate: 60 * 60 * 24,
   };

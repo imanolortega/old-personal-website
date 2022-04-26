@@ -1,6 +1,6 @@
-import 'tailwindcss/tailwind.css';
-import { ThemeProvider } from 'next-themes';
-import Script from 'next/script';
+import "tailwindcss/tailwind.css";
+import { ThemeProvider } from "next-themes";
+import Script from "next/script";
 
 function MyApp({ Component, pageProps }) {
   return (

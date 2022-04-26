@@ -41,13 +41,14 @@ export default function Footer() {
       <p className="text-slate-600 dark:text-slate-400 mb-2">
         <ExternalLink
           href="https://github.com/imanolrtega/new-personal-website"
-          children={'Codeado'}
-        />{' '}
-        con <ExternalLink href="https://nextjs.org/" children={'Next JS'} />,{' '}
-        <ExternalLink href="https://tailwindcss.com/" children={'Tailwind'} />,{' '}
-        <ExternalLink href="https://graphql.org/" children={'GraphQL'} /> y
-        hosteado en{' '}
-        <ExternalLink href="https://vercel.com/" children={'Vercel'} />.
+          children={"Codeado"}
+        />{" "}
+        con <ExternalLink href="https://nextjs.org/" children={"Next JS"} />,{" "}
+        <ExternalLink href="https://tailwindcss.com/" children={"Tailwind"} />,{" "}
+        <ExternalLink href="https://graphql.org/" children={"GraphQL"} />,{" "}
+        <ExternalLink href="https://strapi.io/" children={"Strapi"} /> y
+        hosteado en{" "}
+        <ExternalLink href="https://vercel.com/" children={"Vercel"} />.
       </p>
     </footer>
   );

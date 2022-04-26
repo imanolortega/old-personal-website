@@ -1,6 +1,6 @@
-import Heading from '@/components/Heading';
-import PageLayout from '@/layouts/PageLayout';
-import SiteLayout from '@/layouts/SiteLayout';
+import Heading from "@/components/Heading";
+import PageLayout from "@/layouts/PageLayout";
+import SiteLayout from "@/layouts/SiteLayout";
 
 export default function Custom404() {
   return (
