@@ -1,16 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import { browserName } from "react-device-detect";
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { useTheme } from 'next-themes';
-import { object } from 'prop-types';
+import Head from "next/head";
+import { useRouter } from "next/router";
+import { useTheme } from "next-themes";
+import { object } from "prop-types";
 
-import Site from '@/contexts/siteLayout';
+import Site from "@/contexts/siteLayout";
 
-import Footer from '@/components/Footer';
-import MobileMenu from '@/components/MobileMenu';
-import Navbar from '@/components/Navbar';
-import ScrollTopButton from '@/components/ScrollTopButton';
+import Footer from "@/components/Footer";
+import MobileMenu from "@/components/MobileMenu";
+import Navbar from "@/components/Navbar";
+import ScrollTopButton from "@/components/ScrollTopButton";
 
 export default function SiteLayout(props) {
   const [mounted, setMounted] = useState(false);
@@ -21,10 +21,10 @@ export default function SiteLayout(props) {
   const { children, ...customMeta } = props;
   const router = useRouter();
   const meta = {
-    title: 'Imanol Ortega | Front-end Developer',
+    title: "Imanol Ortega | Front-end Developer",
     description: `Front-end developer, JavaScript & React enthusiast.`,
-    image: 'https://www.imanol.work/images/imanol-ortega-personal-site.jpg',
-    type: 'website',
+    image: "https://www.imanol.work/images/imanol-ortega-personal-site.jpg",
+    type: "website",
     ...customMeta,
   };
 
@@ -33,16 +33,16 @@ export default function SiteLayout(props) {
   function toggleMenu() {
     if (isMenuOpen) {
       setIsMenuOpen(false);
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     } else {
       setIsMenuOpen(true);
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     }
   }
 
   useEffect(() => {
     return function cleanup() {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     };
   }, []);
 
@@ -60,7 +60,7 @@ export default function SiteLayout(props) {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', checkScrollTop);
+    window.addEventListener("scroll", checkScrollTop);
   }, [showScroll]);
 
   const [os, setOs] = useState(false);
@@ -82,13 +82,13 @@ export default function SiteLayout(props) {
           <meta
             property="og:url"
             content={`https://imanol.work${
-              router.asPath === '/index' ? '/' : router.asPath
+              router.asPath === "/index" ? "/" : router.asPath
             }`}
           />
           <link
             rel="canonical"
             href={`https://imanol.work${
-              router.asPath === '/index' ? '/' : router.asPath
+              router.asPath === "/index" ? "/" : router.asPath
             }`}
           />
           <link
@@ -111,7 +111,10 @@ export default function SiteLayout(props) {
         </Head>
 
         {showScroll && browserName !== "Firefox" && (
-          <div className={`fixed pl-6 pr-6 md:pl-${os === "macOS" ? 4 : 8} md:pr-4 top-6 z-30 w-full`}>
+          <div
+            className={`fixed pl-6 pr-6 ${
+              os !== "macOS" ? "md:pl-8 md:pr-4" : ""
+            } top-6 z-30 w-full`}>
             <div className="mx-auto w-full max-w-screen-md">
               <Navbar
                 isFixed
