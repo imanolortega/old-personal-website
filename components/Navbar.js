@@ -5,7 +5,7 @@ import styles from "@/styles/mobile-menu.module.css";
 
 import DarkModeButton from "./DarkModeButton";
 import IconButton from "./IconButton";
-import NavItem from "./NavItems";
+import NavItem from "./NavItem";
 
 function MenuIcon() {
   return (

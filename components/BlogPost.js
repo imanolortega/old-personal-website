@@ -5,7 +5,7 @@ import Heading from "./Heading";
 
 export default function BlogPost({ date, slug, summary, title }) {
   return (
-    <Link href={`/blog/${slug}`}>
+    <Link href={`/blog/${slug}`} scroll={false}>
       <a className="w-full">
         <div className="w-full pl-4 rounded-sm border-l-4 transition border-l-slate-400 dark:hover:border-l-slate-200 hover:border-l-slate-500">
           <div className="flex flex-col justify-between md:flex-row mb-2">

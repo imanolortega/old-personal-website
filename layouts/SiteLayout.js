@@ -105,7 +105,7 @@ export default function SiteLayout(props) {
         </Head>
 
         {showScroll && browserName !== "Firefox" && (
-          <div className="fixed pl-6 pr-6 md:pl-8 md:pr-4 top-6 z-30 w-full">
+          <div className="fixed pl-6 pr-6 md:pl-4 md:pr-4 top-6 z-30 w-full">
             <div className="mx-auto w-full max-w-screen-md">
               <Navbar
                 isFixed

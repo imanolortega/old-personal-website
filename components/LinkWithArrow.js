@@ -3,7 +3,7 @@ import { string } from "prop-types";
 
 export default function LinkWithArrow({ href, text }) {
   return (
-    <Link href={href}>
+    <Link href={href} scroll={false}>
       <a
         className="flex content-center h-8 text-gray-600 dark:text-gray-400 rounded-lg
           hover:text-gray-800 dark:hover:text-gray-200 group">

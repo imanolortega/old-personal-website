@@ -34,6 +34,15 @@ module.exports = {
   images: {
     domains: ['secure.gravatar.com'],
   },
+  async redirects() {
+    return [
+      {
+        source: '/blog/reordenar-array-javascript',
+        destination: '/blog/como-reordenar-un-array-de-forma-realmente-aleatoria',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 /**

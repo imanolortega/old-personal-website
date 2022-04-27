@@ -2,14 +2,20 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 import { string } from "prop-types";
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 export default function NavItem({ href, text }) {
   const router = useRouter();
-  const isActive = router.asPath === href;
+  const [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    setIsActive(router.asPath === href);
+  }, []);
 
   return (
     <li>
-      <Link href={href}>
+      <Link href={href} scroll={false}>
         <a
           className={`${
             isActive

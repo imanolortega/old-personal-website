@@ -9,8 +9,8 @@ export default function List({ data, title }) {
         {title}
       </Heading>
       <ul>
-        {data.map((x) => (
-          <li key={x.key}>- {x.tech}</li>
+        {data?.data?.map((t) => (
+          <li key={t.id}>- {t.attributes.name}</li>
         ))}
       </ul>
     </>
