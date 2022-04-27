@@ -12,7 +12,7 @@ export default function About({ technologies }) {
   const frontend = getTechByType(technologies, "Front-end");
   const backend = getTechByType(technologies, "Back-end");
   const random = getTechByType(technologies, "Random");
-  console.log(frontend);
+
   return (
     <SiteLayout title="About | Imanol Ortega">
       <PageLayout className="md:mb-16 mb-12">
