@@ -113,7 +113,7 @@ export default function SiteLayout(props) {
         {showScroll && browserName !== "Firefox" && (
           <div
             className={`fixed pl-6 pr-6 ${
-              os !== "macOS" ? "md:pl-8 md:pr-4" : ""
+              os !== "macOS" && browserName !== "Safari" ? "md:pl-8 md:pr-4" : ""
             } top-6 z-30 w-full`}>
             <div className="mx-auto w-full max-w-screen-md">
               <Navbar
