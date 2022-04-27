@@ -11,7 +11,6 @@ import Footer from '@/components/Footer';
 import MobileMenu from '@/components/MobileMenu';
 import Navbar from '@/components/Navbar';
 import ScrollTopButton from '@/components/ScrollTopButton';
-import { getOS } from '@/lib/util';
 
 export default function SiteLayout(props) {
   const [mounted, setMounted] = useState(false);
