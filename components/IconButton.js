@@ -82,7 +82,6 @@ export default function IconButton({ icon, isAProject, path }) {
       target="_blank"
       rel="nofollow noopener noreferrer"
       aria-label={`${icon} ${isAProject ? "project" : "link contact"}`}
-      type="button"
       href={path}
       className={`w-8 h-8 opacity-75 hover:opacity-100 rounded-lg flex items-center justify-center ${
         !isAProject ? "hover:ring-2" : null
