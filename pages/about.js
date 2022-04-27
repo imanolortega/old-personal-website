@@ -12,7 +12,7 @@ export default function About({ technologies }) {
   const frontend = getTechByType(technologies, "Front-end");
   const backend = getTechByType(technologies, "Back-end");
   const random = getTechByType(technologies, "Random");
-
+  console.log(frontend);
   return (
     <SiteLayout title="About | Imanol Ortega">
       <PageLayout className="md:mb-16 mb-12">
@@ -36,11 +36,12 @@ export default function About({ technologies }) {
             Comunicador Social.
             <br />
             <br />
-            Actualmente trabajo con Next JS en el Front y generalmente con algún
-            CMS (headless o no) en el Back. Sigo estudiando en el día a día,
-            enfocado en mantener buenas prácticas y convertirme en Fullstack. Mi
-            foco hoy está en la experiencia de usuario: webs rápidas, intuitivas
-            y accesibles.
+            Actualmente en mi trabajo utilizo Next JS en el Front y generalmente
+            algún Headless CMS en el Back. Para mis Side Projects también
+            utilizo Next JS y el Back-end depende del proyecto. Sigo estudiando
+            en el día a día, enfocado en mantener buenas prácticas y convertirme
+            en Fullstack. Mi foco hoy está en la experiencia de usuario: webs
+            rápidas, intuitivas y accesibles.
           </p>
         </SectionPage>
         <SectionPage className="block md:flex w-full justify-between prose leading-8 text-gray-600 dark:text-gray-400">

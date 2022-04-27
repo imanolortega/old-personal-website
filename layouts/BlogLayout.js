@@ -11,7 +11,7 @@ export default function BlogLayout({ children, post }) {
     <SiteLayout
       title={`${post?.attributes?.title} | Imanol Ortega`}
       description={post?.attributes?.description}
-      image={`${post?.attributes?.cover?.data?.attributes?.url}`}
+      image={`https://whispering-tor-96051.herokuapp.com${post?.attributes?.cover?.data?.attributes?.url}`}
       date={formatDate(post?.attributes?.date)}
       type="article">
       <article className="flex flex-col items-start justify-center w-full max-w-screen-md mx-auto md:mb-16 mb-12">

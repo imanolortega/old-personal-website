@@ -78,7 +78,7 @@ export default function IconButton({ icon, isAProject, path }) {
   }
 
   return (
-    <button
+    <a
       target="_blank"
       rel="nofollow noopener noreferrer"
       aria-label={`${icon} ${isAProject ? "project" : "link contact"}`}
@@ -88,7 +88,7 @@ export default function IconButton({ icon, isAProject, path }) {
         !isAProject ? "hover:ring-2" : null
       }  ring-slate-300 dark:ring-slate-600 transition-all cursor-pointer`}>
       <Icon type={icon} theme={theme} />
-    </button>
+    </a>
   );
 }
 
