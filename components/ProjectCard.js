@@ -1,7 +1,7 @@
 import { array, string } from "prop-types";
 
 import Heading from "./Heading";
-import IconButton from "./IconButton";
+import ButtonWithIcon from "./ButtonWithIcon";
 
 export default function ProjectCard({
   externalLink,
@@ -32,8 +32,8 @@ export default function ProjectCard({
               ))}
           </div>
           <div className="flex justify-end space-x-1">
-            <IconButton icon="github" isAProject path={githubLink} />
-            <IconButton icon="external_link" isAProject path={externalLink} />
+            <ButtonWithIcon icon="github" isAProject path={githubLink} />
+            <ButtonWithIcon icon="external_link" isAProject path={externalLink} />
           </div>
         </div>
       </div>

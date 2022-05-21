@@ -4,7 +4,7 @@ import cn from "classnames";
 import styles from "@/styles/mobile-menu.module.css";
 
 import DarkModeButton from "./DarkModeButton";
-import IconButton from "./IconButton";
+import ButtonWithIcon from "./ButtonWithIcon";
 import NavItem from "./NavItem";
 
 function MenuIcon() {
@@ -83,8 +83,8 @@ export default function Navbar({
         <NavItem href="/projects" text="Projects" />
       </ul>
       <div className="flex space-x-2">
-        <IconButton path="https://github.com/imanolrtega" icon="github" />
-        <IconButton
+        <ButtonWithIcon path="https://github.com/imanolrtega" icon="github" />
+        <ButtonWithIcon
           path="https://www.linkedin.com/in/imanol-rtega/"
           icon="linkedin"
         />

@@ -2,23 +2,13 @@ import { useContext, useEffect, useState } from "react";
 import { string } from "prop-types";
 
 import Site from "@/contexts/siteLayout";
+import { contactCardIconsStyle } from "@/styles/icons";
 
 import Heading from "./Heading";
 import Icon from "./Icon";
 
 export default function ContactCard({ description, icon, path, title }) {
   const { theme } = useContext(Site);
-
-  const emailClassName = "block h-5 w-8 mb-4 text-gray-900 dark:text-gray-100";
-  const linkedinClassName =
-    "block h-5 w-5 mb-4 text-gray-900 dark:text-gray-100";
-  const githubClassName = "block h-5 w-5 mb-4 text-gray-900 dark:text-gray-100";
-
-  const iconStyle = {
-    email: emailClassName,
-    linkedin: linkedinClassName,
-    github: githubClassName,
-  };
 
   const [iconColor, setIconColor] = useState();
 
@@ -36,7 +26,7 @@ export default function ContactCard({ description, icon, path, title }) {
       {icon && (
         <Icon
           type={icon}
-          className={iconStyle[icon]}
+          className={contactCardIconsStyle[icon]}
           color={iconColor}
         />
       )}

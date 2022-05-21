@@ -2,25 +2,12 @@ import { useContext, useEffect, useState } from "react";
 import { bool, string } from "prop-types";
 
 import Site from "@/contexts/siteLayout";
-import { selectElement } from "@/lib/util";
+import { buttonWhitIconStyle } from "@/styles/icons";
 
 import Icon from "./Icon";
 
-export default function IconButton({ icon, isAProject, path }) {
+export default function ButtonWithIcon({ icon, isAProject, path }) {
   const { theme } = useContext(Site);
-
-  const emailClassName = "block h-5 w-8 text-gray-900 dark:text-gray-100";
-  const linkedinClassName = "block h-5 w-5 text-gray-900 dark:text-gray-100";
-  const githubClassName = "block h-5 w-5 text-gray-900 dark:text-gray-100";
-  const externalLinkClassname =
-    "block h-6 w-6 text-gray-900 dark:text-gray-100";
-
-  const iconStyle = {
-    email: emailClassName,
-    linkedin: linkedinClassName,
-    github: githubClassName,
-    external_link: externalLinkClassname,
-  };
 
   const [iconColor, setIconColor] = useState();
 
@@ -39,20 +26,20 @@ export default function IconButton({ icon, isAProject, path }) {
       }  ring-slate-300 dark:ring-slate-600 transition-all cursor-pointer`}>
       <Icon
         type={icon}
-        className={iconStyle[icon]}
+        className={buttonWhitIconStyle[icon]}
         color={iconColor}
       />
     </a>
   );
 }
 
-IconButton.defaultProps = {
+ButtonWithIcon.defaultProps = {
   icon: "",
   isAProject: false,
   path: "",
 };
 
-IconButton.propTypes = {
+ButtonWithIcon.propTypes = {
   icon: string,
   isAProject: bool,
   path: string,
