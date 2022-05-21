@@ -82,22 +82,16 @@ const ExternalLink = ({ className, color }) => {
 export default function Icon({ className, color, type }) {
   const { theme } = useContext(Site);
 
-  function selectIcon(type) {
-    const icons = {
-      email: <Email className={className} color={color} theme={theme} />,
-      github: <GitHub className={className} color={color} theme={theme} />,
-      linkedin: (
-        <LinkedIn className={className} color={color} theme={theme} />
-      ),
-      external_link: (
-        <ExternalLink className={className} color={color} theme={theme} />
-      ),
-    };
+  const icons = {
+    email: <Email className={className} color={color} theme={theme} />,
+    github: <GitHub className={className} color={color} theme={theme} />,
+    linkedin: <LinkedIn className={className} color={color} theme={theme} />,
+    external_link: (
+      <ExternalLink className={className} color={color} theme={theme} />
+    ),
+  };
 
-    return icons[type];
-  }
-
-  return <>{selectIcon(type)}</>;
+  return <>{icons[type]}</>;
 }
 
 Icon.defaultProps = {
