@@ -14,7 +14,7 @@ import ScrollTopButton from "@/components/ScrollTopButton";
 
 export default function SiteLayout(props) {
   const [mounted, setMounted] = useState(false);
-  const { resolvedTheme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme(false);
 
   useEffect(() => setMounted(true), []);
 
