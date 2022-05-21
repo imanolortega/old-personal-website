@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { bool, string } from "prop-types";
 
 import Site from "@/contexts/siteLayout";
-import { selectStyle } from "@/lib/util";
+import { selectElement } from "@/lib/util";
 
 import Icon from "./Icon";
 
@@ -39,7 +39,7 @@ export default function IconButton({ icon, isAProject, path }) {
       }  ring-slate-300 dark:ring-slate-600 transition-all cursor-pointer`}>
       <Icon
         type={icon}
-        className={selectStyle(iconStyle, icon)}
+        className={iconStyle[icon]}
         color={iconColor}
       />
     </a>
