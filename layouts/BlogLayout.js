@@ -1,6 +1,6 @@
 import { object } from "prop-types";
 
-import Heading from "@/components/Heading";
+import Heading from "@/components/sections/Heading";
 import SiteLayout from "@/layouts/SiteLayout";
 
 import { formatDate } from "@/lib/datetime";

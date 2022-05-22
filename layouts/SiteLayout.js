@@ -7,10 +7,10 @@ import { object } from "prop-types";
 
 import Site from "@/contexts/siteLayout";
 
-import Footer from "@/components/Footer";
-import MobileMenu from "@/components/MobileMenu";
-import Navbar from "@/components/Navbar";
-import ScrollTopButton from "@/components/ScrollTopButton";
+import Footer from "@/components/sections/Footer";
+import MobileMenu from "@/components/menu/MobileMenu";
+import Navbar from "@/components/navbar/Navbar";
+import ScrollTopButton from "@/components/buttons/ScrollTopButton";
 
 export default function SiteLayout(props) {
   const [mounted, setMounted] = useState(false);

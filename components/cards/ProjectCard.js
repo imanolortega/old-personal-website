@@ -1,7 +1,7 @@
 import { array, string } from "prop-types";
 
-import Heading from "./Heading";
-import ButtonWithIcon from "./ButtonWithIcon";
+import Heading from "../sections/Heading";
+import ButtonWithIcon from "../buttons/ButtonWithIcon";
 
 export default function ProjectCard({
   externalLink,

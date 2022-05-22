@@ -4,7 +4,7 @@ import { bool, string } from "prop-types";
 import Site from "@/contexts/siteLayout";
 import { buttonWhitIconsStyle } from "@/styles/icons";
 
-import Icon from "./Icon";
+import Icon from "../icons/Icon";
 
 export default function ButtonWithIcon({ icon, isAProject, path }) {
   const { theme } = useContext(Site);

@@ -1,7 +1,7 @@
 import Link from "next/link";
 
-import ExternalLink from "./ExternalLink";
-import InternalLink from "./InternalLink";
+import ExternalLink from "../links/ExternalLink";
+import InternalLink from "../links/InternalLink";
 
 export default function Footer() {
   return (

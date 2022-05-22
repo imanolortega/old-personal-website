@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-import ExternalLink from "@/components/ExternalLink";
-import Heading from "@/components/Heading";
-import ProjectCard from "@/components/ProjectCard";
-import SearchBar from "@/components/SearchBar";
-import SectionPage from "@/components/SectionPage";
+import ExternalLink from "@/components/links/ExternalLink";
+import Heading from "@/components/sections/Heading";
+import ProjectCard from "@/components/cards/ProjectCard";
+import SearchBar from "@/components/sections/SearchBar";
+import SectionPage from "@/components/sections/SectionPage";
 import PageLayout from "@/layouts/PageLayout";
 import SiteLayout from "@/layouts/SiteLayout";
 

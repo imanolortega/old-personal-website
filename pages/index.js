@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { array } from "prop-types";
 
-import BlogPostCard from "@/components/BlogPostCard";
-import ExternalLink from "@/components/ExternalLink";
-import Heading from "@/components/Heading";
-import LinkWithArrow from "@/components/LinkWithArrow";
-import ProjectCard from "@/components/ProjectCard";
+import BlogPostCard from "@/components/cards/BlogPostCard";
+import ExternalLink from "@/components/links/ExternalLink";
+import Heading from "@/components/sections/Heading";
+import LinkWithArrow from "@/components/links/LinkWithArrow";
+import ProjectCard from "@/components/cards/ProjectCard";
 import PageLayout from "@/layouts/PageLayout";
 import SiteLayout from "@/layouts/SiteLayout";
 

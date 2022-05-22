@@ -1,9 +1,7 @@
 import Link from "next/link";
 import { string } from "prop-types";
 
-import Heading from "./Heading";
-
-import { formatDate } from "@/lib/datetime";
+import Heading from "../sections/Heading";
 
 export default function BlogPostCard({ date, link, modified, title }) {
   return (

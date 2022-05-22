@@ -1,8 +1,8 @@
-import ContactCard from "@/components/ContactCard";
-import ExternalLink from "@/components/ExternalLink";
-import Heading from "@/components/Heading";
-import List from "@/components/List";
-import SectionPage from "@/components/SectionPage";
+import ContactCard from "@/components/cards/ContactCard";
+import ExternalLink from "@/components/links/ExternalLink";
+import Heading from "@/components/sections/Heading";
+import List from "@/components/sections/List";
+import SectionPage from "@/components/sections/SectionPage";
 import PageLayout from "@/layouts/PageLayout";
 import SiteLayout from "@/layouts/SiteLayout";
 

@@ -4,8 +4,8 @@ import { string } from "prop-types";
 import Site from "@/contexts/siteLayout";
 import { contactCardIconsStyle } from "@/styles/icons";
 
-import Heading from "./Heading";
-import Icon from "./Icon";
+import Heading from "../sections/Heading";
+import Icon from "../icons/Icon";
 
 export default function ContactCard({ description, icon, path, title }) {
   const { theme } = useContext(Site);

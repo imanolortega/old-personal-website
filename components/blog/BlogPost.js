@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { string, object } from "prop-types";
 
-import Heading from "./Heading";
+import Heading from "../sections/Heading";
 
 export default function BlogPost({ date, slug, summary, title }) {
   return (

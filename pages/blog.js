@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { any } from "prop-types";
 
-import BlogPost from "@/components/BlogPost";
-import ContactCard from "@/components/ContactCard";
-import Heading from "@/components/Heading";
-import SearchBar from "@/components/SearchBar";
-import SectionPage from "@/components/SectionPage";
+import BlogPost from "@/components/blog/BlogPost";
+import ContactCard from "@/components/cards/ContactCard";
+import Heading from "@/components/sections/Heading";
+import SearchBar from "@/components/sections/SearchBar";
+import SectionPage from "@/components/sections/SectionPage";
 import PageLayout from "@/layouts/PageLayout";
 import SiteLayout from "@/layouts/SiteLayout";
 

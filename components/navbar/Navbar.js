@@ -4,9 +4,9 @@ import cn from "classnames";
 import styles from "@/styles/mobile-menu.module.css";
 import { menuIconsStyle } from "@/styles/icons";
 
-import ButtonWithIcon from "./ButtonWithIcon";
-import DarkModeButton from "./DarkModeButton";
-import Icon from "./Icon";
+import ButtonWithIcon from "../buttons/ButtonWithIcon";
+import DarkModeButton from "../buttons/DarkModeButton";
+import Icon from "../icons/Icon";
 import NavItem from "./NavItem";
 
 export default function Navbar({

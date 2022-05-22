@@ -1,4 +1,4 @@
-import Heading from "@/components/Heading";
+import Heading from "@/components/sections/Heading";
 import PageLayout from "@/layouts/PageLayout";
 import SiteLayout from "@/layouts/SiteLayout";
 

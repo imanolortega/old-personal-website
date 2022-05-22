@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { bool, object } from 'prop-types';
+import { bool, object } from "prop-types";
 
 import cn from "classnames";
-import styles from "../styles/mobile-menu.module.css";
+import styles from "../../styles/mobile-menu.module.css";
 import useDelayedRender from "use-delayed-render";
 
 function MenuItem({ href, delay, text }) {
@@ -40,7 +40,7 @@ export default function MobileMenu({ isMenuOpen, style }) {
           style={style}
           className={cn(
             styles.menu,
-            'flex flex-col absolute bg-slate-100 dark:bg-slate-900',
+            "flex flex-col absolute bg-slate-100 dark:bg-slate-900",
             isMenuRendered && styles.menuRendered
           )}>
           {menuLinks.map((l) => (
@@ -59,10 +59,10 @@ export default function MobileMenu({ isMenuOpen, style }) {
 
 MobileMenu.defaultProps = {
   isMenuOpen: false,
-  style: {}
+  style: {},
 };
 
 MobileMenu.propTypes = {
   isMenuOpen: bool,
-  style: object
+  style: object,
 };
