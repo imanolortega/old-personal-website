@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { bool, string } from "prop-types";
 
 import Site from "@/contexts/siteLayout";
-import { buttonWhitIconStyle } from "@/styles/icons";
+import { buttonWhitIconsStyle } from "@/styles/icons";
 
 import Icon from "./Icon";
 
@@ -26,7 +26,7 @@ export default function ButtonWithIcon({ icon, isAProject, path }) {
       }  ring-slate-300 dark:ring-slate-600 transition-all cursor-pointer`}>
       <Icon
         type={icon}
-        className={buttonWhitIconStyle[icon]}
+        className={buttonWhitIconsStyle[icon]}
         color={iconColor}
       />
     </a>

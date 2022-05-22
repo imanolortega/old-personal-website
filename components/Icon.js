@@ -79,25 +79,76 @@ const ExternalLink = ({ className, color }) => {
   );
 };
 
+const Menu = ({ className }) => {
+  return (
+    <svg
+      className={className}
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none">
+      <path
+        d="M2.5 7.5H17.5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M2.5 12.5H17.5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+const Cross = ({ className }) => {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      width="24"
+      height="24"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      fill="none"
+      shapeRendering="geometricPrecision">
+      <path d="M18 6L6 18" />
+      <path d="M6 6l12 12" />
+    </svg>
+  );
+};
+
 export default function Icon({ className, color, type }) {
   const { theme } = useContext(Site);
 
   const icons = {
+    cross: <Cross className={className} theme={theme} />,
     email: <Email className={className} color={color} theme={theme} />,
-    github: <GitHub className={className} color={color} theme={theme} />,
-    linkedin: <LinkedIn className={className} color={color} theme={theme} />,
     external_link: (
       <ExternalLink className={className} color={color} theme={theme} />
     ),
+    github: <GitHub className={className} color={color} theme={theme} />,
+    linkedin: <LinkedIn className={className} color={color} theme={theme} />,
+    menu: <Menu className={className} theme={theme} />,
   };
 
   return <>{icons[type]}</>;
 }
 
 Icon.defaultProps = {
+  className: "",
+  color: "",
   type: "",
 };
 
 Icon.propTypes = {
+  className: string,
+  color: string,
   type: string,
 };
