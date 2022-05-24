@@ -13,18 +13,17 @@ import Menu from "./all-icons/Menu";
 export default function Icon({ className, color, type }) {
   const { theme } = useContext(Site);
 
-  const icons = {
-    cross: <Cross className={className} theme={theme} />,
-    email: <Email className={className} color={color} theme={theme} />,
-    external_link: (
-      <ExternalLink className={className} color={color} theme={theme} />
-    ),
-    github: <GitHub className={className} color={color} theme={theme} />,
-    linkedin: <LinkedIn className={className} color={color} theme={theme} />,
-    menu: <Menu className={className} theme={theme} />,
+  const iconsTypes = {
+    cross: Cross,
+    email: Email,
+    external_link: ExternalLink,
+    github: GitHub,
+    linkedin: LinkedIn,
+    menu: Menu,
   };
+  const IconType = iconsTypes[type];
 
-  return <>{icons[type]}</>;
+  return <IconType className={className} color={color} theme={theme} />;
 }
 
 Icon.defaultProps = {
