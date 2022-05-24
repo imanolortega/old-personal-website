@@ -2,8 +2,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 import { string } from "prop-types";
-import { useEffect } from 'react';
-import { useState } from 'react';
+import { useEffect } from "react";
+import { useState } from "react";
 
 export default function NavItem({ href, text }) {
   const router = useRouter();
