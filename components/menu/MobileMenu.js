@@ -1,21 +1,10 @@
-import Link from "next/link";
 import { bool, object } from "prop-types";
 
 import cn from "classnames";
 import styles from "../../styles/mobile-menu.module.css";
 import useDelayedRender from "use-delayed-render";
 
-function MenuItem({ href, delay, text }) {
-  return (
-    <li
-      className="border-b border-gray-300 dark:border-gray-700 text-slate-600 dark:text-slate-100 text-lg font-semibold"
-      style={{ transitionDelay: `${delay}ms` }}>
-      <Link href={href} scroll={false}>
-        <a className="flex w-auto pb-4">{text}</a>
-      </Link>
-    </li>
-  );
-}
+import MenuItem from './MenuItem';
 
 export default function MobileMenu({ isMenuOpen, style }) {
   const menuLinks = [
