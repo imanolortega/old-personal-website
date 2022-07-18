@@ -1,16 +1,15 @@
-import { useState, useEffect } from "react";
-import { browserName } from "react-device-detect";
-import Head from "next/head";
-import { useRouter } from "next/router";
-import { useTheme } from "next-themes";
-import { object } from "prop-types";
-
-import Site from "@/contexts/siteLayout";
+import { useEffect, useState } from "react";
 
 import Footer from "@/components/sections/Footer";
+import Head from "next/head";
 import MobileMenu from "@/components/menu/MobileMenu";
 import Navbar from "@/components/navbar/Navbar";
 import ScrollTopButton from "@/components/buttons/ScrollTopButton";
+import Site from "@/contexts/siteLayout";
+import { browserName } from "react-device-detect";
+import { object } from "prop-types";
+import { useRouter } from "next/router";
+import { useTheme } from "next-themes";
 
 export default function SiteLayout(props) {
   const [mounted, setMounted] = useState(false);
