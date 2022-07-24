@@ -1,9 +1,9 @@
-import { string, any } from "prop-types";
+import { any, string } from "prop-types";
 
-export default function ExternalLink({ href, children }) {
+export default function ExternalLink({ children, className, href }) {
   return (
     <a
-      className="text-slate-600 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200 transition"
+      className={`${className} text-slate-600 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200 transition`}
       target="_blank"
       rel="noopener noreferrer"
       href={href}>
@@ -13,11 +13,13 @@ export default function ExternalLink({ href, children }) {
 }
 
 ExternalLink.defaultProps = {
-  href: "",
+  className: "",
   children: {},
+  href: "",
 };
 
 ExternalLink.propTypes = {
-  href: string,
   children: any,
+  className: string,
+  href: string,
 };

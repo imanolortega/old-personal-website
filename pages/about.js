@@ -1,12 +1,12 @@
+import { getAllTechnologies, getTechByType } from "@/lib/technologies";
+
 import ContactCard from "@/components/cards/ContactCard";
 import ExternalLink from "@/components/links/ExternalLink";
 import Heading from "@/components/sections/Heading";
 import List from "@/components/sections/List";
-import SectionPage from "@/components/sections/SectionPage";
 import PageLayout from "@/layouts/PageLayout";
+import SectionPage from "@/components/sections/SectionPage";
 import SiteLayout from "@/layouts/SiteLayout";
-
-import { getAllTechnologies, getTechByType } from "@/lib/technologies";
 
 export default function About({ technologies }) {
   const frontend = getTechByType(technologies, "Front-end");
@@ -22,7 +22,7 @@ export default function About({ technologies }) {
             className="font-bold text-3xl md:text-5xl mb-6 text-gray-900 dark:text-white">
             About Me
           </Heading>
-          <p>
+          <p className="pb-4">
             Buenas, mi nombre es Imanol. Soy desarrollador Front-end en
             <ExternalLink href="https://easytechgreen.com">
               {" "}
@@ -32,8 +32,9 @@ export default function About({ technologies }) {
                 easytechgreen
               </span>
             </ExternalLink>{" "}
-            y entusiasta de JavaScript y React JS. Antes fui diseñador gráfico y
-            Comunicador Social.
+            y entusiasta del desarrollo web (JavaScript y React JS,
+            principalmente) y de crear interfaces de usuario. Antes fui
+            diseñador gráfico y Comunicador Social.
             <br />
             <br />
             Actualmente en mi trabajo utilizo Next JS en el Front y generalmente
@@ -43,6 +44,13 @@ export default function About({ technologies }) {
             en Fullstack. Mi foco hoy está en la experiencia de usuario: webs
             rápidas, intuitivas y accesibles.
           </p>
+          <ExternalLink href="https://drive.google.com/file/d/1oDfhYE-IZunTBhiCbOm9KLI5TQOL_pQb/view?usp=sharing">
+            <span
+              className="font-semibold bg-clip-text text-transparent bg-gradient-to-r
+              from-purple-500 to-purple-600 underline decoration-1 underline-offset-4 decoration-purple-600">
+              Descargar CV
+            </span>
+          </ExternalLink>
         </SectionPage>
         <SectionPage className="block md:flex w-full justify-between prose leading-8 text-gray-600 dark:text-gray-400">
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
