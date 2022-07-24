@@ -31,8 +31,8 @@ export default function About({ technologies }) {
                 from-emerald-500 to-emerald-600 underline decoration-1 underline-offset-4 decoration-emerald-600">
                 easytechgreen
               </span>
-            </ExternalLink>{" "}
-            y entusiasta del desarrollo web (JavaScript y React JS,
+            </ExternalLink>
+            , entusiasta del desarrollo web (JavaScript y React JS,
             principalmente) y de crear interfaces de usuario. Antes fui
             diseñador gráfico y Comunicador Social.
             <br />
