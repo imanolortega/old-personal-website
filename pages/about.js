@@ -44,7 +44,7 @@ export default function About({ technologies }) {
             en Fullstack. Mi foco hoy está en la experiencia de usuario: webs
             rápidas, intuitivas y accesibles.
           </p>
-          <ExternalLink href="https://drive.google.com/file/d/1oDfhYE-IZunTBhiCbOm9KLI5TQOL_pQb/view?usp=sharing">
+          <ExternalLink href="https://drive.google.com/file/d/15FvvjnIMCMp6XTZy3D2Pa2EU5dty6Jjp/view?usp=sharing">
             <span
               className="font-semibold bg-clip-text text-transparent bg-gradient-to-r
               from-purple-500 to-purple-600 underline decoration-1 underline-offset-4 decoration-purple-600">
