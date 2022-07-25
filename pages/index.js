@@ -48,15 +48,7 @@ export default function Home({ posts, projects }) {
               Imanol Ortega
             </Heading>
             <p className="text-gray-600 dark:text-gray-400 md:mb-16 mb-12">
-              Desarrollador Front-end en{" "}
-              <ExternalLink href="https://easytechgreen.com/">
-                <span
-                  className="font-semibold bg-clip-text text-transparent bg-gradient-to-r
-                from-emerald-500 to-emerald-600 underline decoration-1 underline-offset-4 decoration-emerald-600">
-                  easytechgreen
-                </span>
-              </ExternalLink>
-              . JavaScript, React y Next JS.
+              Desarrollador Front-End. JavaScript, React y Next JS.
             </p>
           </div>
           <div className="w-[80px] sm:w-[176px] justify-end mb-8 sm:mb-0 md:flex hidden">

@@ -73,13 +73,13 @@ export default function Blog({ posts, recommendedBlogs }) {
         <Heading
           tag="h2"
           className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
-          Recommended Blogs
+          Blogs
         </Heading>
         <p className="text-gray-600 dark:text-gray-400 mb-6">
           En el día a día navego mucho, buscando info para resolver problemas,
           para crear algún feature de los proyectos en los que trabajo o
           simplemente para aprender/entender algo. Debajo les comparto algunos
-          blogs (principalmente de Front-end) que considero muy valiosos y que
+          blogs (principalmente de Front-End) que considero muy valiosos y que
           quizás puedan servirles.
         </p>
         <div className="prose leading-8 text-gray-600 dark:text-gray-400 w-full grid grid-cols-1 md:grid-cols-3 gap-4 md:flex-row">

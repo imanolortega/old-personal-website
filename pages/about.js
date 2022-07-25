@@ -23,26 +23,21 @@ export default function About({ technologies }) {
             About Me
           </Heading>
           <p className="pb-4">
-            Buenas, mi nombre es Imanol. Soy desarrollador Front-end en
-            <ExternalLink href="https://easytechgreen.com">
-              {" "}
-              <span
-                className="font-semibold bg-clip-text text-transparent bg-gradient-to-r
-                from-emerald-500 to-emerald-600 underline decoration-1 underline-offset-4 decoration-emerald-600">
-                easytechgreen
-              </span>
-            </ExternalLink>
-            , entusiasta del desarrollo web (JavaScript y React JS,
-            principalmente) y de crear interfaces de usuario. Antes fui
-            diseñador gráfico y Comunicador Social.
+            Buenas, mi nombre es Imanol. Soy desarrollador Front-end, entusiasta
+            del desarrollo web (JavaScript y React JS, principalmente) y de
+            crear interfaces de usuario. En el pasado, antes de comenzar a
+            trabajar como Developer, fui diseñador gráfico y Comunicador Social.
             <br />
             <br />
-            Actualmente en mi trabajo utilizo Next JS en el Front y generalmente
-            algún Headless CMS en el Back. Para mis Side Projects también
-            utilizo Next JS y el Back-end depende del proyecto. Sigo estudiando
-            en el día a día, enfocado en mantener buenas prácticas y convertirme
-            en Fullstack. Mi foco hoy está en la experiencia de usuario: webs
-            rápidas, intuitivas y accesibles.
+            Actualmente en mi trabajo utilizo NextJS en el Front, generalmente
+            algún Headless CMS en el Back y mucho GraphQL. Soy defensor del HTML
+            semántico, de los estilos con Sass (si el proyecto es chico Tailwind
+            puede ser buena opción), y de respetar mucho la accesibilidad web.
+            Hace poco comencé a estudiar React Native, porque me interesa el
+            desarrollo mobile. Me mantengo enfocado en mantener buenas prácticas
+            y en continuar estudiando para convertirme en Fullstack. Mi foco hoy
+            está en la experiencia de usuario: webs rápidas, intuitivas y
+            accesibles.
           </p>
           <ExternalLink href="https://drive.google.com/file/d/15FvvjnIMCMp6XTZy3D2Pa2EU5dty6Jjp/view?usp=sharing">
             <span
