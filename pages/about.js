@@ -31,7 +31,7 @@ export default function About({ technologies }) {
             <br />
             Actualmente en mi trabajo utilizo NextJS en el Front, generalmente
             algún Headless CMS en el Back y mucho GraphQL. Soy defensor del HTML
-            semántico, de los estilos con Sass (si el proyecto es chico Tailwind
+            semántico, de los estilos con SCSS (si el proyecto es chico Tailwind
             puede ser buena opción), y de respetar mucho la accesibilidad web.
             Hace poco comencé a estudiar React Native, porque me interesa el
             desarrollo mobile. Me mantengo enfocado en mantener buenas prácticas
