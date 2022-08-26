@@ -23,21 +23,17 @@ export default function About({ technologies }) {
             About Me
           </Heading>
           <p className="pb-4">
-            Buenas, mi nombre es Imanol. Soy desarrollador Front-end, entusiasta
-            del desarrollo web (JavaScript y React JS, principalmente) y de
-            crear interfaces de usuario. En el pasado, antes de comenzar a
-            trabajar como Developer, fui diseñador gráfico y Comunicador Social.
+            Desarrollador Front-end. Obsesionado con la web y las interfaces de
+            usuario. JavaScript y React, HTML semántico, estilos con SCSS
+            (Tailwind si el proyecto es pequeño) y accesibilidad web. En el
+            pasado, antes de comenzar a trabajar como Developer, fui diseñador
+            gráfico y Comunicador Social.
             <br />
             <br />
-            Actualmente en mi trabajo utilizo NextJS en el Front, generalmente
-            algún Headless CMS en el Back y mucho GraphQL. Soy defensor del HTML
-            semántico, de los estilos con SCSS (si el proyecto es chico Tailwind
-            puede ser buena opción), y de respetar mucho la accesibilidad web.
-            Hace poco comencé a estudiar React Native, porque me interesa el
-            desarrollo mobile. Me mantengo enfocado en mantener buenas prácticas
-            y en continuar estudiando para convertirme en Fullstack. Mi foco hoy
-            está en la experiencia de usuario: webs rápidas, intuitivas y
-            accesibles.
+            Actualmente trabajo con NextJS en el Front, y generalmente algún
+            Headless CMS en el Back (a veces NodeJS), en una agencia de
+            Desarrollo Web de Argentina. Las herramientas siempre son circunstanciales. Lo
+            importante es que la web sea rápida, intuitiva y accesible.
           </p>
           <ExternalLink href="https://drive.google.com/file/d/15FvvjnIMCMp6XTZy3D2Pa2EU5dty6Jjp/view?usp=sharing">
             <span
