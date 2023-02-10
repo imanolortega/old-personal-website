@@ -1,7 +1,6 @@
 import { getAllTechnologies, getTechByType } from "@/lib/technologies";
 
 import ContactCard from "@/components/cards/ContactCard";
-import ExternalLink from "@/components/links/ExternalLink";
 import Heading from "@/components/sections/Heading";
 import List from "@/components/sections/List";
 import PageLayout from "@/layouts/PageLayout";
@@ -24,7 +23,7 @@ export default function About({ technologies }) {
           </Heading>
           <p className="pb-4">
             Desarrollador Front-end. Obsesionado con la web y las interfaces de
-            usuario. JavaScript y React, HTML semántico, estilos con SCSS
+            usuario. JavaScript, TypeScript, React, HTML semántico, estilos con SCSS
             (Tailwind si el proyecto es pequeño) y accesibilidad web. En el
             pasado, antes de comenzar a trabajar como Developer, fui diseñador
             gráfico y Comunicador Social.
@@ -35,13 +34,6 @@ export default function About({ technologies }) {
             Desarrollo Web de Argentina. Las herramientas siempre son circunstanciales. Lo
             importante es que la web sea rápida, intuitiva y accesible.
           </p>
-          <ExternalLink href="https://drive.google.com/file/d/15FvvjnIMCMp6XTZy3D2Pa2EU5dty6Jjp/view?usp=sharing">
-            <span
-              className="font-semibold bg-clip-text text-transparent bg-gradient-to-r
-              from-purple-500 to-purple-600 underline decoration-1 underline-offset-4 decoration-purple-600">
-              Descargar CV
-            </span>
-          </ExternalLink>
         </SectionPage>
         <SectionPage className="block md:flex w-full justify-between prose leading-8 text-gray-600 dark:text-gray-400">
           <div className="w-full md:w-1/3 mb-6 md:mb-0">

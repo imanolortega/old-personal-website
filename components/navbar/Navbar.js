@@ -38,7 +38,6 @@ export default function Navbar({
         </button>
         <NavItem href="/" text="Home" />
         <NavItem href="/about" text="About" />
-        <NavItem href="/blog" text="Blog" />
         <NavItem href="/projects" text="Projects" />
       </ul>
       <div className="flex space-x-2">

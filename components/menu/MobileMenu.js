@@ -10,7 +10,6 @@ export default function MobileMenu({ isMenuOpen, style }) {
   const menuLinks = [
     { id: "0", href: "/", text: "Home", transitionDelay: "150" },
     { id: "1", href: "/about", text: "About", transitionDelay: "200" },
-    { id: "2", href: "/blog", text: "Blog", transitionDelay: "250" },
     { id: "3", href: "/projects", text: "Projects", transitionDelay: "300" },
   ];
 

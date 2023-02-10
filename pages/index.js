@@ -68,26 +68,6 @@ export default function Home({ posts, projects }) {
         <Heading
           tag="h2"
           className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
-          Blog
-        </Heading>
-        <p className="text-gray-600 dark:text-gray-400 mb-6">
-          Trato de escribir algunas de las cosas que voy descubriendo y le
-          pueden servir a alguien más.
-        </p>
-        {posts?.map((p) => (
-          <BlogPostCard
-            date={formatDate(p?.attributes?.date)}
-            key={p?.id}
-            link={`blog/${p?.attributes?.slug}`}
-            modified={formatDate(p?.attributes?.updatedAt)}
-            title={p?.attributes?.title}
-          />
-        ))}
-        <LinkWithArrow text="Más artículos" href="/blog" />
-        <span className="md:h-16 h-12" />
-        <Heading
-          tag="h2"
-          className="font-bold text-2xl md:text-4xl mb-6 text-gray-900 dark:text-white">
           Projects
         </Heading>
         <p className="text-gray-600 dark:text-gray-400 mb-6">
